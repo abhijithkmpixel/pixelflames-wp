@@ -1,4 +1,4 @@
-//=require app/hoome.js
+//=require app/home.js
 
 
 

@@ -1,0 +1,40 @@
+/** @format */
+
+.hero__banner {
+  width: 100%;
+  height: 100dvh;
+  background-color: $color-alice-blue;
+  .container-fluid {
+    height: 100%;
+    .row {
+      height: 100%;
+    }
+  }
+  .hero__banner__content {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    height: 100%;
+    padding-top: 100px;
+    .badge {
+      @include fontStyle(1.74vw, 1, 600, $color-black);
+      padding: 5px 19px;
+      background-color: $color-white;
+      border-radius: 50px;
+      width: max-content;
+      margin-bottom: 25px;
+      text-transform: uppercase;
+    }
+    h1 {
+      @include fontStyle(4.45vw, 1, 600, $color-black);
+      margin-bottom: 25px;
+    }
+    p {
+      @include fontStyle(1.5vw, 1.75, 400, $color-black);
+      max-width: 90%;
+    }
+  }
+  .hero__banner__featured__side__Image{
+    object-position: bottom;
+  }
+}

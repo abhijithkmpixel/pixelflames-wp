@@ -1,1 +1,140 @@
-// Buttons styles here 
+/** @format */
+
+.cta__primary {
+  text-decoration: none;
+  @include fontStyle(1.12vw, 1.5, 500, $color-black);
+  text-transform: uppercase;
+  border: 1px solid transparent;
+  transition: 0.2s all ease-in-out;
+  width: max-content;
+  display: inline-flex;
+  align-items: center;
+  svg {
+    width: 26px;
+    align-self: center;
+    margin-left: 13px;
+    transition: 0.2s all ease-in-out;
+  }
+  &.cta__border {
+    border-color: $color-black;
+    padding: 14px 18px;
+    border-radius: 8px;
+  }
+  &:hover {
+    color: $color-black;
+    @include above($tablet-lg) {
+      color: $color-white;
+      background-color: $color-black;
+    }
+  }
+  &.cta__pomgranate {
+    background-color: $color-pomegranate;
+    border-color: $color-pomegranate;
+    color: $color-white;
+    &:hover {
+      color: $color-white;
+      @include above($tablet-lg) {
+        color: $color-pomegranate;
+        background-color: transparent;
+        svg {
+          margin-left: 23px;
+          path {
+            fill: $color-pomegranate;
+          }
+        }
+      }
+    }
+    &__border {
+      background-color: transparent;
+      border-color: $color-pomegranate;
+      color: $color-pomegranate;
+      &:hover {
+        color: $color-pomegranate;
+        @include above($tablet-lg) {
+          color: $color-white;
+          background-color: $color-pomegranate;
+          svg {
+            margin-left: 23px;
+            path {
+              fill: $color-white;
+            }
+          }
+        }
+      }
+    }
+  }
+  &.text__pomgranate {
+    color: $color-pomegranate;
+    svg {
+      path {
+        fill: $color-pomegranate;
+      }
+    }
+    &:hover {
+      color: $color-pomegranate;
+      @include above($tablet-lg) {
+        color: $color-pomegranate;
+        background-color: transparent;
+        svg {
+          margin-left: 23px;
+          path {
+            fill: $color-pomegranate;
+          }
+        }
+      }
+    }
+  }
+}
+.cta__secondary {
+  text-decoration: none;
+  @include fontStyle(1.12vw, 1.5, 500, $color-black);
+  text-transform: uppercase;
+  border: 1px solid transparent;
+  transition: 0.2s all ease-in-out;
+  width: max-content;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 15px 25px;
+  span {
+    @include fontStyleInherit();
+  }
+  svg {
+    width: 26px;
+    align-self: center;
+    margin-left: 13px;
+    transition: 0.2s all ease-in-out;
+  }
+  & > * {
+    position: relative;
+    z-index: 5;
+  }
+  &::before {
+    content: "";
+    height: 100%;
+    width: 3.5vw;
+    // aspect-ratio: 1/1;
+    background-color: $color-coral2;
+    position: absolute;
+    transition: 0.3s all ease-in-out;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    border-radius: 150px;
+  }
+  &:hover {
+    color: $color-black;
+    @include above($tablet-lg) {
+      color: $color-white;
+      &::before {
+        aspect-ratio: unset;
+        width: 100%;
+      }
+      svg {
+        path {
+          fill: $color-white;
+        }
+      }
+    }
+  }
+}

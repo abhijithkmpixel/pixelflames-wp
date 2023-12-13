@@ -1,0 +1,31 @@
+/** @format */
+
+.how__it__works__row {
+  margin: 0 -50px;
+  & > div {
+    padding: 0 50px;
+  }
+}
+.how__it__works__steps {
+  li {
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    padding: 20px 0;
+    @include fontStyle(1.4vw, 1.5, 500, $color-black);
+    &:not(:last-child) {
+      border-bottom: 1px solid $color-black;
+    }
+    &::before {
+      content: "";
+      margin-top: 8px;
+      width: 13px;
+      height: 13px;
+      flex: 0 0 13px;
+      border-radius: 50%;
+      display: block;
+      background-color: $color-pomegranate;
+      margin-right: 24px;
+    }
+  }
+}

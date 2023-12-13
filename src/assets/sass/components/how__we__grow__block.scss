@@ -1,0 +1,64 @@
+/** @format */
+
+.how__we__grow__block {
+  margin: 0 -75px;
+  & > div {
+    padding: 0 75px;
+  }
+  .how__we__grow__block__featured__image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 492/295;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+  .how__we__grow__steps {
+    li {
+      display: flex;
+      align-items: flex-start;
+      &:not(:last-child) {
+        margin-bottom: 65px;
+      }
+      .how__we__grow__steps__icon {
+        width: 7vw;
+        flex: 0 0 7vw;
+        height: auto;
+        aspect-ratio: 1/1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 27px;
+        border-radius: 10px;
+        background-color: $color-coral2;
+        margin-right: 35px;
+        transition: 0.3s all ease-in-out;
+        img {
+          transition: 0.3s all ease-in-out;
+        }
+      }
+      h4 {
+        @include fontStyle(1.75vw, 1.2, 600, $color-black);
+        margin-bottom: 15px;
+        transition: 0.3s all ease-in-out;
+      }
+      span {
+        @include fontStyle(1.4vw, 1.5, 500, $color-river-bed);
+        transition: 0.3s all ease-in-out;
+      }
+      &:hover {
+        @include above($tablet-lg) {
+          .how__we__grow__steps__icon {
+            background-color: $color-pomegranate;
+            img {
+            //   transform: scale(1.05);
+            }
+          }
+          h4,
+          span {
+            color: $color-pomegranate;
+          }
+        }
+      }
+    }
+  }
+}

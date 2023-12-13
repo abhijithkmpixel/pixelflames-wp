@@ -1,0 +1,71 @@
+/** @format */
+
+.our__amneties__row {
+  margin: 0 -20px;
+  & > div {
+    padding: 0 20px;
+  }
+}
+.our__amneties___card {
+  width: 100%;
+  padding: 43px 34px;
+  background-color: $color-white;
+  border-radius: 12px;
+  box-shadow: 0 0 4px 0 rgba($color: #000000, $alpha: 0.1);
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  & > * {
+    position: relative;
+    z-index: 5;
+  }
+  &::after {
+    content: "";
+    width: 80%;
+    height: auto;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    background: linear-gradient(#feb7bb, #feb7bb);
+    transform: translate(35px, 40px) scale(0);
+    transform-origin: bottom right;
+    transition: 0.3s all ease-in-out;
+    opacity: 20%;
+  }
+  h3 {
+    @include fontStyle(3.82vw, 1, 800, $color-black);
+    margin-bottom: 10px;
+    transition: 0.2s all ease-in-out;
+    span {
+      @include fontStyleInherit();
+      transition-delay: 0;
+      //   transition: 0.2s all ease-in-out;
+    }
+  }
+  h4 {
+    @include fontStyle(1.55vw, 1, 600, $color-black);
+    text-transform: capitalize;
+    margin-bottom: 10px;
+    transition: 0.2s all ease-in-out;
+  }
+  span {
+    @include fontStyle(1vw, 1.2, 400, $color-black);
+    transition: 0.2s all ease-in-out;
+  }
+  &:hover {
+    @include above($tablet-lg) {
+      &::after {
+        transform: translate(35px, 40px) scale(1);
+      }
+      h3,
+      h4,
+      span {
+        color: $color-pomegranate;
+      }
+    }
+  }
+}

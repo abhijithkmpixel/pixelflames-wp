@@ -1,1 +1,42 @@
-// Header styles here 
+/** @format */
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  padding: 40px 0;
+  .brand__logo {
+    display: block;
+    width: 13.5vw;
+    height: auto;
+  }
+  nav {
+    width: max-content;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    .header__primary__navigation {
+      display: flex;
+      align-items: center;
+      margin-right: 80px;
+      li {
+        &:not(:last-child) {
+          margin-right: 38px;
+        }
+        a {
+          text-decoration: none;
+          @include fontStyle(1.12vw, 1.5, 500, $color-stratos);
+          text-transform: uppercase;
+          transition: 0.2s all ease-in-out;
+          &:hover {
+            @include above($tablet-lg) {
+              color: $color-pomegranate;
+            }
+          }
+        }
+      }
+    }
+  }
+}

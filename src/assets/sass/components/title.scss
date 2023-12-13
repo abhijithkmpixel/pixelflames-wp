@@ -1,0 +1,29 @@
+/** @format */
+
+.title__primary {
+  @include fontStyle(3.5vw, 1.2, 500, $color-black);
+  //   display: flex;
+  span {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 15px;
+    background: linear-gradient(#fb6770, #f5333f);
+  }
+}
+.subtitle__primary {
+  @include fontStyle(1.4vw, 1.5, 500, $color-river-bed);
+  strong {
+    @include fontStyleInherit();
+    font-weight: 700;
+  }
+  a {
+    @include fontStyleInherit();
+    text-decoration: none;
+  }
+  &--lg {
+    font-size: 1.85vw;
+  }
+}

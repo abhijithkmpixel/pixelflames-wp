@@ -1,3 +1,5 @@
+/** @format */
+
 // Responsive mixins
 @mixin desktop-lg() {
   @media (max-width: $desktop-lg) {
@@ -16,7 +18,7 @@
 }
 @mixin tablet-sm() {
   @media (max-width: $tablet-sm) {
-    @content; 
+    @content;
   }
 }
 
@@ -45,4 +47,17 @@
   @media (min-width: $value) {
     @content;
   }
+}
+
+@mixin fontStyle($s: 20px, $l: 1.5, $w: 500, $c: $color-river-bed) {
+  font-size: $s;
+  line-height: $l;
+  font-weight: $w;
+  color: $c;
+}
+@mixin fontStyleInherit() {
+  font-size: inherit;
+  line-height: inherit;
+  font-weight: inherit;
+  color: inherit;
 }
