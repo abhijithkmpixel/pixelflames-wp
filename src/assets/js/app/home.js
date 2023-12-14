@@ -6,7 +6,7 @@ $(document).ready(function () {
         slidesToShow: 1,
         slidesToScroll: 1,
         asNavFor: '.clients__testimonials__avatar__slider',
-        focusOnSelect: true
+        focusOnSelect: true,
 
     });
     $('.clients__testimonials__avatar__slider').slick({
@@ -16,7 +16,16 @@ $(document).ready(function () {
         slidesToShow: $('.clients__testimonials__avatar__slider li').length,
         slidesToScroll: 1,
         asNavFor: '.clients__testimonials__content__slider',
-        focusOnSelect: true
+        focusOnSelect: true,
+        responsive: [
+            {
+                breakpoint: 1200,
+                settings: {
+                    variableWidth: true
+                }
+            },
+
+        ]
     });
     $('.clients__logo__slider').slick({
         slidesToShow: 4,
@@ -31,8 +40,35 @@ $(document).ready(function () {
         pauseOnHover: false,
         touchMove: false,
         draggable: false,
-        // asNavFor: '.clients__testimonials__content__slider',
-        // focusOnSelect: true
+        responsive: [
+            {
+                breakpoint: 990,
+                settings: {
+                    slidesToShow: 3,
+
+                }
+            },
+            {
+                breakpoint: 720,
+                settings: {
+                    slidesToShow: 2,
+
+                }
+            },
+
+        ]
     });
+    $(window).scroll(function () {
+        if (window.scrollY > 100) {
+            $('body').addClass('sticky__header')
+        } else {
+            $('body').removeClass('sticky__header')
+
+        }
+    })
+    $('#hamburger__button').click(function () {
+        $('#hamburger__button').toggleClass('is-active')
+        $('body').toggleClass('mobile__menu')
+    })
 
 })

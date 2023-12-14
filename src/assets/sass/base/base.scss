@@ -4,7 +4,9 @@ html {
   scroll-behavior: smooth;
   box-sizing: border-box;
 }
-
+section {
+  overflow: hidden;
+}
 * {
   outline: 0;
   &,
@@ -87,6 +89,12 @@ address {
 }
 .container-fluid {
   padding: 0 90px;
+  @include below($tablet-lg) {
+    padding: 0 30px;
+  }
+  @include below($mobile-lg) {
+    padding: 0 15px;
+  }
 }
 img {
   width: 100%;

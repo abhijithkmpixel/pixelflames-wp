@@ -4,6 +4,9 @@
   margin: 0 -20px;
   & > div {
     padding: 0 20px;
+    @include below($tablet-lg) {
+      margin-bottom: 40px;
+    }
   }
 }
 .our__amneties___card {
@@ -15,6 +18,9 @@
   height: 100%;
   position: relative;
   overflow: hidden;
+  @include below($mobile-lg) {
+    padding: 30px 30px;
+  }
   & > * {
     position: relative;
     z-index: 5;
@@ -45,16 +51,25 @@
       transition-delay: 0;
       //   transition: 0.2s all ease-in-out;
     }
+    @include below($tablet-lg) {
+      font-size: 60px;
+    }
   }
   h4 {
     @include fontStyle(1.55vw, 1, 600, $color-black);
     text-transform: capitalize;
     margin-bottom: 10px;
     transition: 0.2s all ease-in-out;
+    @include below($tablet-lg) {
+      font-size: 26px;
+    }
   }
   span {
     @include fontStyle(1vw, 1.2, 400, $color-black);
     transition: 0.2s all ease-in-out;
+    @include below($tablet-lg) {
+      font-size: 18px;
+    }
   }
   &:hover {
     @include above($tablet-lg) {

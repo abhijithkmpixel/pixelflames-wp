@@ -4,6 +4,9 @@
   margin: 0 -20px;
   & > div {
     padding: 0 20px;
+    @include below($tablet-lg) {
+      margin-bottom: 40px;
+    }
   }
 }
 .agency__growth__card {
@@ -15,7 +18,12 @@
   height: 100%;
   transition: 0.3s all ease-in-out;
   overflow: hidden;
-
+  @include below($tablet-lg) {
+    padding: 30px;
+  }
+  @include below($tablet-sm) {
+    padding: 30px 20px;
+  }
   & > * {
     position: relative;
     z-index: 5;
@@ -42,10 +50,15 @@
     margin-bottom: 40px;
     .agency__growth__card__header__icon {
       width: 55px;
+      flex: 0 0 55px;
       height: 48px;
       margin-right: 20px;
-      flex: 0 0 55px;
       position: relative;
+      @include below($tablet-lg) {
+        width: 65px;
+        flex: 0 0 65px;
+        height: 58px;
+      }
       img {
         transition: 0.3s all ease-in-out;
       }
@@ -69,12 +82,24 @@
       @include fontStyle(1.8vw, 1.2, 600, $color-black);
       margin: 0;
       transition: 0.3s all ease-in-out;
+      @include below($tablet-lg) {
+        font-size: 30px;
+      }
+      @include below($tablet-sm) {
+        font-size: 22px;
+      }
     }
   }
   h5 {
     @include fontStyle(1.4vw, 1.2, 500, $color-river-bed);
     margin-bottom: 40px;
     transition: 0.3s all ease-in-out;
+    @include below($tablet-lg) {
+      font-size: 20px;
+    }
+    @include below($tablet-sm) {
+      font-size: 18px;
+    }
   }
   &:hover {
     @include above($tablet-lg) {

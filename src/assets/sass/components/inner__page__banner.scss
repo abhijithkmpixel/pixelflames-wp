@@ -1,0 +1,42 @@
+/** @format */
+
+.inner__page__banner {
+  width: 100%;
+  overflow: hidden;
+  padding: 200px 0 60px;
+  .subtitle__primary {
+    margin-bottom: 29px;
+  }
+  h1 {
+    @include fontStyle(4.2vw, 1, 600, $color-black);
+    margin-bottom: 40px;
+  }
+  .inner__page__featured__image {
+    margin-top: 70px;
+    position: relative;
+    img {
+      width: 100%;
+      height: auto;
+      overflow: hidden;
+      aspect-ratio: 1162/333;
+      border-radius: 100px 0px 0px 0px;
+      object-fit: cover;
+    }
+    .inner__page__featured__image__icon {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      padding: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      left: calc(100% - 35px);
+      top: -35px;
+      background-color: $color-pomegranate;
+      svg {
+        width: 100%;
+      }
+    }
+  }
+}

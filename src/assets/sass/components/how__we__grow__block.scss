@@ -11,13 +11,26 @@
     aspect-ratio: 492/295;
     overflow: hidden;
     border-radius: 10px;
+    @include below($tablet-lg) {
+      margin: 0 auto 50px;
+      width: 60%;
+    }
+    @include below($mobile-lg) {
+      width: 100%;
+    }
   }
   .how__we__grow__steps {
     li {
       display: flex;
       align-items: flex-start;
+      @include below($mobile-lg) {
+        flex-flow: column;
+      }
       &:not(:last-child) {
         margin-bottom: 65px;
+        @include below($tablet-sm) {
+          margin-bottom: 30px;
+        }
       }
       .how__we__grow__steps__icon {
         width: 7vw;
@@ -35,22 +48,56 @@
         img {
           transition: 0.3s all ease-in-out;
         }
+        @include below($tablet-lg) {
+          width: 120px;
+          flex: 0 0 120px;
+        }
+        @include below($tablet-sm) {
+          width: 90px;
+          flex: 0 0 90px;
+          padding: 20px;
+        }
+        @include below($mobile-lg) {
+          margin: 0 auto 20px;
+        }
       }
       h4 {
         @include fontStyle(1.75vw, 1.2, 600, $color-black);
         margin-bottom: 15px;
         transition: 0.3s all ease-in-out;
+        @include below($tablet-lg) {
+          font-size: 27px;
+        }
+        @include below($tablet-sm) {
+          font-size: 24px;
+          margin-bottom: 5px;
+        }
+        @include below($mobile-lg) {
+          font-size: 22px;
+          text-align: center;
+        }
       }
       span {
         @include fontStyle(1.4vw, 1.5, 500, $color-river-bed);
         transition: 0.3s all ease-in-out;
+        @include below($tablet-lg) {
+          font-size: 22px;
+        }
+        @include below($tablet-sm) {
+          font-size: 20px;
+        }
+        @include below($mobile-lg) {
+          font-size: 18px;
+          display: block;
+          text-align: center;
+        }
       }
       &:hover {
         @include above($tablet-lg) {
           .how__we__grow__steps__icon {
             background-color: $color-pomegranate;
             img {
-            //   transform: scale(1.05);
+              //   transform: scale(1.05);
             }
           }
           h4,

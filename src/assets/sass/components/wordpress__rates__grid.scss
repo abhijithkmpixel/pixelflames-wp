@@ -6,6 +6,11 @@
     padding: 0 19px;
     margin-bottom: 50px;
   }
+  & + .cta__secondary {
+    @include below($mobile-lg) {
+      margin-right: auto;
+    }
+  }
 }
 .wordpress__rates__title__card {
   width: 100%;
@@ -14,9 +19,15 @@
   background-color: $color-coral2;
   border-radius: 18px;
   position: relative;
+  @include below($tablet-lg) {
+    padding: 30px 30px 0;
+  }
   h4 {
     @include fontStyle(2.5vw, 1.1, 700, $color-white);
     margin-bottom: 20px;
+    @include below($tablet-lg) {
+      font-size: 30px;
+    }
   }
   svg {
     width: 36px;
@@ -32,6 +43,9 @@
     bottom: 0;
     right: 65px;
     z-index: 1;
+    @include below($mobile-lg) {
+      position: static;
+    }
   }
 }
 .wordpress__rates__card {
@@ -44,6 +58,9 @@
   position: relative;
   transition: 0.3s all ease-in-out;
   overflow: hidden;
+  @include below($tablet-lg) {
+    padding: 30px 30px;
+  }
   &::after {
     content: "";
     width: 80%;
@@ -67,6 +84,9 @@
     transition: 0.3s all ease-in-out;
     position: relative;
     z-index: 5;
+    @include below($tablet-lg) {
+      font-size: 30px;
+    }
   }
 
   p {
@@ -76,6 +96,10 @@
     z-index: 5;
     margin-bottom: 45px;
     transition: 0.3s all ease-in-out;
+    @include below($tablet-lg) {
+      font-size: 18px;
+      margin-bottom: 25px;
+    }
     svg {
       width: 16px;
       vertical-align: sub;
@@ -91,9 +115,16 @@
     z-index: 5;
     padding-top: 45px;
     transition: 0.3s all ease-in-out;
+    @include below($tablet-lg) {
+      font-size: 26px;
+      padding-top: 25px;
+    }
     span {
       @include fontStyle(1.5vw, 1.26, 400, $color-black);
       transition: 0.3s all ease-in-out;
+      @include below($tablet-lg) {
+        font-size: 22px;
+      }
     }
   }
   h6 {
@@ -105,6 +136,9 @@
     z-index: 5;
     padding-top: 45px;
     transition: 0.3s all ease-in-out;
+    @include below($tablet-lg) {
+      font-size: 26px;
+    }
     // span {
     //   @include fontStyle(1.5vw, 1.26, 400, $color-black);
     //   transition: 0.3s all ease-in-out;
@@ -136,6 +170,9 @@
 .wordpress__package__row {
   margin: 0 -48px;
   padding-bottom: 90px;
+  @include below($mobile-lg) {
+    padding-bottom: 50px;
+  }
   //   border-bottom: 1px solid $color-black;
   & > div {
     padding: 0 48px;
@@ -146,6 +183,13 @@
     aspect-ratio: 456/467;
     border-radius: 12px;
     overflow: hidden;
+    @include below($tablet-lg) {
+      width: 60%;
+      margin: 0 auto 40px;
+    }
+    @include below($mobile-lg) {
+      width: 100%;
+    }
     img {
       object-fit: cover;
     }
@@ -153,9 +197,22 @@
 }
 
 .lets__work__together {
-  padding: 80px 0;
+  padding: 80px 0 10px;
+  @include below($mobile-lg) {
+    padding: 40px 0 10px;
+  }
   .lets__word__together_contact__info {
     position: relative;
+    padding: 45px 50px;
+    background-color: $color-chablis;
+    width: max-content;
+    margin-left: auto;
+    @include below($mobile-lg) {
+      padding: 30px 20px;
+    }
+    @include below($tablet-sm) {
+      width: 100%;
+    }
     img {
       position: absolute;
       width: 90px;
@@ -164,10 +221,37 @@
       left: 0;
       transform: translateX(-90%) translateY(-50%);
       z-index: 1;
+      @include below($tablet-sm) {
+        left: calc(100% - 50px);
+      }
+      @include below($mobile-lg) {
+        // display: none;
+        left: 95%;
+        top: 30px;
+      }
     }
-    padding: 45px 50px;
-    background-color: $color-chablis;
-    width: max-content;
-    margin-left: auto;
+    .animate_on_hover {
+      position: relative;
+      &::after {
+        content: "";
+        width: 100%;
+        height: 2px;
+        background-color: $color-river-bed;
+        transition: 0.4s transform ease-in-out;
+        transform: scaleX(0);
+        transform-origin: right;
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+      }
+      &:hover {
+        @include above($tablet-lg) {
+          &::after {
+            transform: scaleX(1);
+            transform-origin: left;
+          }
+        }
+      }
+    }
   }
 }

@@ -2,11 +2,35 @@
 
 .flexible__section {
   padding: 120px 0;
+  @include below($tablet-lg) {
+    padding: 80px 0;
+  }
+  @include below($mobile-lg) {
+    padding: 40px 0;
+  }
   .agency__growth__grid {
     margin-top: 120px;
+    @include below($tablet-lg) {
+      margin-top: 70px;
+    }
+    @include below($tablet-sm) {
+      margin-top: 30px;
+    }
+    @include below($mobile-lg) {
+      margin-top: 20px;
+    }
   }
   .title__primary {
     margin-bottom: 55px;
+    @include below($tablet-lg) {
+      margin-bottom: 40px;
+    }
+    @include below($tablet-sm) {
+      margin-bottom: 30px;
+    }
+    @include below($mobile-lg) {
+      margin-bottom: 20px;
+    }
   }
   .subtitle__primary {
     margin-bottom: 55px;

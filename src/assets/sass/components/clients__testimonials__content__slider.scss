@@ -6,11 +6,23 @@
   background-color: $color-white;
   box-shadow: 0 0 4px 0 rgba($color: #000000, $alpha: 0.1);
   border-radius: 15px;
+  @include below($tablet-lg) {
+    margin-bottom: 40px;
+  }
+  @include below($mobile-lg) {
+    padding: 30px 20px;
+  }
   .clients__testimonials__content__slide__item {
     width: 100%;
     p {
       @include fontStyle(1.4vw, 1.5, 500, $color-river-bed);
       margin-bottom: 15px;
+      @include below($tablet-lg) {
+        font-size: 24px;
+      }
+      @include below($mobile-lg) {
+        font-size: 18px;
+      }
     }
     .client_rating {
       display: flex;
@@ -22,6 +34,9 @@
         }
         svg {
           width: 15px;
+          @include below($tablet-lg) {
+            width: 20px;
+          }
         }
       }
     }
@@ -44,8 +59,21 @@
     position: relative;
     transition: 0.5s transform ease-in-out;
     cursor: pointer;
+    @include below($tablet-lg) {
+      width: 80px;
+      height: 80px;
+      flex: 0 0 80px;
+    }
+    @include below($mobile-lg) {
+      width: 50px;
+      height: 50px;
+      flex: 0 0 50px;
+    }
     &:not(:first-child) {
       margin-left: -25px;
+      @include below($tablet-lg) {
+        margin-left: -15px;
+      }
     }
     &:nth-last-child(1) {
       z-index: 1;
@@ -92,6 +120,12 @@
     display: flex !important;
     align-items: center;
     justify-content: center;
+    @include below($tablet-sm) {
+      padding: 0 30px;
+    }
+    @include below($mobile-lg) {
+      padding: 0 18px;
+    }
     img {
       object-position: center;
     }

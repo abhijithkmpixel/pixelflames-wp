@@ -12,9 +12,27 @@
     margin-bottom: 15px;
     background: linear-gradient(#fb6770, #f5333f);
   }
+  @include below($tablet-lg) {
+    font-size: 50px;
+  }
+  @include below($tablet-sm) {
+    font-size: 40px;
+  }
+  @include below($mobile-lg) {
+    font-size: 28px;
+  }
 }
 .subtitle__primary {
   @include fontStyle(1.4vw, 1.5, 500, $color-river-bed);
+  @include below($tablet-lg) {
+    font-size: 26px;
+  }
+  @include below($tablet-sm) {
+    font-size: 22px;
+  }
+  @include below($mobile-lg) {
+    font-size: 20px;
+  }
   strong {
     @include fontStyleInherit();
     font-weight: 700;
@@ -25,5 +43,14 @@
   }
   &--lg {
     font-size: 1.85vw;
+    @include below($tablet-lg) {
+      font-size: 30px;
+    }
+    @include below($tablet-sm) {
+      font-size: 26px;
+    }
+    @include below($mobile-lg) {
+      font-size: 22px;
+    }
   }
 }

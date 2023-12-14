@@ -1,0 +1,196 @@
+/** @format */
+
+footer {
+  background-color: $color-zircon;
+  padding: 90px 0;
+  h2 {
+    @include fontStyle(8.15vw, 0.9, 700, $color-black);
+    text-transform: capitalize;
+    @include below($mobile-lg) {
+      font-size: 50px;
+    }
+  }
+  .social__media__links {
+    display: flex;
+    align-items: center;
+    @include below($tablet-sm) {
+      width: 100%;
+      margin-top: 30px;
+    }
+    li {
+      &:not(:last-child) {
+        margin-right: 28px;
+        @include below($mobile-lg) {
+          margin-right: 15px;
+        }
+      }
+      a {
+        width: 48px;
+        height: 48px;
+        border: 1px solid $color-black;
+        border-radius: 50%;
+        background-color: transparent;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 13px;
+        transition: 0.3s all ease-in-out;
+        img {
+          transition: 0.3s all ease-in-out;
+          display: block;
+        }
+        &:hover {
+          @include above($tablet-lg) {
+            background-color: $color-black;
+            img {
+              filter: invert(1);
+            }
+          }
+        }
+      }
+    }
+  }
+  .bottom__footer {
+    margin-top: 90px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 100%;
+    @include below($tablet-sm) {
+      margin-top: 50px;
+    }
+  }
+  .contact__cta__wrap {
+    display: flex;
+    align-items: center;
+    // margin-right: 100px;
+    width: 35%;
+    flex: 0 0 35%;
+    @include below($tablet-lg) {
+      width: 30%;
+      flex: 0 0 30%;
+    }
+    @include below($tablet-sm) {
+      width: 100%;
+      flex: 0 0 100%;
+      margin-bottom: 30px;
+    }
+    .feat__image {
+      width: 160px;
+      height: 160px;
+      flex: 0 0 160px;
+      border-radius: 50%;
+      img {
+        object-fit: cover;
+      }
+      @include below($tablet-lg) {
+        width: 140px;
+        height: 140px;
+        flex: 0 0 140px;
+      }
+    }
+    .animated__arrow {
+      width: 160px;
+      height: 160px;
+      flex: 0 0 160px;
+      position: relative;
+      margin-left: -20px;
+      z-index: 5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @include below($tablet-lg) {
+        width: 140px;
+        height: 140px;
+        flex: 0 0 140px;
+      }
+      & > img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        animation: roll 8s linear infinite;
+        @keyframes roll {
+          0% {
+            transform: rotate(0);
+          }
+          100% {
+            transform: rotate(360deg);
+          }
+        }
+      }
+      .animated__arrow__inner {
+        width: 84px;
+        height: 84px;
+        flex: 0 0 84px;
+        border-radius: 50%;
+        background-color: $color-pomegranate;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        svg {
+          width: 30%;
+        }
+      }
+    }
+  }
+  .footer__links__outer {
+    display: flex;
+    flex-wrap: wrap;
+    width: 65%;
+    flex: 0 0 65%;
+    @include below($tablet-lg) {
+      width: 70%;
+      flex: 0 0 70%;
+    }
+    @include below($tablet-sm) {
+      width: 100%;
+      flex: 0 0 100%;
+    }
+    .footer__links__wrap {
+      width: 33.33%;
+      flex: 0 0 33.33%;
+      @include below($mobile-lg) {
+        width: 100%;
+        flex: 0 0 100%;
+        &:not(:last-child) {
+          margin-bottom: 35px;
+        }
+      }
+      h4 {
+        @include fontStyle(2.1vw, 1.2, 500, $color-black);
+        margin-bottom: 40px;
+        text-transform: capitalize;
+        @include below($tablet-lg) {
+          font-size: 26px;
+        }
+        @include below($mobile-lg) {
+          font-size: 24px;
+          margin-bottom: 20px;
+        }
+      }
+      .footer__links {
+        li {
+          &:not(:last-child) {
+            margin-bottom: 15px;
+          }
+          a {
+            text-decoration: none;
+            @include fontStyle(1.25vw, 1, 400, $color-black);
+            transition: 0.2s all ease-in-out;
+            @include below($tablet-lg) {
+              font-size: 20px;
+            }
+            @include below($mobile-lg) {
+              font-size: 18px;
+            }
+            &:hover {
+              @include above($tablet-lg) {
+                color: $color-pomegranate;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
