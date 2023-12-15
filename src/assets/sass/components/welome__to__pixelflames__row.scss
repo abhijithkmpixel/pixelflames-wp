@@ -1,0 +1,34 @@
+/** @format */
+
+.welome__to__pixelflames__row {
+  margin: 0 -44px;
+  & > div {
+    padding: 0 44px;
+  }
+  p {
+    @include fontStyle(1.45vw, 1.4, 400);
+  }
+  .welome__to__pixelflames__row__feat__image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 398/285;
+    border-radius: 12px;
+    overflow: auto;
+    img {
+      object-fit: cover;
+    }
+  }
+}
+.achievements__row {
+  margin: 50px -88px 0;
+  & > div {
+    padding: 0 88px;
+    &:not(:first-child) {
+      border-left: 1px solid rgba($color: $color-black, $alpha: 0.4);
+    }
+  }
+  h4 {
+    @include fontStyle(5.21vw, 1, 600, $color-black);
+    margin-bottom: 10px;
+  }
+}
