@@ -6,6 +6,7 @@
   background-color: $color-white;
   box-shadow: 0 0 4px 0 rgba($color: #000000, $alpha: 0.1);
   border-radius: 15px;
+  pointer-events: none;
   @include below($tablet-lg) {
     margin-bottom: 40px;
   }
@@ -106,7 +107,8 @@
       z-index: 10;
     }
     &.slick-current {
-      //   transform: translateY(-80px);
+        // transform: translateY(-80px);
+        transform: scale(1.2);
       z-index: 50;
     }
   }

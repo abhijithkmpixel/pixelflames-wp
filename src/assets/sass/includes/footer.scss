@@ -177,15 +177,30 @@ footer {
             text-decoration: none;
             @include fontStyle(1.25vw, 1, 400, $color-black);
             transition: 0.2s all ease-in-out;
+            position: relative;
             @include below($tablet-lg) {
               font-size: 20px;
             }
             @include below($mobile-lg) {
               font-size: 18px;
             }
+            &::after {
+              transform: translateX(-50%) scaleX(0);
+              content: "";
+              transition: 0.2s all ease-in-out;
+              width: 100%;
+              left: 50%;
+              top: calc(100% + 2px);
+              height: 1px;
+              background-color: $color-pomegranate;
+              position: absolute;
+            }
             &:hover {
               @include above($tablet-lg) {
                 color: $color-pomegranate;
+                &::after {
+                  transform: translateX(-50%) scaleX(1);
+                }
               }
             }
           }

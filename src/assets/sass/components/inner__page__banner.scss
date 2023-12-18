@@ -2,18 +2,108 @@
 
 .inner__page__banner {
   width: 100%;
-  overflow: hidden;
-  padding: 200px 0 60px;
+  overflow: hidden;position: relative;
+  @include below($mobile-lg) {
+    margin-bottom: 30px;
+  }
   .subtitle__primary {
     margin-bottom: 29px;
   }
+  .banner__side__element{
+    position: absolute;
+    right: 0;
+    top: 200px;
+    width: 20%;
+    height: auto;
+  }
+  .inner__page__banner__inner {
+    padding: 200px 0 200px;
+    background-color: $color-alice-blue;
+    position: relative;
+    @include below($mobile-lg) {
+      padding: 140px 0 60px;
+    }
+    .ball1 {
+      content: "";
+      width: 18px;
+      height: 18px;
+      display: block;
+      border-radius: 50%;
+      display: block;
+      background-color: $color-coral2;
+      left: 80%;
+      position: absolute;
+      top: 40%;
+    }
+    .ball2 {
+      content: "";
+      width: 25px;
+      height: 25px;
+      display: block;
+      border-radius: 50%;
+      display: block;
+      background: linear-gradient(#fb6770, #f5333f);
+      left: 58%;
+      position: absolute;
+      top: 65%;
+    }
+    .site__breadcrumbs {
+      display: flex;
+      margin: 40px -15px 0;
+      li {
+        @include fontStyle(1.4vw, 1, 600, $color-black);
+        text-transform: capitalize;
+        padding: 0 15px;
+        @include below($tablet-lg) {
+          font-size: 20px;
+        }
+        @include below($mobile-lg) {
+          font-size: 18px;
+        }
+        &:not(:last-child) {
+          position: relative;
+          &::after {
+            content: "";
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            display: block;
+            position: absolute;
+            background-color: $color-black;
+            top: 50%;
+            left: 100%;
+            transform: translate(-50%, -50%);
+          }
+        }
+        a {
+          @include fontStyle(1.4vw, 1, 400, $color-river-bed);
+          text-decoration: none;
+          @include below($tablet-lg) {
+            font-size: 20px;
+          }
+          @include below($mobile-lg) {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
   h1 {
     @include fontStyle(4.2vw, 1, 600, $color-black);
-    margin-bottom: 40px;
+    margin-bottom: 20px;
+    @include below($tablet-lg) {
+      font-size: 60px;
+    }
+    @include below($mobile-lg) {
+      font-size: 38px;
+    }
   }
   .inner__page__featured__image {
-    margin-top: 70px;
+    margin-top: -120px;
     position: relative;
+    @include below($mobile-lg) {
+      margin-top: -60px;
+    }
     img {
       width: 100%;
       height: auto;
@@ -21,6 +111,13 @@
       aspect-ratio: 1162/333;
       border-radius: 100px 0px 0px 0px;
       object-fit: cover;
+      @include below($tablet-sm) {
+        border-radius: 60px 0px 0px 0px;
+      }
+      @include below($mobile-lg) {
+        border-radius: 36px 0px 0px 0px;
+        aspect-ratio: 1162/600;
+      }
     }
     .inner__page__featured__image__icon {
       width: 70px;

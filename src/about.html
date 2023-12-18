@@ -3,21 +3,40 @@
 <partial src="head.html" page="about" title="About - Website"></partial>
 <partial src="header.html"></partial>
 <section class="inner__page__banner" data-scroll-section>
-  <div class="container-fluid" data-scroll>
-    <h4 class="subtitle__primary" data-scroll><strong>ABOUT</strong></h4>
-    <div class="row" data-scroll>
-      <div class="col-12 col-md-8 col-lg-6" data-scroll>
-        <h1 data-scroll>Your trusted digital Solutions provider</h1>
-      </div>
-      <div class="col-12 col-md-9 col-lg-7" data-scroll>
-        <h4 class="subtitle__primary" data-scroll>
-          Enthusiastically extend extensive customer service before
-          best-of-breed convergence completely.
-        </h4>
+  <div class="inner__page__banner__inner">
+    <img src="./uploads/about/bannerelement.svg" alt="" class="banner__side__element">
+    <span class="ball1" data-scroll data-scroll-speed="3"></span
+    ><span class="ball2" data-scroll data-scroll-speed="1.6"></span>
+    <div class="container-fluid" data-scroll>
+      <h4 class="subtitle__primary mb-3 staggerTitle" data-scroll>
+        <strong>ABOUT</strong>
+      </h4>
+      <div class="row" data-scroll>
+        <div class="col-12 col-md-8 col-xl-6" data-scroll>
+          <h1 data-scroll class="staggerTitle">
+            Your trusted digital Solutions provider
+          </h1>
+        </div>
+        <div class="col-12 col-md-9 col-xl-7" data-scroll>
+          <!-- <h4 class="subtitle__primary staggerTitle" data-scroll>
+            Enthusiastically extend extensive customer service before
+            best-of-breed convergence completely.
+          </h4> -->
+          <ul class="site__breadcrumbs staggerTitle">
+            <li>
+              <a href="#">Home</a>
+            </li>
+            <li>About</li>
+          </ul>
+        </div>
       </div>
     </div>
-    <div class="inner__page__featured__image" data-scroll>
-      <img src="./uploads/about/fimg.jpg" alt="" data-scroll />
+  </div>
+  <div class="container-fluid" data-scroll>
+    <div class="inner__page__featured__image staggerTitle" data-scroll>
+      <picture>
+        <img src="./uploads/about/fimg.jpg" alt="" data-scroll />
+      </picture>
       <div class="inner__page__featured__image__icon" data-scroll>
         <svg
           width="37"
@@ -46,19 +65,21 @@
   <div class="container-fluid" data-scroll>
     <div class="row" data-scroll>
       <div class="col-12 col-lg-8 col-xl-7" data-scroll>
-        <h2 class="title__primary" data-scroll>
+        <h2 class="title__primary animate__up" data-scroll>
           Welcome to PixelFlames – Your Trusted WordPress Development Partner!
           <span class="title__dot"></span>
         </h2>
       </div>
     </div>
     <div class="row welome__to__pixelflames__row" data-scroll>
-      <div class="col-12 col-md-6 col-xl-4" data-scroll>
+      <div class="col-12 col-md-6 col-xl-4 stagger__up" data-scroll>
         <div class="welome__to__pixelflames__row__feat__image" data-scroll>
-          <img src="./uploads/about/i1.png" alt="" data-scroll />
+          <picture>
+            <img src="./uploads/about/i1.png" alt="" data-scroll />
+          </picture>
         </div>
       </div>
-      <div class="col-12 col-md-6 col-xl-8" data-scroll>
+      <div class="col-12 col-md-6 col-xl-8 stagger__up" data-scroll>
         <p>
           With a rich history spanning 15 years since our establishment in
           2008,<br />
@@ -67,11 +88,11 @@
           unparalleled WordPress experiences.
         </p>
         <div class="row achievements__row" data-scroll>
-          <div class="col-12 col-md-6" data-scroll>
+          <div class="col-6 col-md-6 stagger__up" data-scroll>
             <h4 data-scroll>100+</h4>
             <p data-scroll>100+ creative Futuristic</p>
           </div>
-          <div class="col-12 col-md-6" data-scroll>
+          <div class="col-6 col-md-6 stagger__up" data-scroll>
             <h4 data-scroll>15yr</h4>
             <p data-scroll>have Working 15 years+</p>
           </div>
@@ -81,16 +102,18 @@
   </div>
 </section>
 
-<section class="flexible__section">
-  <div class="container-fluid pe-0-">
-    <div class="row mb-5 team__members__row">
-      <div class="col-12 col-lg-4 col-xl-3">
-        <h2 class="title__primary mb-0" data-scroll>
+<section class="flexible__section section__alice__blue" data-scroll-section>
+  <div class="container-fluid pe-0-" data-scroll>
+    <div class="row mb-5- team__members__row" data-scroll>
+      <div class="col-12 col-lg-4 col-xl-3 animate__up" data-scroll>
+        <h2 class="title__primary mb-1" data-scroll>
           Our Dedicated Team
           <span class="title__dot"></span>
         </h2>
       </div>
-      <div class="col-12 col-lg-8 col-xl-7 d-flex align-items-end">
+      <div
+        class="col-12 col-lg-8 col-xl-7 d-flex align-items-end animate__up"
+        data-scroll>
         <p>
           Want to start a project or need our expert consultation? It is a long
           established fact that a reader will be distracted by the readable
@@ -99,14 +122,20 @@
       </div>
     </div>
   </div>
-  <div class="container-fluid pe-0">
-    <div class="row team__members__row">
-      <div class="col-12 col-lg-4 col-xl-3">
-        <div class="team__ceo"><img src="./uploads/about/a1.png" alt="" /></div>
+  <div class="container-fluid pe-0" data-scroll>
+    <div class="row team__members__row" data-scroll>
+      <div class="col-12 col-lg-4 col-xl-3 animate__up" data-scroll>
+        <div class="team__ceo mb-5" data-scroll>
+          <img src="./uploads/about/a1.png" alt="" data-scroll />
+        </div>
+        <h6 class="subtitle__primary text-uppercase mb-0">
+          <strong>Subin Kurian</strong>
+        </h6>
+        <h6 class="subtitle__primary">CEO Pixelflames</h6>
       </div>
-      <div class="col-12 col-lg-8 col-xl-9">
-        <div class="team__members__slider">
-          <div class="team__members__slide__item">
+      <div class="col-12 col-lg-8 col-xl-9 animate__up" data-scroll>
+        <div class="team__members__slider" data-scroll>
+          <div class="team__members__slide__item" data-scroll>
             <div class="hover_tooltil">
               <h5>Abhijith KM</h5>
               <span>Developer</span>
@@ -115,9 +144,13 @@
                 <img src="./assets/img/icons/whatsapp-icon.svg" alt=""
               /></a>
             </div>
-            <img src="./uploads/about/a2.png" alt="" />
+            <div class="team__members__slide__item__inner">
+              <img src="./uploads/about/a2.png" alt="" />
+            </div>
           </div>
-          <div class="team__members__slide__item">
+          <div
+            class="team__members__slide__item team__members__slide__item--rounded"
+            data-scroll>
             <div class="hover_tooltil">
               <h5>Vishnu</h5>
               <span>Developer</span>
@@ -126,10 +159,350 @@
                 <img src="./assets/img/icons/whatsapp-icon.svg" alt=""
               /></a>
             </div>
-            <img src="./uploads/about/a3.png" alt="" />
+            <div class="team__members__slide__item__inner">
+              <img src="./uploads/about/a3.png" alt="" />
+            </div>
+          </div>
+          <div class="team__members__slide__item" data-scroll>
+            <div class="hover_tooltil">
+              <h5>Anshad</h5>
+              <span>Developer</span>
+              <a href="tel:+9715453212"
+                >+971 545 3212
+                <img src="./assets/img/icons/whatsapp-icon.svg" alt=""
+              /></a>
+            </div>
+            <div class="team__members__slide__item__inner">
+              <img src="./uploads/about/a4.png" alt="" />
+            </div>
+          </div>
+          <div class="team__members__slide__item" data-scroll>
+            <div class="hover_tooltil">
+              <h5>Vimal</h5>
+              <span>Developer</span>
+              <a href="tel:+9715453212"
+                >+971 545 3212
+                <img src="./assets/img/icons/whatsapp-icon.svg" alt=""
+              /></a>
+            </div>
+            <div class="team__members__slide__item__inner">
+              <img src="./uploads/about/a5.png" alt="" />
+            </div>
+          </div>
+          <div class="team__members__slide__item" data-scroll>
+            <div class="hover_tooltil">
+              <h5>Ramya</h5>
+              <span>Developer</span>
+              <a href="tel:+9715453212"
+                >+971 545 3212
+                <img src="./assets/img/icons/whatsapp-icon.svg" alt=""
+              /></a>
+            </div>
+            <div class="team__members__slide__item__inner">
+              <img src="./uploads/about/a6.png" alt="" />
+            </div>
+          </div>
+          <div class="team__members__slide__item" data-scroll>
+            <div class="hover_tooltil">
+              <h5>Akshay</h5>
+              <span>Developer</span>
+              <a href="tel:+9715453212"
+                >+971 545 3212
+                <img src="./assets/img/icons/whatsapp-icon.svg" alt=""
+              /></a>
+            </div>
+            <div class="team__members__slide__item__inner">
+              <img src="./uploads/about/a3.png" alt="" />
+            </div>
+          </div>
+          <div
+            class="team__members__slide__item team__members__slide__item--rounded"
+            data-scroll>
+            <div class="hover_tooltil">
+              <h5>Salih</h5>
+              <span>Developer</span>
+              <a href="tel:+9715453212"
+                >+971 545 3212
+                <img src="./assets/img/icons/whatsapp-icon.svg" alt=""
+              /></a>
+            </div>
+            <div class="team__members__slide__item__inner">
+              <img src="./uploads/about/a2.png" alt="" />
+            </div>
+          </div>
+          <div
+            class="team__members__slide__item team__members__slide__item--rounded"
+            data-scroll>
+            <div class="hover_tooltil">
+              <h5>Abhijith KM</h5>
+              <span>Developer</span>
+              <a href="tel:+9715453212"
+                >+971 545 3212
+                <img src="./assets/img/icons/whatsapp-icon.svg" alt=""
+              /></a>
+            </div>
+            <div class="team__members__slide__item__inner">
+              <img src="./uploads/about/a2.png" alt="" />
+            </div>
+          </div>
+          <div class="team__members__slide__item" data-scroll>
+            <div class="hover_tooltil">
+              <h5>Vishnu</h5>
+              <span>Developer</span>
+              <a href="tel:+9715453212"
+                >+971 545 3212
+                <img src="./assets/img/icons/whatsapp-icon.svg" alt=""
+              /></a>
+            </div>
+            <div class="team__members__slide__item__inner">
+              <img src="./uploads/about/a3.png" alt="" />
+            </div>
+          </div>
+          <div class="team__members__slide__item" data-scroll>
+            <div class="hover_tooltil">
+              <h5>Anshad</h5>
+              <span>Developer</span>
+              <a href="tel:+9715453212"
+                >+971 545 3212
+                <img src="./assets/img/icons/whatsapp-icon.svg" alt=""
+              /></a>
+            </div>
+            <div class="team__members__slide__item__inner">
+              <img src="./uploads/about/a4.png" alt="" />
+            </div>
+          </div>
+          <div class="team__members__slide__item" data-scroll>
+            <div class="hover_tooltil">
+              <h5>Vimal</h5>
+              <span>Developer</span>
+              <a href="tel:+9715453212"
+                >+971 545 3212
+                <img src="./assets/img/icons/whatsapp-icon.svg" alt=""
+              /></a>
+            </div>
+            <div class="team__members__slide__item__inner">
+              <img src="./uploads/about/a5.png" alt="" />
+            </div>
+          </div>
+          <div class="team__members__slide__item" data-scroll>
+            <div class="hover_tooltil">
+              <h5>Ramya</h5>
+              <span>Developer</span>
+              <a href="tel:+9715453212"
+                >+971 545 3212
+                <img src="./assets/img/icons/whatsapp-icon.svg" alt=""
+              /></a>
+            </div>
+            <div class="team__members__slide__item__inner">
+              <img src="./uploads/about/a6.png" alt="" />
+            </div>
+          </div>
+          <div class="team__members__slide__item" data-scroll>
+            <div class="hover_tooltil">
+              <h5>Akshay</h5>
+              <span>Developer</span>
+              <a href="tel:+9715453212"
+                >+971 545 3212
+                <img src="./assets/img/icons/whatsapp-icon.svg" alt=""
+              /></a>
+            </div>
+            <div class="team__members__slide__item__inner">
+              <img src="./uploads/about/a3.png" alt="" />
+            </div>
+          </div>
+          <div class="team__members__slide__item" data-scroll>
+            <div class="hover_tooltil">
+              <h5>Salih</h5>
+              <span>Developer</span>
+              <a href="tel:+9715453212"
+                >+971 545 3212
+                <img src="./assets/img/icons/whatsapp-icon.svg" alt=""
+              /></a>
+            </div>
+            <div class="team__members__slide__item__inner">
+              <img src="./uploads/about/a2.png" alt="" />
+            </div>
           </div>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+<section class="flexible__alternate__grid" data-scroll-section>
+  <div class="container-fluid" data-scroll>
+    <div class="row" data-scroll>
+      <div class="col-12 col-lg-6 col-xl-4 animate__right" data-scroll>
+        <div class="feat__img">
+          <picture>
+            <img src="./uploads/about/i2.png" alt="" data-scroll />
+          </picture>
+        </div>
+      </div>
+      <div
+        class="col-12 col-lg-6 col-xl-8 d-flex flex-column justify-content-center animate__left"
+        data-scroll>
+        <h2 class="title__primary" data-scroll>
+          Expertise in WordPress Development
+        </h2>
+        <p>
+          Our journey began with a passion for WordPress, and over the years, it
+          has evolved into a specialization. We bring extensive expertise in
+          WordPress development, turning ideas into dynamic and functional
+          websites. Crafting code is not just a job for us; it's a form of art.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="flexible__alternate__grid" data-scroll-section>
+  <div class="container-fluid" data-scroll>
+    <div class="row" data-scroll>
+      <div class="col-12 col-lg-6 col-xl-4 animate__left" data-scroll>
+        <div class="feat__img">
+          <picture>
+            <img src="./uploads/about/i3.png" alt="" data-scroll />
+          </picture>
+        </div>
+      </div>
+      <div
+        class="col-12 col-lg-6 col-xl-8 d-flex flex-column justify-content-center animate__right"
+        data-scroll>
+        <h2 class="title__primary" data-scroll>
+          Proprietary Design System for WordPress
+        </h2>
+        <p>
+          In our quest for efficiency, we've developed our proprietary design
+          system exclusively for WordPress. This system is the secret sauce that
+          makes our development process swift and seamless, ensuring your
+          project is not just delivered but exceeds expectations.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="flexible__alternate__grid" data-scroll-section>
+  <div class="container-fluid" data-scroll>
+    <div class="row" data-scroll>
+      <div class="col-12 col-lg-6 col-xl-4 animate__right" data-scroll>
+        <div class="feat__img">
+          <picture>
+            <img src="./uploads/about/i4.png" alt="" data-scroll />
+          </picture>
+        </div>
+      </div>
+      <div
+        class="col-12 col-lg-6 col-xl-8 d-flex flex-column justify-content-center animate__left"
+        data-scroll>
+        <h2 class="title__primary" data-scroll>
+          Quality Assurance and AI Integration
+        </h2>
+        <p>
+          Quality is the heartbeat of PixelFlames. Our coding practices adhere
+          to the highest standards, and to stay ahead, we incorporate artificial
+          intelligence for SEO and quality assurance in our code. This ensures
+          that your website not only looks great but performs exceptionally
+          well.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="flexible__section section__bg__gallery" data-scroll-section>
+  <div class="container-fluid" data-scroll>
+    <h2 class="title__primary mb-4 animate__up" data-scroll>
+      Happy Clients,<br />
+      Quality Results
+      <span class="title__dot"></span>
+    </h2>
+    <h6 class="subtitle__primary animate__up" data-scroll>
+      The true measure of our success is the satisfaction of our clients. Over
+      the years, we've had the privilege of working with many happy clients who
+      have witnessed the excellence in our work. Their success stories inspire
+      us to continue pushing boundaries.
+    </h6>
+  </div>
+  <div class="clients__logo__slider_2 animate__up" data-scroll>
+    <div class="clients__logo__wrap" data-scroll>
+      <img src="./uploads/home/adidas.svg" alt="" data-scroll />
+    </div>
+    <div class="clients__logo__wrap" data-scroll>
+      <img src="./uploads/home/toyota.svg" alt="" data-scroll />
+    </div>
+    <div class="clients__logo__wrap" data-scroll>
+      <img src="./uploads/home/intrax.svg" alt="" data-scroll />
+    </div>
+    <div class="clients__logo__wrap" data-scroll>
+      <img src="./uploads/home/coke.svg" alt="" data-scroll />
+    </div>
+    <div class="clients__logo__wrap" data-scroll>
+      <img src="./uploads/home/prada.svg" alt="" data-scroll />
+    </div>
+    <div class="clients__logo__wrap" data-scroll>
+      <img src="./uploads/home/ss.svg" alt="" data-scroll />
+    </div>
+    <div class="clients__logo__wrap" data-scroll>
+      <img src="./uploads/home/adidas.svg" alt="" data-scroll />
+    </div>
+    <div class="clients__logo__wrap" data-scroll>
+      <img src="./uploads/home/toyota.svg" alt="" data-scroll />
+    </div>
+    <div class="clients__logo__wrap" data-scroll>
+      <img src="./uploads/home/intrax.svg" alt="" data-scroll />
+    </div>
+  </div>
+  <div class="clients__logo__slider_3 animate__up" data-scroll dir="rtl">
+    <div class="clients__logo__wrap" data-scroll>
+      <img src="./uploads/home/adidas.svg" alt="" data-scroll />
+    </div>
+    <div class="clients__logo__wrap" data-scroll>
+      <img src="./uploads/home/toyota.svg" alt="" data-scroll />
+    </div>
+    <div class="clients__logo__wrap" data-scroll>
+      <img src="./uploads/home/intrax.svg" alt="" data-scroll />
+    </div>
+    <div class="clients__logo__wrap" data-scroll>
+      <img src="./uploads/home/coke.svg" alt="" data-scroll />
+    </div>
+    <div class="clients__logo__wrap" data-scroll>
+      <img src="./uploads/home/prada.svg" alt="" data-scroll />
+    </div>
+    <div class="clients__logo__wrap" data-scroll>
+      <img src="./uploads/home/ss.svg" alt="" data-scroll />
+    </div>
+    <div class="clients__logo__wrap" data-scroll>
+      <img src="./uploads/home/adidas.svg" alt="" data-scroll />
+    </div>
+    <div class="clients__logo__wrap" data-scroll>
+      <img src="./uploads/home/toyota.svg" alt="" data-scroll />
+    </div>
+    <div class="clients__logo__wrap" data-scroll>
+      <img src="./uploads/home/intrax.svg" alt="" data-scroll />
+    </div>
+  </div>
+</section>
+<section class="flexible__section" data-scroll-section>
+  <div class="container-fluid" data-scroll>
+    <h2 class="title__primary mb-4 animate__up" data-scroll>
+      A Supportive<br />
+      and Responsive Team
+      <span class="title__dot"></span>
+    </h2>
+    <h6 class="subtitle__primary animate__up" data-scroll>
+      At PixelFlames, we are not just developers; we are partners in your
+      success. Our team is characterized by a culture of helpfulness, ensuring
+      that your queries are addressed promptly. We understand the value of time
+      in this fast-paced digital landscape.
+    </h6>
+    <h6 class="subtitle__primary animate__up" data-scroll>
+      As you explore PixelFlames, you're not just choosing a development team;
+      you're selecting a collaborative partner committed to transforming your
+      vision into a digital reality. Join us on this journey, and let's create
+      something extraordinary together.
+    </h6>
+    <div class="full_width_feat__image animate__up" data-scroll>
+      <picture>
+        <img src="./uploads/about/fimg2.jpg" alt="" data-scroll />
+      </picture>
     </div>
   </div>
 </section>

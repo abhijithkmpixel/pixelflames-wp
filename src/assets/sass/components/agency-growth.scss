@@ -101,12 +101,19 @@
       font-size: 18px;
     }
   }
+  p {
+    @include fontStyle(1vw, 1.5, 500, $color-river-bed);
+    margin-bottom: 0;
+  }
   &:hover {
     @include above($tablet-lg) {
       border-color: $color-pomegranate;
       background-color: $color-pomegranate;
       * {
         color: $color-white !important;
+      }
+      h6 {
+        opacity: 0.2;
       }
       .cta__primary {
         svg {
@@ -126,6 +133,30 @@
         img {
           filter: grayscale(100%) contrast(1000%) invert(1);
           transform: translate(0);
+        }
+      }
+    }
+  }
+}
+.agency__growth__grid--service {
+  .agency__growth__card {
+    .agency__growth__card__header {
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-bottom: 20px;
+      h6 {
+        @include fontStyle(4.87vw, 1.1, 500, $color-gallery);
+        transition: 0.3s all ease-in-out;
+      }
+      h4 {
+        margin-top: 20px;
+        font-size: 1.53vw;
+        margin-bottom: 0px;
+        @include below($tablet-lg) {
+          font-size: 26px;
+        }
+        @include below($tablet-sm) {
+          font-size: 20px;
         }
       }
     }

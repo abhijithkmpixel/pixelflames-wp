@@ -14,6 +14,11 @@ section {
   &:after {
     box-sizing: inherit;
   }
+  &::selection {
+    background-color: $color-pomegranate;
+    color: $color-white;
+  }
+  user-select: none;
 }
 
 a,
@@ -100,4 +105,56 @@ img {
   width: 100%;
   height: 100%;
   object-fit: contain;
+}
+[data-load-container] {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  transition: 0.35s all ease-in-out;
+}
+[data-scroll-container] {
+  position: fixed;
+  // top: 0;
+  // right: 0;
+  // bottom: 0;
+  // left: 0;
+  width: 100vw;
+  // max-width: 100vw;
+  // overflow: hidden;
+  // transition: 0.35s all ease-in-out;
+  @include below($tablet-lg) {
+    position: static;
+  }
+}
+body {
+  height: 100vh;
+}
+// .is-view {
+//   visibility: visible !important;
+// }
+html.has-scroll-smooth {
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+.preloader {
+  position: fixed;
+  z-index: 101;
+  width: 100%;
+  max-width: 100vw;
+  height: 100%;
+  max-height: 100vh;
+  top: 0;
+  left: 0;
+  transition: 0.5s all ease-in-out;
+  background-color: $color-gallery;
+}
+picture {
+  width: 100%;
+  height: 100%;
+  display: block;
 }

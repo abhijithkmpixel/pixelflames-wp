@@ -28,6 +28,12 @@ header {
     display: block;
     width: 12vw;
     height: auto;
+    // position: absolute;
+    // top: calc((100vh / 2) - 40px);
+    // left: calc((100vw / 2) - 90px);
+    z-index: 102;
+    // transform: translate(-50%, -50%);
+    transition: 0s;
     @include below($tablet-lg) {
       width: 220px;
     }
@@ -57,9 +63,24 @@ header {
           text-transform: uppercase;
           letter-spacing: 0.7px;
           transition: 0.2s all ease-in-out;
+          position: relative;
+          &::after {
+            transform: translateX(-50%) scaleX(0);
+            content: "";
+            transition: 0.2s all ease-in-out;
+            width: 100%;
+            left: 50%;
+            top: calc(100% + 5px);
+            height: 1.5px;
+            background-color: $color-pomegranate;
+            position: absolute;
+          }
           &:hover {
             @include above($tablet-lg) {
               color: $color-pomegranate;
+              &::after {
+                transform: translateX(-50%) scaleX(1);
+              }
             }
           }
         }

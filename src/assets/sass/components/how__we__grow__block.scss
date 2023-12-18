@@ -11,6 +11,9 @@
     aspect-ratio: 492/295;
     overflow: hidden;
     border-radius: 10px;
+    img {
+      object-fit: cover;
+    }
     @include below($tablet-lg) {
       margin: 0 auto 50px;
       width: 60%;

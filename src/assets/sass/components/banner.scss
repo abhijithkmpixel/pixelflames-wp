@@ -65,6 +65,7 @@
     }
   }
   .hero__banner__featured__side__Image__wrap {
+    position: relative;
     @include below($tablet-lg) {
       display: flex;
       align-items: flex-end;
@@ -85,4 +86,144 @@
       margin-top: 20px;
     }
   }
+  .float__image {
+    position: absolute;
+    z-index: 5;
+    transition: 0s all ease-in-out;
+    &.float__img1 {
+      width: 190px;
+      height: auto;
+      left: 0;
+      top: 35%;
+      // animation: focus1 ease-in-out 16s infinite;
+      // @keyframes focus1 {
+      //   0% {
+      //     transform: scale(1);
+      //   }
+      //   20% {
+      //     transform: scale(1.3);
+      //   }
+      //   50% {
+      //     transform: scale(1);
+      //   }
+      //   75% {
+      //     transform: scale(1);
+      //   }
+      //   100% {
+      //     transform: scale(1);
+      //   }
+      // }
+    }
+    &.float__img2 {
+      width: 120px;
+      height: auto;
+      right: 190px;
+      top: 40%;
+      // animation: focus2 ease-in-out 16s infinite;
+      // @keyframes focus2 {
+      //   0% {
+      //     transform: scale(1);
+      //   }
+      //   20% {
+      //     transform: scale(1);
+      //   }
+      //   50% {
+      //     transform: scale(1.3);
+      //   }
+      //   75% {
+      //     transform: scale(1);
+      //   }
+      //   100% {
+      //     transform: scale(1);
+      //   }
+      // }
+    }
+    &.float__img3 {
+      width: 70px;
+      height: auto;
+      left: 30px;
+      bottom: 26%;
+      // animation: focus3 ease-in-out 16s infinite;
+      // @keyframes focus3 {
+      //   0% {
+      //     transform: scale(1);
+      //   }
+      //   20% {
+      //     transform: scale(1);
+      //   }
+      //   50% {
+      //     transform: scale(1);
+      //   }
+      //   75% {
+      //     transform: scale(1.3);
+      //   }
+      //   100% {
+      //     transform: scale(1);
+      //   }
+      // }
+    }
+    &.float__img4 {
+      width: 170px;
+      height: auto;
+      right: 200px;
+      bottom: 10%;
+      // animation: focus4 ease-in-out 16s infinite;
+      // @keyframes focus4 {
+      //   0% {
+      //     transform: scale(1);
+      //   }
+      //   20% {
+      //     transform: scale(1);
+      //   }
+      //   50% {
+      //     transform: scale(1);
+      //   }
+      //   75% {
+      //     transform: scale(1);
+      //   }
+      //   100% {
+      //     transform: scale(1.3);
+      //   }
+      // }
+    }
+    // animation: focuss 16s linear infinite;
+  }
+}
+
+
+@keyframes zoomAnimation {
+  0%, 100% {
+    transform: scale(1);
+  }
+  10% {
+    transform: scale(1);
+  }
+  20% {
+    transform: scale(1.2);
+  }
+  30% {
+    transform: scale(1.2);
+  }
+  40% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1);
+  }
+}
+
+.float__img1 {
+  animation: zoomAnimation 12s infinite 0s; /* Adjust the duration as needed */
+}
+
+.float__img2 {
+  animation: zoomAnimation 12s infinite 3s; /* Adjust the duration and delay as needed */
+}
+
+.float__img3 {
+  animation: zoomAnimation 12s infinite 6s; /* Adjust the duration and delay as needed */
+}
+
+.float__img4 {
+  animation: zoomAnimation 12s infinite 9s; /* Adjust the duration and delay as needed */
 }

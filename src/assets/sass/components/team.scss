@@ -2,8 +2,20 @@
 
 .team__members__row {
   margin: 0 -50px;
+  @include below($tablet-lg) {
+    margin: 0 -20px;
+  }
   & > div {
     padding: 0 50px;
+    @include below($tablet-lg) {
+      padding: 0 20px;
+    }
+  }
+  p {
+    @include fontStyle(1.45vw, 1.5, 400, $color-black);
+    @include below($tablet-lg) {
+      font-size: 20px;
+    }
   }
   .team__ceo {
     width: 100%;
@@ -11,18 +23,139 @@
     aspect-ratio: 253/316;
     border-radius: 12px;
     overflow: auto;
+    margin-top: 90px;
+    @include below($tablet-lg) {
+      margin-top: 50px;
+    }
+    @include below($tablet-sm) {
+      width: 60%;
+      margin: 50px auto 0;
+    }
+    @include below($mobile-lg) {
+      margin-bottom: 14px !important;
+      width: 80%;
+    }
+
     img {
       object-fit: cover;
+    }
+    & ~ .subtitle__primary {
+      @include below($tablet-sm) {
+        font-size: 40px;
+        text-align: center;
+      }
+      @include below($mobile-lg) {
+        font-size: 22px;
+      }
     }
   }
 }
 .team__members__slider {
+  &:hover {
+    .slick__prev,
+    .slick__next {
+      @include above($tablet-lg) {
+        transform: translateY(-50%) translateX(0) !important;
+        opacity: 1 !important;
+      }
+    }
+  }
+  .slick__arr {
+    width: 70px;
+    flex: 0 0 70px;
+    height: 70px;
+    border-radius: 50%;
+    padding: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-white;
+    box-shadow: 0 0 4px 0 rgba($color: #000000, $alpha: 0.4);
+    border: 0;
+    outline: 0;
+    position: absolute;
+    z-index: 10;
+    top: 56%;
+    transition: 0.3s all ease-in-out;
+    @include below($tablet-lg) {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    @include below($mobile-lg) {
+      width: 45px;
+      flex: 0 0 45px;
+      height: 45px;
+      padding: 10px;
+    }
+    svg {
+      width: 100%;
+      height: auto;
+    }
+    &.slick__prev {
+      left: 0;
+      @include above($tablet-lg) {
+        transform: translateY(-50%) translateX(-50px);
+        opacity: 0;
+      }
+      @include below($tablet-sm) {
+        left: 30px;
+      }
+      @include below($mobile-lg) {
+        left: -10px;
+      }
+    }
+    &.slick__next {
+      right: 30px;
+      @include above($tablet-lg) {
+        transform: translateY(-50%) translateX(50px);
+        opacity: 0;
+      }
+      @include below($mobile-lg) {
+        right: 6px;
+      }
+    }
+  }
   width: 100%;
+
+  .slick-list.draggable {
+    margin: 0 -11px;
+    padding: 90px 0 0;
+    // overflow: visible;
+    @include below($tablet-lg) {
+      padding-top: 0;
+      margin-top: 50px;
+    }
+    @include below($mobile-lg) {
+      margin-top: 0px;
+    }
+  }
   .team__members__slide__item {
-    width: 190px;
+    width: 16vw !important;
     height: auto;
     aspect-ratio: 1/1;
     position: relative;
+    padding: 0 11px;
+    transition: 0.5s all ease-in-out;
+    @include below($tablet-lg) {
+      width: 24vw !important;
+    }
+    @include below($tablet-sm) {
+      width: 35vw !important;
+    }
+    @include below($mobile-lg) {
+      width: 45vw !important;
+      padding: 8px;
+    }
+
+    .team__members__slide__item__inner {
+      border-radius: 12px;
+      transition: 0.5s all ease-in-out;
+      transition-delay: 0;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 1/1;
+      overflow: hidden;
+    }
     .hover_tooltil {
       display: block;
       position: absolute;
@@ -30,9 +163,14 @@
       border-radius: 10px 10px 18px 0;
       box-shadow: 0 0 4px 0 rgba($color: #000000, $alpha: 0.4);
       width: max-content;
-      left: calc(100% - 30px);
-      bottom: calc(100% - 30px);
+      left: calc(100% - 50px);
+      bottom: calc(100% - 50px);
       padding: 16px 20px;
+      transition: 0.5s all ease-in-out;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-20px);
+      z-index: 30;
       h5 {
         @include fontStyle(1.32vw, 1, 500, $color-black);
         margin-bottom: 5px;
@@ -44,14 +182,50 @@
       }
       a {
         @include fontStyle(1.2vw, 1, 500, $color-black);
-        display: flex;
-        img{
-
+        display: inline-flex;
+        align-items: center;
+        text-decoration: none;
+        img {
+          margin-left: 6px;
+          width: 28px;
+          height: auto;
+          aspect-ratio: 1/1;
         }
       }
     }
     & > img {
       object-fit: cover;
+    }
+    &:hover {
+      @include above($tablet-lg) {
+        .hover_tooltil {
+          transform: translateY(0);
+          opacity: 1;
+          visibility: visible;
+        }
+        .team__members__slide__item__inner {
+          border-radius: 50%;
+        }
+      }
+    }
+    &--rounded {
+      .team__members__slide__item__inner {
+        @include above($tablet-lg) {
+          border-radius: 50%;
+        }
+      }
+      &:hover {
+        @include above($tablet-lg) {
+          // .hover_tooltil {
+          //   transform: translateY(0);
+          //   opacity: 1;
+          //   visibility: visible;
+          // }
+          .team__members__slide__item__inner {
+            border-radius: 12px;
+          }
+        }
+      }
     }
   }
 }

@@ -2,11 +2,20 @@
 
 .welome__to__pixelflames__row {
   margin: 0 -44px;
+  @include below($tablet-lg) {
+    margin: 0 -20px;
+  }
   & > div {
     padding: 0 44px;
+    @include below($tablet-lg) {
+      padding: 0 20px;
+    }
   }
   p {
     @include fontStyle(1.45vw, 1.4, 400);
+    @include below($tablet-lg) {
+      font-size: 20px;
+    }
   }
   .welome__to__pixelflames__row__feat__image {
     width: 100%;
@@ -14,6 +23,9 @@
     aspect-ratio: 398/285;
     border-radius: 12px;
     overflow: auto;
+    @include below($mobile-lg) {
+      margin-bottom: 30px;
+    }
     img {
       object-fit: cover;
     }
@@ -21,8 +33,17 @@
 }
 .achievements__row {
   margin: 50px -88px 0;
+  @include below($tablet-lg) {
+    margin: 0 -30px;
+  }
+  @include below($mobile-lg) {
+    margin: 40px -30px 0;
+  }
   & > div {
     padding: 0 88px;
+    @include below($tablet-lg) {
+      padding: 0 30px;
+    }
     &:not(:first-child) {
       border-left: 1px solid rgba($color: $color-black, $alpha: 0.4);
     }
@@ -30,5 +51,8 @@
   h4 {
     @include fontStyle(5.21vw, 1, 600, $color-black);
     margin-bottom: 10px;
+    @include below($mobile-lg) {
+      font-size: 38px;
+    }
   }
 }
