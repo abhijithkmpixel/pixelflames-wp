@@ -77,7 +77,7 @@ if ($(window.innerWidth > 1200)) {
 
             scrollTrigger: {
                 trigger: $(this),
-                start: "0% 96%",
+                start: "0% 99%",
                 scroller: window.innerWidth > 1200 ? "[data-scroll-container]" : "body",
                 scrub: false,
             }
@@ -91,7 +91,7 @@ if ($(window.innerWidth > 1200)) {
 
         scrollTrigger: {
             trigger: '.stagger__up',
-            start: "0% 96%",
+            start: "0% 99%",
             scroller: window.innerWidth > 1200 ? "[data-scroll-container]" : "body",
             scrub: false,
         }
@@ -104,7 +104,7 @@ if ($(window.innerWidth > 1200)) {
             duration: .6,
             scrollTrigger: {
                 trigger: $(this),
-                start: "0% 96%",
+                start: "0% 99%",
                 scroller: window.innerWidth > 1200 ? "[data-scroll-container]" : "body",
                 scrub: false,
             }
@@ -118,7 +118,7 @@ if ($(window.innerWidth > 1200)) {
 
         scrollTrigger: {
             trigger: '.stagger__left',
-            start: "0% 96%",
+            start: "0% 99%",
             scroller: window.innerWidth > 1200 ? "[data-scroll-container]" : "body",
             scrub: false,
         }
@@ -131,7 +131,7 @@ if ($(window.innerWidth > 1200)) {
             duration: .6,
             scrollTrigger: {
                 trigger: $(this),
-                start: "0% 96%",
+                start: "0% 99%",
                 // end: "100% 0%",
                 scroller: window.innerWidth > 1200 ? "[data-scroll-container]" : "body",
                 scrub: false,
@@ -146,7 +146,7 @@ if ($(window.innerWidth > 1200)) {
 
         scrollTrigger: {
             trigger: '.stagger__right',
-            start: "0% 96%",
+            start: "0% 99%",
             // end: "100% 0%",
             scroller: window.innerWidth > 1200 ? "[data-scroll-container]" : "body",
             scrub: false,
