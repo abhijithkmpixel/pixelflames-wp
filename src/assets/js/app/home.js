@@ -17,7 +17,7 @@ $(document).ready(function () {
   <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
 </svg>
         </button>`,
-        
+
         // asNavFor: '.clients__testimonials__avatar__slider',
         // focusOnSelect: true,
 
@@ -36,10 +36,10 @@ $(document).ready(function () {
         touchMove: false,
         draggable: false,
         variableWidth: true,
-        pauseOnFocus:false,
-        pauseOnHover:false,
-        pauseOnDotsHover:false,
-        rtl:true,
+        pauseOnFocus: false,
+        pauseOnHover: false,
+        pauseOnDotsHover: false,
+        rtl: true,
         responsive: [
             {
                 breakpoint: 990,
@@ -73,9 +73,9 @@ $(document).ready(function () {
         touchMove: false,
         draggable: false,
         variableWidth: true,
-        pauseOnFocus:false,
-        pauseOnHover:false,
-        pauseOnDotsHover:false,
+        pauseOnFocus: false,
+        pauseOnHover: false,
+        pauseOnDotsHover: false,
         responsive: [
             {
                 breakpoint: 990,
@@ -163,9 +163,31 @@ $(document).ready(function () {
         }
     })
     $('#hamburger__button').click(function () {
-        $('#hamburger__button').toggleClass('is-active')
+        // $('#hamburger__button').toggleClass('is-active')
         $('body').toggleClass('mobile__menu')
     })
+    $('.menu__overlay').click(function () {
+        // $('#hamburger__button').toggleClass('is-active')
+        $('body').toggleClass('mobile__menu')
+    })
+    $('#close__menu__btn').click(function () {
+        // $('#hamburger__button').toggleClass('is-active')
+        $('body').toggleClass('mobile__menu')
+    })
+
+
+    //quick links script
+    // $('.related__quick__links li a').each(function(){
+    //     $(this).mouseover(function())
+    // })
+    if (window.innerWidth > 1200) {
+        $('.related__quick__links li a').mouseover(function () {
+            $('.related__quick__links li a').addClass('opacity-25 ')
+        })
+        $('.related__quick__links li a').mouseleave(function () {
+            $('.related__quick__links li a').removeClass('opacity-25 ')
+        })
+    }
 
 })
 

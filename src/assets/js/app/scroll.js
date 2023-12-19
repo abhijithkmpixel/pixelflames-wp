@@ -58,8 +58,8 @@ if ($(window.innerWidth > 1200)) {
     gsap.from('.staggerTitle', {
         opacity: 0,
         y: 100.,
-        stagger: .4,
-        delay: 1,
+        stagger: .2,
+        delay: 0,
     })
     gsap.from('.hero__banner .hero__banner__featured__side__Image__wrap ', {
         opacity: 0,

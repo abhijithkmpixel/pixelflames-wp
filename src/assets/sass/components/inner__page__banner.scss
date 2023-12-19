@@ -2,19 +2,23 @@
 
 .inner__page__banner {
   width: 100%;
-  overflow: hidden;position: relative;
+  overflow: hidden;
+  position: relative;
   @include below($mobile-lg) {
     margin-bottom: 30px;
   }
   .subtitle__primary {
     margin-bottom: 29px;
   }
-  .banner__side__element{
+  .banner__side__element {
     position: absolute;
     right: 0;
     top: 200px;
     width: 20%;
     height: auto;
+    @include below($tablet-lg) {
+      width: 32%;
+    }
   }
   .inner__page__banner__inner {
     padding: 200px 0 200px;
@@ -50,10 +54,15 @@
     .site__breadcrumbs {
       display: flex;
       margin: 40px -15px 0;
+      flex-wrap: wrap;
+      @include below($mobile-lg) {
+        margin: 20px -15px 0;
+      }
       li {
         @include fontStyle(1.4vw, 1, 600, $color-black);
         text-transform: capitalize;
         padding: 0 15px;
+        margin-bottom: 10px;
         @include below($tablet-lg) {
           font-size: 20px;
         }
@@ -69,7 +78,7 @@
             border-radius: 50%;
             display: block;
             position: absolute;
-            background-color: $color-black;
+            background-color: $color-river-bed;
             top: 50%;
             left: 100%;
             transform: translate(-50%, -50%);
@@ -102,7 +111,7 @@
     margin-top: -120px;
     position: relative;
     @include below($mobile-lg) {
-      margin-top: -60px;
+      margin-top: -30px;
     }
     img {
       width: 100%;
@@ -128,11 +137,21 @@
       justify-content: center;
       align-items: center;
       position: absolute;
-      left: calc(100% - 35px);
-      top: -35px;
+      bottom: 100%;
+      left: 100%;
+      transform: translate(-50%, 50%);
       background-color: $color-pomegranate;
       svg {
         width: 100%;
+      }
+      @include below($tablet-lg) {
+        width: 55px;
+        height: 55px;
+      }
+      @include below($mobile-lg) {
+        width: 45px;
+        height: 45px;
+        padding: 12px;
       }
     }
   }

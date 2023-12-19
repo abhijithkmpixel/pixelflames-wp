@@ -133,36 +133,89 @@
     object-fit: cover;
   }
 }
+.products__package__wrap {
+  width: 100%;
+  overflow-x: auto;
+}
 .products__package {
   table-layout: fixed;
+  @include below($tablet-lg) {
+    table-layout: unset;
+  }
   td,
   th {
     border: 1px solid #9ca1b4;
     border-collapse: collapse;
     padding: 20px 25px;
+    transition: 0.2s all ease-in-out;
+    @include below($mobile-lg) {
+      padding: 12px 15px;
+    }
   }
   th:hover {
-    background-color: $color-pomegranate;
-
-    & > * {
-      color: $color-white;
+    @include above($tablet-lg) {
+      background-color: $color-pomegranate;
+      & > * {
+        color: $color-white;
+        border-color: $color-white;
+      }
+    }
+  }
+  .cta__primary {
+    &:hover {
+      @include above($tablet-lg) {
+        background-color: $color-white;
+        color: $color-pomegranate;
+      }
     }
   }
   h4 {
     @include fontStyle(1.5vw, 1, 700, $color-black);
     margin-bottom: 10px;
+    transition: 0.2s all ease-in-out;
+
+    @include below($tablet-lg) {
+      font-size: 20px;
+    }
+    @include below($mobile-lg) {
+      font-size: 18px;
+    }
   }
   h6 {
     @include fontStyle(1.12vw, 1, 600, $color-charade);
     // margin-bottom: 10px;
+    transition: 0.2s all ease-in-out;
+
+    @include below($tablet-lg) {
+      font-size: 18px;
+    }
+    @include below($mobile-lg) {
+      font-size: 16px;
+    }
   }
   p {
     @include fontStyle(0.77vw, 1, 500, $color-lynch);
     // margin-bottom: 10px;
+    transition: 0.2s all ease-in-out;
+
+    @include below($tablet-lg) {
+      font-size: 16px;
+    }
+    @include below($mobile-lg) {
+      font-size: 14px;
+    }
   }
   h5 {
     @include fontStyle(1.25vw, 1, 500, $color-black);
     margin-bottom: 20px;
+    transition: 0.2s all ease-in-out;
+
+    @include below($tablet-lg) {
+      font-size: 19px;
+    }
+    @include below($mobile-lg) {
+      font-size: 17px;
+    }
     span {
       @include fontStyleInherit();
     }
@@ -170,6 +223,11 @@
   img {
     width: 19px;
     height: 19px;
+  }
+  thead > tr > th:first-child > h4 {
+    @include below($tablet-sm) {
+      width: 200px;
+    }
   }
   tbody {
     tr {
@@ -183,6 +241,7 @@
   margin: 0 -20px;
   & > div {
     padding: 0 20px;
+    margin-bottom: 30px;
   }
   .our__features__card {
     width: 100%;
@@ -190,6 +249,10 @@
     border-radius: 12px;
     transition: 0.3s all ease-in-out;
     padding: 40px 30px;
+    height: 100%;
+    @include below($tablet-lg) {
+      padding: 30px 20px;
+    }
     .our__features__card__icon {
       width: 60px;
       height: 60px;
@@ -212,17 +275,200 @@
       @include fontStyle(1.75vw, 1.2, 600, $color-black);
       text-align: center;
       margin-bottom: 25px;
+      @include below($tablet-lg) {
+        font-size: 24px;
+        margin-bottom: 15px;
+      }
     }
     p {
       @include fontStyle(1.25vw, 1.5, 500, $color-river-bed);
       text-align: center;
       max-width: 80%;
       margin: auto;
+      @include below($tablet-lg) {
+        font-size: 16px;
+        max-width: 100%;
+      }
     }
     &:hover {
       @include above($tablet-lg) {
         border-color: $color-white;
         box-shadow: 0 40px 40px 0 rgba($color: #a0c2d3, $alpha: 0.24);
+      }
+    }
+  }
+}
+.our__contribution {
+  margin-bottom: 30px;
+  li {
+    list-style-type: none;
+    @include fontStyle(1.25vw, 1.4, 400, $color-black);
+    &:not(:last-child) {
+      margin-bottom: 15px;
+      @include below($mobile-lg) {
+        margin-bottom: 10px;
+      }
+    }
+    @include below($tablet-lg) {
+      font-size: 18px;
+    }
+  }
+}
+.project__overview {
+  h3 {
+    @include fontStyle(2.8vw, 1.2, 400, $color-black);
+    margin-bottom: 40px;
+    @include below($tablet-lg) {
+      font-size: 38px;
+    }
+    @include below($mobile-lg) {
+      font-size: 30px;
+    }
+  }
+  p {
+    @include fontStyle(1.25vw, 1.6, 400, $color-river-bed);
+    margin-bottom: 25px;
+    @include below($tablet-lg) {
+      font-size: 18px;
+    }
+    strong {
+      @include fontStyleInherit();
+      color: $color-black;
+      font-weight: 500;
+    }
+  }
+}
+.related__projects__wrap {
+  margin: 0 -33px;
+  & > div {
+    padding: 0 33px;
+  }
+}
+.related__projects__row {
+  margin: 0 -22.5px;
+  @include below($tablet-sm) {
+    margin: 0 -15px;
+  }
+  & > div {
+    padding: 0 22.5px;
+    @include below($tablet-sm) {
+      margin-bottom: 40px;
+      padding: 0 15px;
+    }
+  }
+}
+.related__projects__item {
+  width: 100%;
+  .related__projects__item__featured__image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 365/322;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    display: block;
+    overflow: hidden;
+    position: relative;
+    @include below($mobile-lg) {
+      border-radius: 8px;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: rgba($color: #f5333f, $alpha: 0.8);
+      transition: 0.3s all ease-in-out;
+      top: 0;
+      left: 0;
+      z-index: 2;
+      opacity: 0;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      width: 80%;
+      height: auto;
+      border-radius: 50%;
+      aspect-ratio: 1/1;
+      background: linear-gradient(#ffb2b6, #f5333f);
+      opacity: 0.2;
+      transition: 0.3s all ease-in-out;
+      right: -50px;
+      bottom: -50px;
+      z-index: 5;
+      transform: scale(0);
+      transform-origin: right bottom;
+    }
+    &:hover {
+      @include above($tablet-lg) {
+        &::before {
+          opacity: 1;
+        }
+        &::after {
+          transform: scale(1);
+        }
+      }
+    }
+  }
+  h5 {
+    @include fontStyle(1.74vw, 1.2, 500, $color-black);
+    margin-bottom: 10px;
+    a {
+      @include fontStyleInherit();
+    }
+    @include below($tablet-lg) {
+      font-size: 30px;
+    }
+  }
+  span {
+    @include fontStyle(1.11vw, 1.2, 500, $color-river-bed);
+    @include below($tablet-lg) {
+      font-size: 18px;
+    }
+  }
+}
+.related__quick__links {
+  width: 100%;
+  @include below($tablet-lg) {
+    margin-top: 50px;
+  }
+  li {
+    padding: 35px 0;
+    border-bottom: 1px solid $color-gray;
+    @include below($mobile-lg) {
+      padding: 20px 0;
+    }
+    &:first-child {
+      border-top: 1px solid $color-gray;
+    }
+    a {
+      display: inline-flex;
+      align-items: center;
+      text-decoration: none;
+      text-transform: uppercase;
+      @include fontStyle(1.53vw, 1.3, 500$color-black);
+      @include below($tablet-lg) {
+        font-size: 20px;
+      }
+      @include below($mobile-lg) {
+        font-size: 18px;
+      }
+      svg {
+        width: 40px;
+        height: auto;
+        margin-left: 15px;
+        transition: 0.4s all ease-in-out;
+        @include below($mobile-lg) {
+          width: 30px;
+        }
+      }
+      &:hover {
+        @include above($tablet-lg) {
+          opacity: 1 !important;
+          svg {
+            margin-left: 25px;
+          }
+        }
       }
     }
   }

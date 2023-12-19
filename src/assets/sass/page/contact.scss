@@ -271,7 +271,7 @@
       }
     }
     @include below($tablet-sm) {
-      padding: 45px 65px;
+      padding: 45px 50px;
     }
     @include below($mobile-sm) {
       padding: 30px 25px;
@@ -281,6 +281,29 @@
         display: block;
         width: 100%;
       }
+    }
+  }
+  .pricing__feat__img {
+    position: absolute;
+    bottom: -60px;
+    right: 0px;
+    width: 35%;
+    // max-height: 100%;
+    height: auto;
+    @include below($tablet-lg) {
+      position: static;
+      width: 50%;
+      margin-top: 30px;
+      display: block;
+      margin-left: auto;
+      margin-bottom: -60px;
+    }
+    @include below($tablet-sm) {
+      width: 90%;
+      margin: 30px auto -45px;
+    }
+    @include below($mobile-lg) {
+      margin: 30px auto -30px;
     }
   }
 }
