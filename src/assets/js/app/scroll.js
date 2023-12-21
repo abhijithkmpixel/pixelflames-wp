@@ -27,8 +27,15 @@ if ($(window.innerWidth > 1200)) {
 
             ScrollTrigger.refresh();
         }, 1000);
+        $("[scroll-to]").click(function (e) {
+            e.preventDefault();
+            let id = $(this).attr("href").split("#")[1];
+            let target = document.getElementById(id);
+            scroll.scrollTo(target, {
+                offset: `-${document.querySelector("header").clientHeight + 30}`,
+            });
+        });
     });
-
     // tell ScrollTrigger to use these proxy methods for the ".smooth-scroll" element since Locomotive Scroll is hijacking things
     ScrollTrigger.scrollerProxy("[data-scroll-container]", {
         scrollTop(value) {

@@ -87,11 +87,17 @@
         a {
           @include fontStyle(1.4vw, 1, 400, $color-river-bed);
           text-decoration: none;
+          transition: 0.2s all ease-in-out;
           @include below($tablet-lg) {
             font-size: 20px;
           }
           @include below($mobile-lg) {
             font-size: 18px;
+          }
+          &:hover {
+            @include above($tablet-lg) {
+              color: $color-pomegranate;
+            }
           }
         }
       }

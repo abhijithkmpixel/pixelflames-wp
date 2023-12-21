@@ -1,0 +1,128 @@
+/** @format */
+
+// .service_detail_banner{
+//     background-color: $color-white !important;
+//     .ball1{
+//         background: linear-gradient(#fb6770, $color-pomegranate);
+//     }
+//     .ball2{
+//      background-color: $color-coral2 !important;
+//     }
+// }
+.secondary_nav {
+  padding: 50px 0;
+  .secondary_nav_wrap {
+    display: block;
+    position: relative;
+    &::after {
+      content: "";
+      width: 100%;
+      height: 1px;
+      display: block;
+      position: absolute;
+      background-color: $color-black;
+      margin-top: 40px;
+    }
+    a.active {
+      color: $color-black;
+    }
+  }
+  .site__breadcrumbs {
+    display: flex;
+    margin: 40px -15px 0;
+    li {
+      @include fontStyle(1.4vw, 1, 600, $color-black);
+      text-transform: capitalize;
+      padding: 0 15px;
+      @include below($tablet-lg) {
+        font-size: 20px;
+      }
+      @include below($mobile-lg) {
+        font-size: 18px;
+      }
+      a {
+        @include fontStyle(1.4vw, 1, 400, $color-river-bed);
+        text-decoration: none;
+        @include below($tablet-lg) {
+          font-size: 20px;
+        }
+        @include below($mobile-lg) {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
+// .service_details_grid{
+//     .title__primary{
+//         font-size: 2.8vw;
+//     }
+//     .subtitle__primary{
+//         color: $color-black;
+//     }
+// }
+.service_card {
+  .row {
+    margin: 0 -1W0px;
+    & > div {
+      padding: 0 1W0px;
+    }
+  }
+  .service_card_box {
+    margin-bottom: 20px;
+  }
+  .service_details_card {
+    width: 100%;
+    border: 1px solid #a0a0a0;
+    border-radius: 18px;
+    padding: 30px 26px;
+    position: relative;
+    height: 100%;
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+    .service_details_card_header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 20px;
+      .service_details_card_header_icon {
+        width: 55px;
+        flex: 0 0 55px;
+        height: 48px;
+        margin-right: 20px;
+        margin-bottom: 20px;
+        position: relative;
+        &::after {
+          content: "";
+          width: 100%;
+          height: auto;
+          aspect-ratio: 1/1;
+          background-color: #ffe4db;
+          z-index: -1;
+          border-radius: 11px 3px 6px 3px;
+          position: absolute;
+          top: 5px;
+          transform: translate(5px, 5px);
+          left: 5px;
+        }
+      }
+      h4 {
+        margin-top: 20px;
+        font-size: 1.53vw;
+        margin-bottom: 0px;
+      }
+    }
+    p {
+      font-size: 1vw;
+      line-height: 1.5;
+      font-weight: 500;
+      color: #4e5a65;
+      margin-bottom: 0;
+    }
+    &:hover {
+      border-color: $color-white;
+      box-shadow: 5px 5px 60px rgba(160, 194, 211, 0.24);
+    }
+  }
+}

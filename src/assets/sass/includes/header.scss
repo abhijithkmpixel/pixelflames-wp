@@ -90,7 +90,7 @@ header {
       position: fixed;
       left: 0;
       top: 0;
-      width: calc(100vw - 60px);
+      width: calc(100vw - 100px);
       height: 100dvh;
       z-index: 10;
       background-color: $color-gallery;
@@ -122,6 +122,7 @@ header {
     }
     @include below($mobile-lg) {
       padding: 13px 15px 20px;
+      width: calc(100vw - 60px);
     }
   }
   .hamburger {

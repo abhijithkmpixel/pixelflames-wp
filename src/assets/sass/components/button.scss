@@ -162,3 +162,40 @@
     }
   }
 }
+.custom__selectbox {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid $color-black;
+  border-radius: 100px;
+  cursor: pointer;
+  select {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    background-color: transparent;
+    @include fontStyle(1.12vw, 1, 400, $color-black);
+    padding: 12px 57px 15px 20px;
+    border: 0 !important;
+    outline: 0 !important;
+    border-radius: 100px;
+    cursor: pointer;
+    @include below($tablet-lg) {
+      font-size: 20px;
+    }
+    @include below($mobile-lg) {
+      font-size: 18px;
+    }
+  }
+  svg {
+    width: 13px;
+    height: auto;
+    margin-left: 25px;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    z-index: 1;
+    pointer-events: none;
+  }
+}
