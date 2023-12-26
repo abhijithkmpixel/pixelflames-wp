@@ -9,6 +9,7 @@
   width: max-content;
   display: inline-flex;
   align-items: center;
+  cursor: pointer;
   @include below($tablet-lg) {
     font-size: 18px;
   }
@@ -32,12 +33,15 @@
       padding: 6px 16px;
     }
   }
-  &:hover {
+  &:not(.not_hover):hover {
     color: $color-black;
     @include above($tablet-lg) {
       color: $color-white;
       background-color: $color-black;
     }
+  }
+  &.border_clear {
+    border-color: transparent;
   }
   &.cta__pomgranate {
     background-color: $color-pomegranate;
@@ -197,5 +201,41 @@
     transform: translateY(-50%);
     z-index: 1;
     pointer-events: none;
+  }
+}
+.cta__tab {
+  text-decoration: none;
+  @include fontStyle(1.12vw, 1.5, 500, $color-river-bed);
+  text-transform: uppercase;
+  border: 1px solid transparent;
+  transition: 0.2s all ease-in-out;
+  width: max-content;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  // border-color: $color-black;
+  padding: 14px 18px;
+  border-radius: 8px;
+  box-shadow: 0 0 50px 0 rgba($color: #a0c2d3, $alpha: 0.24);
+  @include below($tablet-lg) {
+    font-size: 18px;
+  }
+  @include below($mobile-lg) {
+    font-size: 16px;
+  }
+  svg {
+    width: 26px;
+    align-self: center;
+    margin-left: 13px;
+    transition: 0.2s all ease-in-out;
+  }
+  &:hover {
+    @include above($tablet-lg) {
+      box-shadow: 0 15px 50px 0 rgba($color: #a0c2d3, $alpha: 0.5);
+    }
+  }
+  &.active {
+    box-shadow: none;
+    border: 1px solid rgba($color: $color-river-bed, $alpha: 0.5);
   }
 }

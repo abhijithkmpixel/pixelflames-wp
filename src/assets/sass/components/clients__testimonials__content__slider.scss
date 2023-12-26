@@ -16,7 +16,7 @@
   .clients__testimonials__content__slide__item {
     width: 100%;
     p {
-      @include fontStyle(1.4vw, 1.5, 500, $color-river-bed);
+      @include fontStyle(1.4vw, 1.5, 500, $color-blue-bayoux);
       margin-bottom: 15px;
       @include below($tablet-lg) {
         font-size: 24px;
@@ -40,6 +40,9 @@
           }
         }
       }
+    }
+    strong {
+      color: $color-madison;
     }
   }
 }
@@ -107,8 +110,8 @@
       z-index: 10;
     }
     &.slick-current {
-        // transform: translateY(-80px);
-        transform: scale(1.2);
+      // transform: translateY(-80px);
+      transform: scale(1.2);
       z-index: 50;
     }
   }

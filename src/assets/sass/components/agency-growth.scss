@@ -81,7 +81,7 @@
       }
     }
     h4 {
-      @include fontStyle(1.8vw, 1.2, 600, $color-black);
+      @include fontStyle(1.8vw, 1.2, 600, $color-madison);
       margin: 0;
       transition: 0.3s all ease-in-out;
       @include below($tablet-lg) {
@@ -93,7 +93,7 @@
     }
   }
   h5 {
-    @include fontStyle(1.4vw, 1.2, 500, $color-river-bed);
+    @include fontStyle(1.4vw, 1.2, 500, $color-blue-bayoux);
     margin-bottom: 40px;
     transition: 0.3s all ease-in-out;
     @include below($tablet-lg) {
@@ -104,7 +104,7 @@
     }
   }
   p {
-    @include fontStyle(1vw, 1.5, 500, $color-river-bed);
+    @include fontStyle(1vw, 1.5, 500, $color-blue-bayoux);
     margin-bottom: 0;
     @include below($tablet-lg) {
       font-size: 18px;
@@ -129,7 +129,7 @@
       }
       &::after {
         transform: translate(40px, 50px) scale(1);
-        transition-delay: 0.1s;
+        // transition-delay: 0.1s;
       }
       .agency__growth__card__header .agency__growth__card__header__icon {
         &::before {

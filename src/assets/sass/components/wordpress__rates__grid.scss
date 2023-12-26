@@ -16,7 +16,7 @@
   width: 100%;
   height: 100%;
   padding: 47px 40px 0;
-  background-color: $color-coral2;
+  background-color: $color-madison;
   border-radius: 18px;
   position: relative;
   @include below($tablet-lg) {
@@ -52,7 +52,7 @@
   width: 100%;
   height: 100%;
   padding: 47px 40px;
-  border: 1px solid #4e5a65;
+  border: 1px solid $color-blue-bayoux;
   //   background-color: $color-coral2;
   border-radius: 18px;
   position: relative;
@@ -79,7 +79,7 @@
     opacity: 0.4;
   }
   h4 {
-    @include fontStyle(2.5vw, 1.1, 700, $color-black);
+    @include fontStyle(2.5vw, 1.1, 700, $color-madison);
     margin-bottom: 20px;
     transition: 0.3s all ease-in-out;
     position: relative;
@@ -90,7 +90,7 @@
   }
 
   p {
-    @include fontStyle(1.12vw, 1.5, 400, $color-tuna);
+    @include fontStyle(1.12vw, 1.5, 400, $color-blue-bayoux);
     // max-width: 68%;
     position: relative;
     z-index: 5;
@@ -107,7 +107,7 @@
     }
   }
   h5 {
-    @include fontStyle(2.5vw, 1.26, 800, $color-black);
+    @include fontStyle(2.5vw, 1.26, 800, $color-madison);
     border-top: 1px dashed $color-black;
     border-width: 2px;
     border-spacing: 10px;
@@ -120,7 +120,7 @@
       padding-top: 25px;
     }
     span {
-      @include fontStyle(1.5vw, 1.26, 400, $color-black);
+      @include fontStyle(1.5vw, 1.26, 400, $color-madison);
       transition: 0.3s all ease-in-out;
       @include below($tablet-lg) {
         font-size: 22px;
@@ -128,7 +128,7 @@
     }
   }
   h6 {
-    @include fontStyle(2vw, 1.26, 700, $color-black);
+    @include fontStyle(2vw, 1.26, 700, $color-madison);
     border-top: 1px dashed $color-black;
     border-width: 2px;
     border-spacing: 10px;
@@ -252,6 +252,10 @@
           }
         }
       }
+    }
+    p,
+    a {
+      color: $color-madison;
     }
   }
 }

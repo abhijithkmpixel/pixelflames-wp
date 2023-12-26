@@ -62,6 +62,23 @@ if ($(window.innerWidth > 1200)) {
     //   var nextSection = parentSection.nextElementSibling;
     //   scroll.scrollTo(nextSection)
     // })
+    $('#how__it__works__tab__link .cta__tab').click(function () {
+        $('#how__it__works__tab__link .cta__tab').removeClass('active')
+        // $('#how__it__works__tab__link .cta__tab').addClass('not_hover border_clear')
+        $(this).addClass('cta__pomgranate__border  active')
+        let id = $(this).attr('data-tab-id')
+        $('#how__it__works__tab__body__wrap .how__it__works__tab__body').each(function () {
+            if (id == $(this).attr('data-body-id')) {
+                $(this).removeClass('d-none')
+            } else {
+                $(this).addClass('d-none')
+
+            }
+        })
+        setTimeout(() => {
+            scroll.update();
+        }, 1000);
+    })
     gsap.from('.staggerTitle', {
         opacity: 0,
         y: 100.,
@@ -72,19 +89,19 @@ if ($(window.innerWidth > 1200)) {
         opacity: 0,
         x: 100.,
         stagger: .4,
-        delay: 3,
+        delay: 1.2,
     })
     $('.animate__up').each(function () {
 
         gsap.from($(this), {
             opacity: 0,
-            y: 200,
+            y: 150,
             duration: .6,
             stagger: .4,
 
             scrollTrigger: {
                 trigger: $(this),
-                start: "0% 99%",
+                start: "0% 100%",
                 scroller: window.innerWidth > 1200 ? "[data-scroll-container]" : "body",
                 scrub: false,
             }
@@ -92,13 +109,13 @@ if ($(window.innerWidth > 1200)) {
     })
     gsap.from('.stagger__up', {
         opacity: 0,
-        y: 200,
+        y: 150,
         duration: .6,
         stagger: .4,
 
         scrollTrigger: {
             trigger: '.stagger__up',
-            start: "0% 99%",
+            start: "0% 100%",
             scroller: window.innerWidth > 1200 ? "[data-scroll-container]" : "body",
             scrub: false,
         }
@@ -107,11 +124,11 @@ if ($(window.innerWidth > 1200)) {
 
         gsap.from($(this), {
             opacity: 0,
-            x: 200,
+            x: 150,
             duration: .6,
             scrollTrigger: {
                 trigger: $(this),
-                start: "0% 99%",
+                start: "0% 100%",
                 scroller: window.innerWidth > 1200 ? "[data-scroll-container]" : "body",
                 scrub: false,
             }
@@ -119,13 +136,13 @@ if ($(window.innerWidth > 1200)) {
     })
     gsap.from('.stagger__left', {
         opacity: 0,
-        x: 200,
+        x: 150,
         duration: .6,
         stagger: .4,
 
         scrollTrigger: {
             trigger: '.stagger__left',
-            start: "0% 99%",
+            start: "0% 100%",
             scroller: window.innerWidth > 1200 ? "[data-scroll-container]" : "body",
             scrub: false,
         }
@@ -138,7 +155,7 @@ if ($(window.innerWidth > 1200)) {
             duration: .6,
             scrollTrigger: {
                 trigger: $(this),
-                start: "0% 99%",
+                start: "0% 100%",
                 // end: "100% 0%",
                 scroller: window.innerWidth > 1200 ? "[data-scroll-container]" : "body",
                 scrub: false,
@@ -153,14 +170,14 @@ if ($(window.innerWidth > 1200)) {
 
         scrollTrigger: {
             trigger: '.stagger__right',
-            start: "0% 99%",
+            start: "0% 100%",
             // end: "100% 0%",
             scroller: window.innerWidth > 1200 ? "[data-scroll-container]" : "body",
             scrub: false,
         }
     })
 
-    $('picture img').each(function(){
+    $('picture img').each(function () {
 
         gsap.fromTo($(this), {
             objectPosition: "100% 0%",

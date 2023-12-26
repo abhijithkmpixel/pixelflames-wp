@@ -43,7 +43,7 @@
     opacity: 20%;
   }
   h3 {
-    @include fontStyle(3.82vw, 1, 800, $color-black);
+    @include fontStyle(3.82vw, 1, 800, $color-madison);
     margin-bottom: 10px;
     transition: 0.2s all ease-in-out;
     span {
@@ -56,7 +56,7 @@
     }
   }
   h4 {
-    @include fontStyle(1.55vw, 1, 600, $color-black);
+    @include fontStyle(1.55vw, 1, 600, $color-madison);
     text-transform: capitalize;
     margin-bottom: 10px;
     transition: 0.2s all ease-in-out;
@@ -65,7 +65,7 @@
     }
   }
   span {
-    @include fontStyle(1vw, 1.2, 400, $color-black);
+    @include fontStyle(1vw, 1.2, 400, $color-blue-bayoux);
     transition: 0.2s all ease-in-out;
     @include below($tablet-lg) {
       font-size: 18px;

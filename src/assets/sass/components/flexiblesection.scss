@@ -39,6 +39,12 @@
 .section__bg__gallery {
   background-color: $color-gallery;
 }
+.section__bg__lilac {
+  background-color: $color-white-lilac;
+}
+.section__bg__aqua__squeeze {
+  background-color: $color-aqua-squeeze;
+}
 .section__alice__blue {
   background-color: $color-alice-blue;
 }
@@ -153,13 +159,9 @@
     }
   }
   th:hover {
-    @include above($tablet-lg) {
-      background-color: $color-pomegranate;
-      & > * {
-        color: $color-white;
-        border-color: $color-white;
-      }
-    }
+    // @include above($tablet-lg) {
+
+    // }
   }
   .cta__primary {
     &:hover {
@@ -182,7 +184,7 @@
     }
   }
   h6 {
-    @include fontStyle(1.12vw, 1, 600, $color-charade);
+    @include fontStyle(1.12vw, 1, 600, $color-madison);
     // margin-bottom: 10px;
     transition: 0.2s all ease-in-out;
 
@@ -229,10 +231,30 @@
       width: 200px;
     }
   }
-  tbody {
-    tr {
-      &:nth-child(even) {
-        background-color: #f7faff;
+  // tbody {
+  //   tr {
+  //     &:nth-child(even) {
+  //       background-color: #f7faff;
+  //     }
+  //   }
+  // }
+  tr > td:nth-child(3),
+  tr > th:nth-child(3) {
+    border-top: 1px solid #f5333f;
+    border-left: 1px solid #f5333f;
+    border-right: 1px solid #f5333f;
+    border-bottom: 1px solid #f5333f;
+  }
+  tr > td:nth-child(2),
+  tr th:nth-child(2) {
+    border-right: 1px solid #f5333f;
+  }
+  thead {
+    th:nth-child(3) {
+      background-color: $color-pomegranate;
+      & > * {
+        color: $color-white;
+        border-color: $color-white;
       }
     }
   }
@@ -302,7 +324,7 @@
   margin-bottom: 30px;
   li {
     list-style-type: none;
-    @include fontStyle(1.25vw, 1.4, 400, $color-black);
+    @include fontStyle(1.25vw, 1.4, 400, $color-madison);
     &:not(:last-child) {
       margin-bottom: 15px;
       @include below($mobile-lg) {
@@ -411,7 +433,7 @@
     }
   }
   h5 {
-    @include fontStyle(1.74vw, 1.2, 500, $color-black);
+    @include fontStyle(1.74vw, 1.2, 600, $color-black);
     margin-bottom: 10px;
     a {
       @include fontStyleInherit();
@@ -561,7 +583,7 @@
       }
     }
     h4 {
-      @include fontStyle(2vw, 1.2, 500, $color-black);
+      @include fontStyle(2vw, 1.2, 600, $color-black);
       margin-bottom: 10px;
       @include below($tablet-lg) {
         font-size: 36px;
@@ -588,7 +610,7 @@
         border-radius: 50%;
         background-color: $color-river-bed;
         margin-right: 7px;
-        margin-top: 8px;
+        margin-top: 5px;
         @include below($tablet-lg) {
           width: 9px;
           height: 9px;

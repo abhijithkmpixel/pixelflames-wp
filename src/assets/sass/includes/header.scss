@@ -12,8 +12,10 @@ header {
     content: "";
     width: 100%;
     height: 100%;
-    background-color: $color-gallery;
+    background-color: rgba($color: #fff, $alpha: .5);
     position: absolute;
+    -webkit-backdrop-filter: blur(40px);
+    backdrop-filter: blur(40px);
     top: 0;
     left: 0;
     z-index: -1;
@@ -59,7 +61,7 @@ header {
         }
         a {
           text-decoration: none;
-          @include fontStyle(1.12vw, 1.5, 500, $color-stratos);
+          @include fontStyle(1.12vw, 1.5, 500, $color-madison);
           text-transform: uppercase;
           letter-spacing: 0.7px;
           transition: 0.2s all ease-in-out;

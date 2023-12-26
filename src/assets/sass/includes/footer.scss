@@ -2,12 +2,12 @@
 
 footer {
   background-color: $color-zircon;
-  padding: 90px 0;
+  padding: 90px 0 60px;
   @include below($mobile-lg) {
     padding: 40px 0 30px;
   }
   h2 {
-    @include fontStyle(8.15vw, 0.9, 700, $color-black);
+    @include fontStyle(8.15vw, 0.9, 700, $color-madison);
     text-transform: capitalize;
     @include below($mobile-lg) {
       font-size: 50px;
@@ -34,7 +34,7 @@ footer {
       a {
         width: 48px;
         height: 48px;
-        border: 1px solid $color-black;
+        border: 1px solid $color-madison;
         border-radius: 50%;
         background-color: transparent;
         display: flex;
@@ -48,7 +48,7 @@ footer {
         }
         &:hover {
           @include above($tablet-lg) {
-            background-color: $color-black;
+            background-color: $color-madison;
             img {
               filter: invert(1);
             }
@@ -171,7 +171,7 @@ footer {
         }
       }
       h4 {
-        @include fontStyle(2.1vw, 1.2, 500, $color-black);
+        @include fontStyle(2.1vw, 1.2, 500, $color-madison);
         margin-bottom: 40px;
         text-transform: capitalize;
         @include below($tablet-lg) {
@@ -196,7 +196,7 @@ footer {
           }
           a {
             text-decoration: none;
-            @include fontStyle(1.25vw, 1, 400, $color-black);
+            @include fontStyle(1.25vw, 1, 400, $color-blue-bayoux);
             transition: 0.2s all ease-in-out;
             position: relative;
             @include below($tablet-lg) {
@@ -229,5 +229,8 @@ footer {
         }
       }
     }
+  }
+  .footer__copyright__text {
+    @include fontStyle(1vw, 1, 400, $color-blue-bayoux);
   }
 }

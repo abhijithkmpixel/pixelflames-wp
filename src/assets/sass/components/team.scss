@@ -172,7 +172,7 @@
       transform: translateY(-20px);
       z-index: 30;
       h5 {
-        @include fontStyle(1.32vw, 1, 500, $color-black);
+        @include fontStyle(1.32vw, 1, 600, $color-black);
         margin-bottom: 5px;
       }
       span {

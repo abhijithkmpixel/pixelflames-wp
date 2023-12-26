@@ -59,7 +59,7 @@
         margin: 20px -15px 0;
       }
       li {
-        @include fontStyle(1.4vw, 1, 600, $color-black);
+        @include fontStyle(1.4vw, 1, 600, $color-madison);
         text-transform: capitalize;
         padding: 0 15px;
         margin-bottom: 10px;
@@ -78,14 +78,14 @@
             border-radius: 50%;
             display: block;
             position: absolute;
-            background-color: $color-river-bed;
+            background-color: $color-blue-bayoux;
             top: 50%;
             left: 100%;
             transform: translate(-50%, -50%);
           }
         }
         a {
-          @include fontStyle(1.4vw, 1, 400, $color-river-bed);
+          @include fontStyle(1.4vw, 1, 400, $color-blue-bayoux);
           text-decoration: none;
           transition: 0.2s all ease-in-out;
           @include below($tablet-lg) {
@@ -104,7 +104,7 @@
     }
   }
   h1 {
-    @include fontStyle(4.2vw, 1, 600, $color-black);
+    @include fontStyle(4.2vw, 1, 600, $color-madison);
     margin-bottom: 20px;
     @include below($tablet-lg) {
       font-size: 60px;

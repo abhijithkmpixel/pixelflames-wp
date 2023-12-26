@@ -175,11 +175,6 @@ $(document).ready(function () {
         $('body').toggleClass('mobile__menu')
     })
 
-
-    //quick links script
-    // $('.related__quick__links li a').each(function(){
-    //     $(this).mouseover(function())
-    // })
     if (window.innerWidth > 1200) {
         $('.related__quick__links li a').mouseover(function () {
             $('.related__quick__links li a').addClass('opacity-25 ')

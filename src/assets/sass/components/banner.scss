@@ -24,7 +24,7 @@
       justify-content: flex-end;
     }
     .badge {
-      @include fontStyle(1.74vw, 1, 600, $color-black);
+      @include fontStyle(1.74vw, 1, 600, $color-madison);
       padding: 5px 19px;
       background-color: $color-white;
       border-radius: 50px;
@@ -40,7 +40,7 @@
       }
     }
     h1 {
-      @include fontStyle(4.45vw, 1, 600, $color-black);
+      @include fontStyle(4.45vw, 1, 600, $color-madison);
       margin-bottom: 25px;
       @include below($tablet-lg) {
         font-size: 60px;
@@ -54,7 +54,7 @@
       }
     }
     p {
-      @include fontStyle(1.5vw, 1.75, 400, $color-black);
+      @include fontStyle(1.5vw, 1.75, 400, $color-blue-bayoux);
       max-width: 90%;
       @include below($tablet-lg) {
         font-size: 20px;

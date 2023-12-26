@@ -45,7 +45,8 @@
         align-items: center;
         padding: 27px;
         border-radius: 10px;
-        background-color: $color-coral2;
+        background-color: transparent;
+        border: 1px solid $color-blue-bayoux;
         margin-right: 35px;
         transition: 0.3s all ease-in-out;
         img {
@@ -65,7 +66,7 @@
         }
       }
       h4 {
-        @include fontStyle(1.75vw, 1.2, 600, $color-black);
+        @include fontStyle(1.75vw, 1.2, 600, $color-madison);
         margin-bottom: 15px;
         transition: 0.3s all ease-in-out;
         @include below($tablet-lg) {
@@ -81,7 +82,7 @@
         }
       }
       span {
-        @include fontStyle(1.4vw, 1.5, 500, $color-river-bed);
+        @include fontStyle(1.4vw, 1.5, 500, $color-blue-bayoux);
         transition: 0.3s all ease-in-out;
         @include below($tablet-lg) {
           font-size: 22px;
@@ -99,8 +100,10 @@
         @include above($tablet-lg) {
           .how__we__grow__steps__icon {
             background-color: $color-pomegranate;
+            border-color: $color-pomegranate;
             img {
               //   transform: scale(1.05);
+              filter: brightness(0) invert(1);
             }
           }
           h4,
