@@ -31,7 +31,7 @@
     font-size: 22px;
   }
   @include below($mobile-lg) {
-    font-size: 20px;
+    font-size: 18px;
   }
   strong {
     @include fontStyleInherit();
@@ -50,7 +50,7 @@
       font-size: 26px;
     }
     @include below($mobile-lg) {
-      font-size: 22px;
+      font-size: 20px;
     }
   }
 }
@@ -63,7 +63,7 @@
     font-size: 22px;
   }
   @include below($mobile-lg) {
-    font-size: 20px;
+    font-size: 18px;
   }
   strong {
     @include fontStyleInherit();

@@ -639,3 +639,15 @@
     }
   }
 }
+
+.how__it__works__tab__link__wrap {
+  @include below($mobile-lg) {
+    justify-content: center !important;
+    align-items: center;
+  }
+}
+.cta__secondary {
+  @include below($mobile-lg) {
+    margin-right: auto;
+  }
+}

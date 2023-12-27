@@ -43,8 +43,11 @@
     bottom: 0;
     right: 65px;
     z-index: 1;
-    @include below($mobile-lg) {
+    @include below($tablet-lg) {
       position: static;
+      display: block;
+      margin-left: auto;
+      margin-right: 25px;
     }
   }
 }
@@ -170,8 +173,12 @@
 .wordpress__package__row {
   margin: 0 -48px;
   padding-bottom: 90px;
+  @include below($tablet-lg) {
+    margin-top: 150px !important;
+  }
   @include below($mobile-lg) {
     padding-bottom: 50px;
+    margin-top: 70px !important;
   }
   //   border-bottom: 1px solid $color-black;
   & > div {
@@ -200,6 +207,7 @@
   padding: 80px 0 10px;
   @include below($mobile-lg) {
     padding: 40px 0 10px;
+    text-align: center !important;
   }
   .lets__word__together_contact__info {
     position: relative;
@@ -213,6 +221,7 @@
     @include below($tablet-sm) {
       width: 100%;
     }
+
     img {
       position: absolute;
       width: 90px;
@@ -225,7 +234,7 @@
         left: calc(100% - 50px);
       }
       @include below($mobile-lg) {
-        // display: none;
+        display: none;
         left: 95%;
         top: 30px;
       }

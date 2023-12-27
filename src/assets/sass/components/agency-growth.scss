@@ -2,12 +2,33 @@
 
 .agency__growth__grid {
   margin: 0 -20px;
+  @include below($tablet-lg) {
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+  @include below($mobile-lg) {
+    margin: 0 -15px;
+  }
   & > div {
     padding: 0 20px;
     margin-bottom: 40px;
 
     @include below($tablet-lg) {
       margin-bottom: 40px;
+      width: 47%;
+      flex: 0 0 47%;
+      scroll-snap-align: start;
+    }
+    @include below($tablet-sm) {
+      width: 60%;
+      flex: 0 0 60%;
+    }
+    @include below($mobile-lg) {
+      width: 80%;
+      flex: 0 0 80%;
+      padding: 0 15px;
     }
   }
 }
@@ -22,6 +43,34 @@
   overflow: hidden;
   @include below($tablet-lg) {
     padding: 30px;
+    border-color: $color-pomegranate;
+    background-color: $color-pomegranate;
+    * {
+      color: $color-white !important;
+    }
+    h6 {
+      opacity: 0.2;
+    }
+    .cta__primary {
+      svg {
+        path {
+          fill: $color-white;
+        }
+      }
+    }
+    &::after {
+      transform: translate(40px, 50px) scale(1);
+      // transition-delay: 0.1s;
+    }
+    .agency__growth__card__header .agency__growth__card__header__icon {
+      &::before {
+        opacity: 0;
+      }
+      img {
+        filter: grayscale(100%) contrast(1000%) invert(1);
+        transform: translate(0);
+      }
+    }
   }
   @include below($tablet-sm) {
     padding: 30px 20px;
@@ -50,6 +99,9 @@
     display: flex;
     align-items: center;
     margin-bottom: 40px;
+    @include below($mobile-lg) {
+      margin-bottom: 20px;
+    }
     .agency__growth__card__header__icon {
       width: 55px;
       flex: 0 0 55px;
@@ -60,6 +112,11 @@
         width: 65px;
         flex: 0 0 65px;
         height: 58px;
+      }
+      @include below($mobile-lg) {
+        width: 45px;
+        flex: 0 0 45px;
+        height: 45px;
       }
       img {
         transition: 0.3s all ease-in-out;
@@ -90,6 +147,9 @@
       @include below($tablet-sm) {
         font-size: 22px;
       }
+      @include below($mobile-lg) {
+        font-size: 20px;
+      }
     }
   }
   h5 {
@@ -101,6 +161,9 @@
     }
     @include below($tablet-sm) {
       font-size: 18px;
+    }
+    @include below($mobile-lg) {
+      font-size: 16px;
     }
   }
   p {

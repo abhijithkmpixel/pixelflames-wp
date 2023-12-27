@@ -182,7 +182,16 @@ $(document).ready(function () {
         $('.related__quick__links li a').mouseleave(function () {
             $('.related__quick__links li a').removeClass('opacity-25 ')
         })
+        $('#header__primary__navigation > li').mouseover(function () {
+            $('#header__primary__navigation > li').removeClass('active')
+            $(this).addClass('active');
+        })
+        $('header').mouseleave(function () {
+            $('#header__primary__navigation > li').removeClass('active')
+        })
     }
+
+    $('header').css({ '--height': document.querySelector('header').clientHeight + 'px' })
 
 })
 

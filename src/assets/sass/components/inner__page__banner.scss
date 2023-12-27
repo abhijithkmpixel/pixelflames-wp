@@ -9,6 +9,11 @@
   }
   .subtitle__primary {
     margin-bottom: 29px;
+    display: none;
+    @include below($mobile-lg) {
+      display: block;
+      text-align: center;
+    }
   }
   .banner__side__element {
     position: absolute;
@@ -57,6 +62,7 @@
       flex-wrap: wrap;
       @include below($mobile-lg) {
         margin: 20px -15px 0;
+        display: none
       }
       li {
         @include fontStyle(1.4vw, 1, 600, $color-madison);
