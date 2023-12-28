@@ -26,8 +26,8 @@
       flex: 0 0 60%;
     }
     @include below($mobile-lg) {
-      width: 80%;
-      flex: 0 0 80%;
+      width: 85%;
+      flex: 0 0 85%;
       padding: 0 15px;
     }
   }
@@ -171,6 +171,9 @@
     margin-bottom: 0;
     @include below($tablet-lg) {
       font-size: 18px;
+    }
+    @include below($mobile-lg) {
+      font-size: 14px;
     }
   }
   &:hover {

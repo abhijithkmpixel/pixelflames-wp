@@ -118,6 +118,9 @@
         margin-bottom: 0px;
         color: $color-madison;
         font-weight: 600;
+        @include below($tablet-lg) {
+          font-size: 20px;
+        }
       }
     }
     p {
@@ -126,6 +129,12 @@
       font-weight: 500;
       color: $color-blue-bayoux;
       margin-bottom: 0;
+      @include below($tablet-lg) {
+        font-size: 18px;
+      }
+      @include below($mobile-lg) {
+        font-size: 16px;
+      }
     }
     &:hover {
       border-color: $color-white;

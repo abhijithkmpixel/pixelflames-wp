@@ -78,7 +78,8 @@
         width: 60%;
       }
       @include below($mobile-lg) {
-        width: 80%;
+        width: 100%;
+        aspect-ratio: 398/256;
       }
       img {
         object-fit: cover;
@@ -94,6 +95,9 @@
       @include fontStyle(1.45vw, 1.4, 400);
       @include below($tablet-lg) {
         font-size: 20px;
+      }
+      @include below($mobile-lg) {
+        font-size: 16px;
       }
     }
   }
@@ -353,6 +357,9 @@
     @include below($tablet-lg) {
       font-size: 18px;
     }
+    @include below($mobile-lg) {
+      font-size: 16px;
+    }
     strong {
       @include fontStyleInherit();
       color: $color-black;
@@ -441,11 +448,17 @@
     @include below($tablet-lg) {
       font-size: 30px;
     }
+    @include below($mobile-lg) {
+      font-size: 24px;
+    }
   }
   span {
     @include fontStyle(1.11vw, 1.2, 500, $color-river-bed);
     @include below($tablet-lg) {
       font-size: 18px;
+    }
+    @include below($mobile-lg) {
+      font-size: 16px;
     }
   }
 }
@@ -453,6 +466,9 @@
   width: 100%;
   @include below($tablet-lg) {
     margin-top: 50px;
+  }
+  @include below($mobile-lg) {
+    margin-top: 20px;
   }
   li {
     padding: 35px 0;
@@ -504,7 +520,19 @@
     padding: 0 17px;
     margin-bottom: 40px;
     &:nth-child(2),
-    &:nth-child(6) {
+    &:nth-child(7),
+    &:nth-child(5) {
+      .portfolio__listing__card {
+        .portfolio__listing__card__image {
+          @include above($tablet-lg) {
+            border-top-left-radius: 70px;
+          }
+        }
+      }
+    }
+    &:nth-child(3),
+    &:nth-child(8),
+    &:nth-child(4) {
       .portfolio__listing__card {
         .portfolio__listing__card__image {
           @include above($tablet-lg) {
@@ -513,12 +541,22 @@
         }
       }
     }
-    &:nth-child(4),
-    &:nth-child(3) {
+    &:nth-child(1),
+    &:nth-child(6) {
       .portfolio__listing__card {
         .portfolio__listing__card__image {
           @include above($tablet-lg) {
             border-bottom-left-radius: 70px;
+          }
+        }
+      }
+    }
+    &:nth-child(5),
+    &:nth-child(9) {
+      .portfolio__listing__card {
+        .portfolio__listing__card__image {
+          @include above($tablet-lg) {
+            border-bottom-right-radius: 70px;
           }
         }
       }

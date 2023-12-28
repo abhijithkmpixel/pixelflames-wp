@@ -11,7 +11,9 @@
     <span class="ball1" data-scroll data-scroll-speed="3"></span
     ><span class="ball2" data-scroll data-scroll-speed="1.6"></span>
     <div class="container-fluid" data-scroll>
-      <h4 class="subtitle__primary mb-3 staggerTitle text-uppercase" data-scroll>
+      <h4
+        class="subtitle__primary mb-3 staggerTitle text-uppercase"
+        data-scroll>
         <strong>contact</strong>
       </h4>
       <div class="row" data-scroll>
@@ -63,7 +65,10 @@
   </div>
 </section>
 
-<section class="contactform flexible__section" id="contactform" data-scroll-section>
+<section
+  class="contactform flexible__section"
+  id="contactform"
+  data-scroll-section>
   <div class="container-fluid" data-scroll>
     <div class="category_wrap" data-scroll>
       <div class="row" data-scroll>
@@ -79,39 +84,71 @@
         </div>
       </div>
     </div>
-    <div class="form_wrap" data-scroll>
-      <div class="row" data-scroll>
-        <div class="col-12 col-lg-12" data-scroll>
-          <div class="button_wrap animate__up" data-scroll>
-            <fieldset>
-              <input type="radio" name="regarding" id="Strategy" />
-              <label for="Strategy">Strategy</label>
-            </fieldset>
-            <fieldset>
-              <input type="radio" name="regarding" id="Brand" />
-              <label for="Brand">Brand</label>
-            </fieldset>
-            <fieldset>
-              <input type="radio" name="regarding" id="Physical Design" />
-              <label for="Physical Design">Physical Design</label>
-            </fieldset>
-            <fieldset>
-              <input type="radio" name="regarding" id="Innovation" />
-              <label for="Innovation">Innovation</label>
-            </fieldset>
-            <fieldset>
-              <input type="radio" name="regarding" id="Other" />
-              <label for="Other">Other</label>
-            </fieldset>
-          </div>
-        </div>
-      </div>
+    <div class="form__tab__links__wrap" id="contact__form__taab" data-scroll>
+      <a class="cta__tab active" data-tab-id="general-enquiry">General Enquiry</a>
+      <a class="cta__tab" data-tab-id="get-a-quote">Get a Quote</a>
+      <a class="cta__tab" data-tab-id="lets-talk">let’s talk</a>
+    </div>
+    <div class="form_wrap" data-scroll data-tab-body="general-enquiry">
+    
 
       <div class="form_sec animate__up" data-scroll>
         <fieldset data-scroll>
           <label for="">What is your name?</label>
           <input type="text" placeholder="What is your name?" />
-        </fieldset >
+        </fieldset>
+        <fieldset data-scroll>
+          <label for="">Your Email?</label>
+          <input type="email" placeholder="Your Email?" />
+        </fieldset>
+        <fieldset data-scroll>
+          <label for="">Whats your thoughts?</label>
+          <input type="text" placeholder="Whats your thoughts?" />
+        </fieldset>
+        <fieldset data-scroll>
+          <div class="submit_btn_wrap" data-scroll>
+            <input
+              type="submit"
+              value="Send Request"
+              class="submit_cta cta__primary cta__border cta__pomgranate"
+              data-scroll />
+          </div>
+        </fieldset>
+      </div>
+    </div>
+    <div class="form_wrap d-none" data-scroll data-tab-body="get-a-quote">
+      <!-- <div class="row" data-scroll>
+        <div class="col-12 col-lg-12" data-scroll> -->
+      <div class="button_wrap animate__up" data-scroll>
+        <fieldset>
+          <input type="radio" name="regarding" id="Strategy" />
+          <label for="Strategy">Strategy</label>
+        </fieldset>
+        <fieldset>
+          <input type="radio" name="regarding" id="Brand" />
+          <label for="Brand">Brand</label>
+        </fieldset>
+        <fieldset>
+          <input type="radio" name="regarding" id="Physical Design" />
+          <label for="Physical Design">Physical Design</label>
+        </fieldset>
+        <fieldset>
+          <input type="radio" name="regarding" id="Innovation" />
+          <label for="Innovation">Innovation</label>
+        </fieldset>
+        <fieldset>
+          <input type="radio" name="regarding" id="Other" />
+          <label for="Other">Other</label>
+        </fieldset>
+      </div>
+      <!-- </div>
+      </div> -->
+
+      <div class="form_sec animate__up" data-scroll>
+        <fieldset data-scroll>
+          <label for="">What is your name?</label>
+          <input type="text" placeholder="What is your name?" />
+        </fieldset>
         <fieldset data-scroll>
           <label for="">Your Email?</label>
           <input type="email" placeholder="Your Email?" />
@@ -129,7 +166,31 @@
             <input
               type="submit"
               value="Send Request"
-              class="submit_cta cta__primary cta__border cta__pomgranate" data-scroll/>
+              class="submit_cta cta__primary cta__border cta__pomgranate"
+              data-scroll />
+          </div>
+        </fieldset>
+      </div>
+    </div>
+     <div class="form_wrap d-none" data-scroll data-tab-body="lets-talk">
+    
+
+      <div class="form_sec animate__up" data-scroll>
+        <fieldset data-scroll>
+          <label for="">What is your name?</label>
+          <input type="text" placeholder="What is your name?" />
+        </fieldset>
+        <fieldset data-scroll>
+          <label for="">Your Email?</label>
+          <input type="email" placeholder="Your Email?" />
+        </fieldset>
+        <fieldset data-scroll>
+          <div class="submit_btn_wrap" data-scroll>
+            <input
+              type="submit"
+              value="Send Request"
+              class="submit_cta cta__primary cta__border cta__pomgranate"
+              data-scroll />
           </div>
         </fieldset>
       </div>
@@ -153,7 +214,8 @@
             aria-label="location image"
             target=""
             href="#"
-            class="location_img" data-scroll>
+            class="location_img"
+            data-scroll>
             <picture>
               <img alt="PIXELFLAMES FZE" src="./uploads/contact/dubai.png" />
             </picture>
@@ -175,7 +237,8 @@
             aria-label="location image"
             target=""
             href="#"
-            class="location_img" data-scroll>
+            class="location_img"
+            data-scroll>
             <picture data-scroll>
               <img alt="PIXELFLAMES FZE" src="./uploads/contact/calicut.png" />
             </picture>
@@ -192,8 +255,7 @@
 <section class="flexible__section pricing" data-scroll-section>
   <div class="container-fluid" data-scroll>
     <div class="bg_blue">
-
-      <div class="row  animate__up" data-scroll>
+      <div class="row animate__up" data-scroll>
         <div class="col-md-6" data-scroll>
           <div class="left_pane" data-scroll>
             <h2 class="title__primary left_pane_title" data-scroll>
@@ -205,7 +267,9 @@
             </h5>
           </div>
         </div>
-        <div class="col-md-6 d-flex justify-content-end align-items-center" data-scroll>
+        <div
+          class="col-md-6 d-flex justify-content-end align-items-center"
+          data-scroll>
           <div class="rigth_button" data-scroll>
             <a
               href="#"

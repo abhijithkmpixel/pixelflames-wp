@@ -16,6 +16,9 @@
     @include below($tablet-lg) {
       font-size: 20px;
     }
+    @include below($mobile-lg) {
+      font-size: 16px;
+    }
   }
   .welome__to__pixelflames__row__feat__image {
     width: 100%;

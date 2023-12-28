@@ -1,27 +1,33 @@
+// $('body').addClass('pe-none')
+
 $(document).ready(function () {
-    $('.team__members__slider').slick({
-        dots: false,
-        infinite: true,
-        speed: 500,
-        // slidesToShow: 5,
-        variableWidth: true,
-        rows: 2,
-        slidesToScroll: 1,
-        prevArrow: `      <button class="slick__arr slick__prev">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
-  <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
-</svg>
-        </button>`,
-        nextArrow: `  <button class="slick__arr slick__next">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
-  <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
-</svg>
-        </button>`,
+    setTimeout(() => {
+        // $('body').removeClass('pe-none')
 
-        // asNavFor: '.clients__testimonials__avatar__slider',
-        // focusOnSelect: true,
+    }, 2000);
+//     $('.team__members__slider').slick({
+//         dots: false,
+//         infinite: true,
+//         speed: 500,
+//         // slidesToShow: 5,
+//         variableWidth: true,
+//         rows: 2,
+//         slidesToScroll: 1,
+//         prevArrow: `      <button class="slick__arr slick__prev">
+//           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+//   <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
+// </svg>
+//         </button>`,
+//         nextArrow: `  <button class="slick__arr slick__next">
+//         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+//   <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+// </svg>
+//         </button>`,
 
-    });
+//         // asNavFor: '.clients__testimonials__avatar__slider',
+//         // focusOnSelect: true,
+
+//     });
     $('.clients__logo__slider_3').slick({
         // slidesToShow: 4,
         slidesToScroll: 1,
@@ -163,11 +169,11 @@ $(document).ready(function () {
         }
     })
     $('#hamburger__button').click(function () {
-        // $('#hamburger__button').toggleClass('is-active')
+        $('#hamburger__button').toggleClass('is-active')
         $('body').toggleClass('mobile__menu')
     })
     $('.menu__overlay').click(function () {
-        // $('#hamburger__button').toggleClass('is-active')
+        $('#hamburger__button').toggleClass('is-active')
         $('body').toggleClass('mobile__menu')
     })
     $('#close__menu__btn').click(function () {
@@ -188,6 +194,11 @@ $(document).ready(function () {
         })
         $('header').mouseleave(function () {
             $('#header__primary__navigation > li').removeClass('active')
+        })
+    } else {
+        $('#header__primary__navigation > li').click(function () {
+            // $('#header__primary__navigation > li').removeClass('active')
+            $(this).toggleClass('active');
         })
     }
 

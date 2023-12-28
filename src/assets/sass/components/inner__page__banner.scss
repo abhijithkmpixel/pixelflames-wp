@@ -43,6 +43,10 @@
       left: 80%;
       position: absolute;
       top: 40%;
+      @include below($mobile-lg) {
+        top: 130px;
+        left: 15px;
+      }
     }
     .ball2 {
       content: "";
@@ -55,6 +59,12 @@
       left: 58%;
       position: absolute;
       top: 65%;
+      @include below($mobile-lg) {
+        top: auto;
+        bottom: 50px;
+        left: auto;
+        right: 15px;
+      }
     }
     .site__breadcrumbs {
       display: flex;
@@ -62,7 +72,7 @@
       flex-wrap: wrap;
       @include below($mobile-lg) {
         margin: 20px -15px 0;
-        display: none
+        display: none;
       }
       li {
         @include fontStyle(1.4vw, 1, 600, $color-madison);
@@ -117,6 +127,8 @@
     }
     @include below($mobile-lg) {
       font-size: 38px;
+      margin-bottom: 50px;
+      text-align: center;
     }
   }
   .inner__page__featured__image {
@@ -136,7 +148,7 @@
         border-radius: 60px 0px 0px 0px;
       }
       @include below($mobile-lg) {
-        border-radius: 36px 0px 0px 0px;
+        border-radius: 12px;
         aspect-ratio: 1162/600;
       }
     }
@@ -161,6 +173,7 @@
         height: 55px;
       }
       @include below($mobile-lg) {
+        display: none;
         width: 45px;
         height: 45px;
         padding: 12px;

@@ -23,6 +23,7 @@
         }
         @include below($mobile-sm) {
           margin-right: 30px;
+          margin-bottom: 18px;
         }
         input {
           display: none;
@@ -36,6 +37,9 @@
           border-radius: 8px;
           padding: 18px 30px;
           cursor: pointer;
+          @include below($tablet-lg) {
+            font-size: 20px;
+          }
           @include below($mobile-sm) {
             padding: 12px 20px;
             font-size: 10px;
@@ -75,7 +79,7 @@
             padding: 25px 0;
           }
           @include below($mobile-sm) {
-            font-size: 10px;
+            font-size: 14px;
             padding: 15px 0;
           }
           &::placeholder {
@@ -164,8 +168,19 @@
   }
   .row {
     margin: 0 -120px;
+    @include below($tablet-lg) {
+      margin: 0 -30px;
+    }
     & > div {
       padding: 0 120px;
+      @include below($tablet-lg) {
+        padding: 0 30px;
+      }
+      @include below($mobile-lg) {
+        &:not(:last-child) {
+          margin-bottom: 60px;
+        }
+      }
       &:nth-child(2) {
         .location_img:after {
           content: "";
@@ -177,6 +192,9 @@
           position: absolute;
           left: 0;
           top: 0;
+          @include below($tablet-lg) {
+            margin-left: -30px;
+          }
         }
       }
     }
@@ -184,8 +202,10 @@
   @include below($tablet-sm) {
     .row {
       margin: 0 -90px;
+
       & > div {
         padding: 0 90px;
+
         &:nth-child(2) {
           .location_img:after {
             margin-left: -90px;
@@ -201,8 +221,11 @@
       line-height: 1;
       color: $color-madison;
       margin-bottom: 40px;
-      @include below($tablet-sm) {
-        font-size: 18px;
+      @include below($tablet-lg) {
+        font-size: 28px;
+      }
+      @include below($mobile-lg) {
+        margin-bottom: 15px;
       }
     }
     p {
@@ -210,6 +233,9 @@
       color: $color-blue-bayoux;
       line-height: 1.2;
       font-weight: 500;
+      @include below($tablet-lg) {
+        font-size: 18px;
+      }
       @include below($mobile-sm) {
         font-size: 16px;
       }
@@ -235,7 +261,7 @@
         @include above($tablet-lg) {
           img {
             transform: scale(1);
-            filter: brightness(.8);
+            filter: brightness(0.8);
           }
         }
       }
@@ -251,6 +277,9 @@
         line-height: 1;
         margin-bottom: 20px;
         text-decoration: none;
+        @include below($tablet-lg) {
+          font-size: 18px;
+        }
         @include below($mobile-sm) {
           font-size: 16px;
           padding-left: 26px;
@@ -274,6 +303,9 @@
   }
 }
 .pricing {
+  @include below($mobile-lg) {
+    text-align: center;
+  }
   .bg_blue {
     padding: 60px 85px;
     background-color: $color-alice-blue;
@@ -281,7 +313,7 @@
     .title__primary {
       margin-bottom: 33px !important;
       @include below($mobile-sm) {
-        margin-bottom: 20pxs;
+        margin-bottom: 20px !important;
       }
     }
     @include below($mobile-sm) {
@@ -316,6 +348,7 @@
       display: block;
       margin-left: auto;
       margin-bottom: -60px;
+      margin-right: auto;
     }
     @include below($tablet-sm) {
       width: 90%;
@@ -323,6 +356,7 @@
     }
     @include below($mobile-lg) {
       margin: 30px auto -30px;
+      width: 100%;
     }
   }
 }
@@ -333,4 +367,52 @@
 // }
 
 @include below(variable) {
+}
+.form__tab__links__wrap {
+  margin-bottom: 80px;
+  margin-top: 80px;
+  @include below($mobile-lg) {
+    margin-bottom: 40px;
+    margin-top: 40px;
+  }
+  & > * {
+    &:not(:last-child) {
+      margin-right: 70px;
+      @include below($mobile-lg) {
+        margin-right: 30px;
+      }
+    }
+  }
+  .cta__tab {
+    background-color: transparent;
+    box-shadow: none !important;
+    border: 0 !important;
+    padding: 0;
+    @include below($mobile-lg) {
+      margin-bottom: 10px;
+    }
+    &.active {
+      color: $color-madison;
+      font-weight: 600;
+    }
+    &:not(:last-child) {
+      position: relative;
+      &::after {
+        // @include above($mobile-lg) {
+        content: "";
+        width: 1px;
+        height: 20px;
+        background-color: $color-black-original;
+        position: absolute;
+        left: calc(100% + 35px);
+        display: block;
+        top: 50%;
+        transform: translateY(-50%);
+        @include below($mobile-lg) {
+          left: calc(100% + 15px);
+        }
+        // }
+      }
+    }
+  }
 }

@@ -11,6 +11,11 @@
     vertical-align: middle;
     margin-bottom: 15px;
     background: linear-gradient(#fb6770, #f5333f);
+    @include below($mobile-lg) {
+      width: 10px;
+      height: 10px;
+      margin-bottom: 8px;
+    }
   }
   @include below($tablet-lg) {
     font-size: 46px;
