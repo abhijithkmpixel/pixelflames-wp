@@ -48,6 +48,18 @@
 }
 .clients__testimonials__row {
   margin: 0 -40px 90px;
+  .col-xl-5 {
+    @include above($tablet-lg) {
+      width: 38%;
+      flex: 0 0 38%;
+    }
+  }
+  .col-xl-7 {
+    @include above($tablet-lg) {
+      width: 62%;
+      flex: 0 0 62%;
+    }
+  }
   & > div {
     padding: 0 40px;
   }
@@ -59,7 +71,7 @@
     overflow: visible;
   }
   li {
-    width: auto;
+    width: 110px;
     position: relative;
     transition: 0.5s transform ease-in-out;
     cursor: pointer;

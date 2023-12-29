@@ -1,6 +1,18 @@
 /** @format */
 
 .how__it__works__row {
+  .col-xl-5 {
+    @include above($tablet-lg) {
+      width: 46%;
+      flex: 0 0 46%;
+    }
+  }
+  .col-xl-7 {
+    @include above($tablet-lg) {
+      width: 54%;
+      flex: 0 0 54%;
+    }
+  }
   .subtitle {
     @include fontStyle(1.25vw, 1, 600, $color-black);
     @include below($tablet-lg) {

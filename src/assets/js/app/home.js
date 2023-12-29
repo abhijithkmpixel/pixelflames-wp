@@ -119,6 +119,7 @@ $(document).ready(function () {
         slidesToScroll: 1,
         asNavFor: '.clients__testimonials__content__slider',
         focusOnSelect: true,
+        variableWidth:true,
         responsive: [
             {
                 breakpoint: 1200,

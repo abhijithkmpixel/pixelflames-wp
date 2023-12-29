@@ -109,7 +109,7 @@
     z-index: 5;
     transition: 0s all ease-in-out;
     &.float__img1 {
-      width: 190px;
+      width: 140px;
       height: auto;
       left: 0;
       top: 35%;
@@ -124,9 +124,9 @@
       }
     }
     &.float__img2 {
-      width: 120px;
+      width: 90px;
       height: auto;
-      right: 190px;
+      right: 150px;
       top: 40%;
       @include below($tablet-sm) {
         top: 30%;
@@ -137,10 +137,10 @@
       }
     }
     &.float__img3 {
-      width: 70px;
+      width: 50px;
       height: auto;
       left: 30px;
-      bottom: 26%;
+      bottom: 20%;
       @include below($tablet-lg) {
         left: 190px;
         bottom: 22%;
@@ -154,9 +154,9 @@
       }
     }
     &.float__img4 {
-      width: 170px;
+      width: 130px;
       height: auto;
-      right: 200px;
+      right: 160px;
       bottom: 10%;
       @include below($tablet-sm) {
         bottom: 15%;
