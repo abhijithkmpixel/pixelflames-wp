@@ -14,7 +14,7 @@
     }
   }
   .subtitle {
-    @include fontStyle(1.25vw, 1, 600, $color-black);
+    @include fontStyle(1.2vw, 1, 600, $color-black);
     @include below($tablet-lg) {
       font-size: 26px;
     }
@@ -43,7 +43,7 @@
     align-items: flex-start;
     position: relative;
     padding: 20px 0;
-    @include fontStyle(1.4vw, 1.5, 500, $color-black);
+    @include fontStyle(1.11vw, 1.5, 500, $color-black);
     @include below($tablet-lg) {
       font-size: 24px;
     }

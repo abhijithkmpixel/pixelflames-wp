@@ -31,7 +31,7 @@
     display: flex;
     margin: 40px -30px 0;
     li {
-      @include fontStyle(1.4vw, 1, 600, $color-blue-bayoux);
+      @include fontStyle(1.2vw, 1, 600, $color-blue-bayoux);
       text-transform: capitalize;
       padding: 0 30px;
       // @include below($tablet-lg) {
@@ -41,7 +41,7 @@
       //   font-size: 18px;
       // }
       a {
-        @include fontStyle(1.4vw, 1, 400, $color-blue-bayoux);
+        @include fontStyle(1.2vw, 1, 400, $color-blue-bayoux);
         text-decoration: none;
         @include below($tablet-lg) {
           font-size: 20px;

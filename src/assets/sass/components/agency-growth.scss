@@ -36,7 +36,8 @@
   width: 100%;
   border: 1px solid #a0a0a0;
   border-radius: 12px;
-  padding: 52px 40px;
+  // padding: 52px 40px;
+  padding: 40px 30px;
   position: relative;
   height: 100%;
   transition: 0.3s all ease-in-out;
@@ -138,7 +139,7 @@
       }
     }
     h4 {
-      @include fontStyle(1.8vw, 1.2, 600, $color-madison);
+      @include fontStyle(1.7vw, 1.2, 600, $color-madison);
       margin: 0;
       transition: 0.3s all ease-in-out;
       @include below($tablet-lg) {
@@ -153,7 +154,7 @@
     }
   }
   h5 {
-    @include fontStyle(1.4vw, 1.2, 500, $color-blue-bayoux);
+    @include fontStyle(1.2vw, 1.2, 500, $color-blue-bayoux);
     margin-bottom: 40px;
     transition: 0.3s all ease-in-out;
     @include below($tablet-lg) {
@@ -224,7 +225,7 @@
       }
       h4 {
         margin-top: 20px;
-        font-size: 1.53vw;
+        font-size: 1.45vw;
         margin-bottom: 0px;
         @include below($tablet-lg) {
           font-size: 26px;

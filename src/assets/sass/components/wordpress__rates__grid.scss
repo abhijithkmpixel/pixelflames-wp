@@ -54,7 +54,8 @@
 .wordpress__rates__card {
   width: 100%;
   height: 100%;
-  padding: 47px 40px;
+  // padding: 47px 40px;
+  padding: 40px 35px;
   border: 1px solid $color-blue-bayoux;
   //   background-color: $color-coral2;
   border-radius: 18px;
@@ -93,11 +94,11 @@
   }
 
   p {
-    @include fontStyle(1.12vw, 1.5, 400, $color-blue-bayoux);
+    @include fontStyle(1.11vw, 1.5, 400, $color-blue-bayoux);
     // max-width: 68%;
     position: relative;
     z-index: 5;
-    margin-bottom: 45px;
+    margin-bottom: 30px;
     transition: 0.3s all ease-in-out;
     @include below($tablet-lg) {
       font-size: 18px;
@@ -110,20 +111,20 @@
     }
   }
   h5 {
-    @include fontStyle(2.5vw, 1.26, 800, $color-madison);
+    @include fontStyle(2.2vw, 1.26, 800, $color-madison);
     border-top: 1px dashed $color-black;
     border-width: 2px;
     border-spacing: 10px;
     position: relative;
     z-index: 5;
-    padding-top: 45px;
+    padding-top: 35px;
     transition: 0.3s all ease-in-out;
     @include below($tablet-lg) {
       font-size: 26px;
       padding-top: 25px;
     }
     span {
-      @include fontStyle(1.5vw, 1.26, 400, $color-madison);
+      @include fontStyle(1.3vw, 1.26, 400, $color-madison);
       transition: 0.3s all ease-in-out;
       @include below($tablet-lg) {
         font-size: 22px;
@@ -131,7 +132,7 @@
     }
   }
   h6 {
-    @include fontStyle(2vw, 1.26, 700, $color-madison);
+    @include fontStyle(1.8vw, 1.26, 700, $color-madison);
     border-top: 1px dashed $color-black;
     border-width: 2px;
     border-spacing: 10px;
@@ -215,6 +216,7 @@
     background-color: $color-chablis;
     width: max-content;
     margin-left: auto;
+    border-radius: 12px;
     @include below($mobile-lg) {
       padding: 30px 20px;
     }
@@ -245,7 +247,7 @@
         content: "";
         width: 100%;
         height: 2px;
-        background-color: $color-river-bed;
+        background-color: $color-madison;
         transition: 0.4s transform ease-in-out;
         transform: scaleX(0);
         transform-origin: right;

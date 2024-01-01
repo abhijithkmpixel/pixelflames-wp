@@ -137,6 +137,7 @@ header {
             // margin-top: 20px;
             overflow: hidden;
             transform: scale(1);
+            box-shadow: none;
           }
           .overview {
             @include below($tablet-lg) {
@@ -181,7 +182,7 @@ header {
             }
           }
           h6 {
-            @include fontStyle(1.12vw, 1, 500, $color-black-original);
+            @include fontStyle(1.12vw, 1, 500, $color-madison);
             margin-bottom: 15px;
             @include below($tablet-lg) {
               font-size: 20px;
@@ -429,6 +430,7 @@ header {
   .hamburger {
     position: relative;
     z-index: 11;
+    height: 31px;
   }
 }
 .menu__overlay {

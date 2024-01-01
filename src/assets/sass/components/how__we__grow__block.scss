@@ -30,20 +30,20 @@
         flex-flow: column;
       }
       &:not(:last-child) {
-        margin-bottom: 65px;
+        margin-bottom: 50px;
         @include below($tablet-sm) {
           margin-bottom: 30px;
         }
       }
       .how__we__grow__steps__icon {
-        width: 7vw;
-        flex: 0 0 7vw;
+        width: 6vw;
+        flex: 0 0 6vw;
         height: auto;
         aspect-ratio: 1/1;
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 27px;
+        padding: 23px;
         border-radius: 10px;
         background-color: transparent;
         border: 1px solid $color-blue-bayoux;
@@ -66,8 +66,8 @@
         }
       }
       h4 {
-        @include fontStyle(1.75vw, 1.2, 600, $color-madison);
-        margin-bottom: 15px;
+        @include fontStyle(1.55vw, 1.2, 600, $color-madison);
+        margin-bottom: 10px;
         transition: 0.3s all ease-in-out;
         @include below($tablet-lg) {
           font-size: 27px;
@@ -82,7 +82,7 @@
         }
       }
       span {
-        @include fontStyle(1.4vw, 1.5, 500, $color-blue-bayoux);
+        @include fontStyle(1.2vw, 1.5, 500, $color-blue-bayoux);
         transition: 0.3s all ease-in-out;
         @include below($tablet-lg) {
           font-size: 22px;

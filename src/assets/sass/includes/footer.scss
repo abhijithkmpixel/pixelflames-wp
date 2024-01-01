@@ -50,7 +50,7 @@ footer {
           @include above($tablet-lg) {
             background-color: $color-madison;
             img {
-              filter: invert(1);
+              filter: brightness(0) invert(1);
             }
           }
         }
@@ -195,6 +195,10 @@ footer {
           margin-bottom: 12px;
           text-align: center;
         }
+        a {
+          @include fontStyleInherit();
+          text-decoration: none;
+        }
       }
       .footer__links {
         li {
@@ -209,7 +213,7 @@ footer {
           }
           a {
             text-decoration: none;
-            @include fontStyle(1.25vw, 1, 400, $color-blue-bayoux);
+            @include fontStyle(1.2vw, 1, 400, $color-blue-bayoux);
             transition: 0.2s all ease-in-out;
             position: relative;
             @include below($tablet-lg) {

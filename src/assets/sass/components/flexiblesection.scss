@@ -9,9 +9,9 @@
     padding: 40px 0;
   }
   .agency__growth__grid {
-    margin-top: 120px;
+    margin-top: 60px;
     @include below($tablet-lg) {
-      margin-top: 70px;
+      // margin-top: 70px;
     }
     @include below($tablet-sm) {
       margin-top: 30px;
@@ -21,9 +21,9 @@
     }
   }
   .title__primary {
-    margin-bottom: 55px;
+    margin-bottom: 35px;
     @include below($tablet-lg) {
-      margin-bottom: 40px;
+      // margin-bottom: 40px;
     }
     @include below($tablet-sm) {
       margin-bottom: 30px;
@@ -33,7 +33,7 @@
     }
   }
   .subtitle__primary {
-    margin-bottom: 55px;
+    margin-bottom: 25px;
   }
 }
 .section__bg__gallery {
@@ -49,7 +49,8 @@
   background-color: $color-alice-blue;
 }
 .flexible__alternate__grid {
-  padding: 120px 0;
+  // padding: 120px 0;
+  padding: 80px 0;
   @include below($tablet-lg) {
     padding: 80px 0;
   }
@@ -65,6 +66,18 @@
       padding: 0 60px;
       @include below($tablet-lg) {
         padding: 0 20px;
+      }
+    }
+    .col-xl-4 {
+      @include above($tablet-lg) {
+        width: 40.5%;
+        width: 0 0 40.5%;
+      }
+    }
+    .col-xl-8 {
+      @include above($tablet-lg) {
+        width: 59.5%;
+        width: 0 0 59.5%;
       }
     }
     .feat__img {
@@ -86,13 +99,13 @@
       }
     }
     .title__primary {
-      margin-bottom: 40px;
+      margin-bottom: 25px;
       @include below($tablet-sm) {
         margin-bottom: 20px;
       }
     }
     p {
-      @include fontStyle(1.45vw, 1.4, 400);
+      @include fontStyle(1.25vw, 1.4, 400);
       @include below($tablet-lg) {
         font-size: 20px;
       }
@@ -101,7 +114,7 @@
       }
     }
   }
-  &:nth-child(even) {
+  &:nth-of-type(even) {
     .row {
       @include above($tablet-sm) {
         flex-flow: row-reverse;
@@ -149,6 +162,10 @@
 }
 .products__package {
   table-layout: fixed;
+  @include above($tablet-lg) {
+    width: 65%;
+    margin: auto;
+  }
   @include below($tablet-lg) {
     table-layout: unset;
   }
@@ -156,7 +173,8 @@
   th {
     border: 1px solid #9ca1b4;
     border-collapse: collapse;
-    padding: 20px 25px;
+    padding: 10px 15px;
+    // padding: 20px 25px;
     transition: 0.2s all ease-in-out;
     @include below($mobile-lg) {
       padding: 12px 15px;
@@ -168,16 +186,23 @@
     // }
   }
   .cta__primary {
+    font-size: 0.8vw;
+    @include below($tablet-lg) {
+      font-size: 16px;
+    }
+    @include below($mobile-lg) {
+      font-size: 14px;
+    }
     &:hover {
       @include above($tablet-lg) {
-        background-color: $color-white;
-        color: $color-pomegranate;
+        background-color: $color-pomegranate;
+        color: $color-white;
       }
     }
   }
   h4 {
-    @include fontStyle(1.5vw, 1, 700, $color-black);
-    margin-bottom: 10px;
+    @include fontStyle(1.1vw, 1, 700, $color-black);
+    margin-bottom: 5px;
     transition: 0.2s all ease-in-out;
 
     @include below($tablet-lg) {
@@ -188,7 +213,7 @@
     }
   }
   h6 {
-    @include fontStyle(1.12vw, 1, 600, $color-madison);
+    @include fontStyle(0.8vw, 1, 600, $color-madison);
     // margin-bottom: 10px;
     transition: 0.2s all ease-in-out;
 
@@ -200,7 +225,7 @@
     }
   }
   p {
-    @include fontStyle(0.77vw, 1, 500, $color-lynch);
+    @include fontStyle(0.6vw, 1, 500, $color-lynch);
     // margin-bottom: 10px;
     transition: 0.2s all ease-in-out;
 
@@ -212,8 +237,8 @@
     }
   }
   h5 {
-    @include fontStyle(1.25vw, 1, 500, $color-black);
-    margin-bottom: 20px;
+    @include fontStyle(1vw, 1, 500, $color-black);
+    margin-bottom: 10px;
     transition: 0.2s all ease-in-out;
 
     @include below($tablet-lg) {
@@ -227,21 +252,21 @@
     }
   }
   img {
-    width: 19px;
-    height: 19px;
+    width: 14px;
+    height: 14px;
   }
   thead > tr > th:first-child > h4 {
     @include below($tablet-sm) {
       width: 200px;
     }
   }
-  // tbody {
-  //   tr {
-  //     &:nth-child(even) {
-  //       background-color: #f7faff;
-  //     }
-  //   }
-  // }
+  tbody {
+    tr {
+      td:not(:nth-child(1)) {
+        color: $color-black-original;
+      }
+    }
+  }
   tr > td:nth-child(3),
   tr > th:nth-child(3) {
     border-top: 1px solid #f5333f;
@@ -256,6 +281,14 @@
   thead {
     th:nth-child(3) {
       background-color: $color-pomegranate;
+      .cta__primary {
+        &:hover {
+          @include above($tablet-lg) {
+            background-color: $color-white;
+            color: $color-pomegranate;
+          }
+        }
+      }
       & > * {
         color: $color-white;
         border-color: $color-white;
@@ -298,7 +331,7 @@
       }
     }
     h4 {
-      @include fontStyle(1.75vw, 1.2, 600, $color-black);
+      @include fontStyle(1.55vw, 1.2, 600, $color-black);
       text-align: center;
       margin-bottom: 25px;
       @include below($tablet-lg) {
@@ -307,9 +340,9 @@
       }
     }
     p {
-      @include fontStyle(1.25vw, 1.5, 500, $color-river-bed);
+      @include fontStyle(1.2vw, 1.5, 500, $color-river-bed);
       text-align: center;
-      max-width: 80%;
+      max-width: 90%;
       margin: auto;
       @include below($tablet-lg) {
         font-size: 16px;
@@ -328,7 +361,7 @@
   margin-bottom: 30px;
   li {
     list-style-type: none;
-    @include fontStyle(1.25vw, 1.4, 400, $color-madison);
+    @include fontStyle(1.2vw, 1.4, 400, $color-madison);
     &:not(:last-child) {
       margin-bottom: 15px;
       @include below($mobile-lg) {
@@ -352,7 +385,7 @@
     }
   }
   p {
-    @include fontStyle(1.25vw, 1.6, 400, $color-river-bed);
+    @include fontStyle(1.2vw, 1.6, 400, $color-river-bed);
     margin-bottom: 25px;
     @include below($tablet-lg) {
       font-size: 18px;
@@ -682,6 +715,11 @@
   @include below($mobile-lg) {
     justify-content: center !important;
     align-items: center;
+  }
+  .cta__tab {
+    @include below($mobile-lg) {
+      margin-bottom: 10px;
+    }
   }
 }
 .cta__secondary {

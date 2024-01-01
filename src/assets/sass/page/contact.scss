@@ -29,13 +29,14 @@
           display: none;
         }
         label {
-          font-size: 1.4vw;
+          font-size: 1.2vw;
           line-height: 1;
           font-weight: 400;
           color: $color-madison;
           border: 1px solid $color-blue-bayoux;
           border-radius: 8px;
           padding: 18px 30px;
+          transition: 0.2s all ease-in-out;
           cursor: pointer;
           @include below($tablet-lg) {
             font-size: 20px;
@@ -192,6 +193,7 @@
           position: absolute;
           left: 0;
           top: 0;
+          pointer-events: none;
           @include below($tablet-lg) {
             margin-left: -30px;
           }
@@ -229,7 +231,7 @@
       }
     }
     p {
-      font-size: 1.4vw;
+      font-size: 1.2vw;
       color: $color-blue-bayoux;
       line-height: 1.2;
       font-weight: 500;
@@ -272,7 +274,7 @@
         color: $color-madison;
         padding-left: 36px;
         position: relative;
-        font-size: 1.4vw;
+        font-size: 1.2vw;
         font-weight: 500;
         line-height: 1;
         margin-bottom: 20px;

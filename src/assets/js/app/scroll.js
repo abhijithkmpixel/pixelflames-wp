@@ -238,6 +238,11 @@ if ($(window.innerWidth > 1200)) {
                     }
                 })
         })
+        // each time the window updates, we should refresh ScrollTrigger and then update LocomotiveScroll.
+        ScrollTrigger.addEventListener("refresh", () => scroll.update());
+    
+        // after everything is set up, refresh() ScrollTrigger and update LocomotiveScroll because padding may have been added for pinning, etc.
+        ScrollTrigger.refresh();
     }, 2000);
 
     // gsap.to('header .brand__logo',
@@ -248,13 +253,4 @@ if ($(window.innerWidth > 1200)) {
     //         delay: 1,
     //         transform: 'translate(0%,0%)'
     //     })
-
-
-
-
-    // each time the window updates, we should refresh ScrollTrigger and then update LocomotiveScroll.
-    ScrollTrigger.addEventListener("refresh", () => scroll.update());
-
-    // after everything is set up, refresh() ScrollTrigger and update LocomotiveScroll because padding may have been added for pinning, etc.
-    ScrollTrigger.refresh();
 }

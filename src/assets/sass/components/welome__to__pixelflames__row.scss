@@ -35,7 +35,7 @@
   }
 }
 .achievements__row {
-  margin: 50px -88px 0;
+  margin: 30px -88px 0;
   @include below($tablet-lg) {
     margin: 0 -30px;
   }
@@ -52,7 +52,7 @@
     }
   }
   h4 {
-    @include fontStyle(5.21vw, 1, 600, $color-black);
+    @include fontStyle(5vw, 1, 600, $color-black);
     margin-bottom: 10px;
     @include below($mobile-lg) {
       font-size: 38px;

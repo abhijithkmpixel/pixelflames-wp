@@ -1,7 +1,7 @@
 /** @format */
 
 .title__primary {
-  @include fontStyle(3.5vw, 1.2, 500, $color-madison);
+  @include fontStyle(3.3vw, 1.2, 500, $color-madison);
   //   display: flex;
   span {
     width: 16px;
@@ -28,7 +28,7 @@
   }
 }
 .subtitle__primary {
-  @include fontStyle(1.4vw, 1.5, 500, $color-blue-bayoux);
+  @include fontStyle(1.11vw, 1.5, 500, $color-blue-bayoux);
   @include below($tablet-lg) {
     font-size: 26px;
   }
@@ -60,7 +60,7 @@
   }
 }
 .subtitle__secondary {
-  @include fontStyle(1.4vw, 1.5, 400, $color-blue-bayoux);
+  @include fontStyle(1.11vw, 1.5, 400, $color-blue-bayoux);
   @include below($tablet-lg) {
     font-size: 26px;
   }

@@ -94,7 +94,7 @@ address {
   outline: 0;
 }
 .container-fluid {
-  padding: 0 90px;
+  padding: 0 140px;
   @include below($tablet-lg) {
     padding: 0 30px;
   }
@@ -159,7 +159,7 @@ picture {
   height: 100%;
   display: block;
 }
-.ration__1160x420 {
+.ratio__1160x420 {
   width: 100%;
   height: auto;
   aspect-ratio: 1162/420;
@@ -168,7 +168,7 @@ picture {
     object-fit: cover;
   }
 }
-.ration__1160x616 {
+.ratio__1160x616 {
   width: 100%;
   height: auto;
   aspect-ratio: 1162/616;
@@ -177,7 +177,7 @@ picture {
     object-fit: cover;
   }
 }
-.ration__565x420 {
+.ratio__565x420 {
   width: 100%;
   height: auto;
   aspect-ratio: 565/420;

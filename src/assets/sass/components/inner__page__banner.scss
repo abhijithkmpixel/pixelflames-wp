@@ -75,7 +75,7 @@
         display: none;
       }
       li {
-        @include fontStyle(1.4vw, 1, 600, $color-madison);
+        @include fontStyle(1.2vw, 1, 600, $color-madison);
         text-transform: capitalize;
         padding: 0 15px;
         margin-bottom: 10px;
@@ -101,7 +101,7 @@
           }
         }
         a {
-          @include fontStyle(1.4vw, 1, 400, $color-blue-bayoux);
+          @include fontStyle(1.2vw, 1, 400, $color-blue-bayoux);
           text-decoration: none;
           transition: 0.2s all ease-in-out;
           @include below($tablet-lg) {
