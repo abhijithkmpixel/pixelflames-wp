@@ -163,8 +163,8 @@
 .products__package {
   table-layout: fixed;
   @include above($tablet-lg) {
-    width: 65%;
-    margin: auto;
+    width: 75%;
+    // margin: auto;
   }
   @include below($tablet-lg) {
     table-layout: unset;

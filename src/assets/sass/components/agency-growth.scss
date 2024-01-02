@@ -1,7 +1,7 @@
 /** @format */
 
 .agency__growth__grid {
-  margin: 0 -20px;
+  margin: 0 -10px;
   @include below($tablet-lg) {
     flex-wrap: nowrap;
     overflow-x: scroll;
@@ -12,8 +12,8 @@
     margin: 0 -15px;
   }
   & > div {
-    padding: 0 20px;
-    margin-bottom: 40px;
+    padding: 0 10px;
+    margin-bottom: 20px;
 
     @include below($tablet-lg) {
       margin-bottom: 40px;

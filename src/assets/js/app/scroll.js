@@ -133,6 +133,10 @@ if ($(window.innerWidth > 1200)) {
                 setTimeout(() => {
                     scroll.update();
                 }, 1000);
+            let target = document.querySelector(`[data-tab-id=${contactformid}]`);
+            scroll.scrollTo(target, {
+                offset: `-${document.querySelector("header").clientHeight + 30}`,
+            });
             }
         })
 
@@ -240,10 +244,10 @@ if ($(window.innerWidth > 1200)) {
         })
         // each time the window updates, we should refresh ScrollTrigger and then update LocomotiveScroll.
         ScrollTrigger.addEventListener("refresh", () => scroll.update());
-    
+
         // after everything is set up, refresh() ScrollTrigger and update LocomotiveScroll because padding may have been added for pinning, etc.
         ScrollTrigger.refresh();
-    }, 2000);
+    }, 1800);
 
     // gsap.to('header .brand__logo',
     //     {

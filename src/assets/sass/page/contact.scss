@@ -70,7 +70,7 @@
           font-size: 1.9vw;
           line-height: 1.2;
           font-weight: 400;
-          color: rgba($color: $color-blue-bayoux, $alpha: 0.5);
+          color: rgba($color: $color-blue-bayoux, $alpha: 1);
           width: 100%;
           border: none;
           border-bottom: 1px solid $color-blue-bayoux;
@@ -84,11 +84,19 @@
             padding: 15px 0;
           }
           &::placeholder {
-            @include fontStyleInherit();
+            // @include fontStyleInherit();
+            color: rgba($color: $color-blue-bayoux, $alpha: 0.5);
+            transition: 0.2s all ease-in-out;
+            @include below($mobile-sm) {
+              font-size: 14px;
+            }
           }
           &:focus {
             border-color: $color-madison;
             color: $color-madison;
+            &::placeholder {
+              color: rgba($color: $color-madison, $alpha: 1);
+            }
           }
         }
         .submit_btn_wrap {
@@ -313,7 +321,7 @@
     background-color: $color-alice-blue;
     border-radius: 12px;
     .title__primary {
-      margin-bottom: 33px !important;
+      margin-bottom: 20px !important;
       @include below($mobile-sm) {
         margin-bottom: 20px !important;
       }
@@ -339,8 +347,8 @@
   .pricing__feat__img {
     position: absolute;
     bottom: -60px;
-    right: 0px;
-    width: 35%;
+    right: -55px;
+    width: 38%;
     // max-height: 100%;
     height: auto;
     @include below($tablet-lg) {
@@ -348,6 +356,7 @@
       width: 50%;
       margin-top: 30px;
       display: block;
+      right: 0;
       margin-left: auto;
       margin-bottom: -60px;
       margin-right: auto;
@@ -359,6 +368,7 @@
     @include below($mobile-lg) {
       margin: 30px auto -30px;
       width: 100%;
+      right: 0;
     }
   }
 }

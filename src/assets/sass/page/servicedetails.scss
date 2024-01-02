@@ -11,6 +11,9 @@
 // }
 .secondary_nav {
   padding: 50px 0;
+  @include below($mobile-lg) {
+    padding: 20px 0 30px;
+  }
   .secondary_nav_wrap {
     display: block;
     position: relative;
@@ -22,6 +25,9 @@
       position: absolute;
       background-color: $color-black;
       margin-top: 40px;
+      @include below($mobile-lg) {
+        margin-top: 20px;
+      }
     }
     a.active {
       // color: $color-black;
@@ -29,7 +35,7 @@
   }
   .site__breadcrumbs {
     display: flex;
-    margin: 40px -30px 0;
+    margin: 0px -30px 0;
     li {
       @include fontStyle(1.2vw, 1, 600, $color-blue-bayoux);
       text-transform: capitalize;
@@ -68,9 +74,9 @@
 // }
 .service_card {
   .row {
-    margin: 0 -1W0px;
+    margin: 0 -10px;
     & > div {
-      padding: 0 1W0px;
+      padding: 0 10px;
     }
   }
   .service_card_box {

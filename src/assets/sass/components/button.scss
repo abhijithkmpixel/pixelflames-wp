@@ -178,7 +178,7 @@
     appearance: none;
     width: 100%;
     background-color: transparent;
-    @include fontStyle(1.1vw, 1, 400, $color-black);
+    @include fontStyle(1.1vw, 0.8, 400, $color-black);
     padding: 12px 57px 15px 20px;
     border: 0 !important;
     outline: 0 !important;

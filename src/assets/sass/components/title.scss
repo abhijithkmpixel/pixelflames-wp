@@ -28,7 +28,7 @@
   }
 }
 .subtitle__primary {
-  @include fontStyle(1.11vw, 1.5, 500, $color-blue-bayoux);
+  @include fontStyle(1.15vw, 1.5, 500, $color-blue-bayoux);
   @include below($tablet-lg) {
     font-size: 26px;
   }
