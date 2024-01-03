@@ -24,6 +24,10 @@
     @include below($tablet-lg) {
       width: 32%;
     }
+    @include below($mobile-lg) {
+      width: 100%;
+      top: 100px;
+    }
   }
   .inner__page__banner__inner {
     padding: 200px 0 200px;
@@ -129,6 +133,9 @@
       font-size: 38px;
       margin-bottom: 50px;
       text-align: center;
+      max-width: 90%;
+      margin-left: auto;
+      margin-right: auto;
     }
   }
   .inner__page__featured__image {

@@ -125,11 +125,12 @@
 .clients__logo__slider_2,
 .clients__logo__slider_3 {
   margin-top: 20px;
+  pointer-events: none;
   .clients__logo__wrap {
     width: 20vw;
     height: 120px;
     margin: 0 7px;
-    border: 1px solid $color-black;
+    border: 1px solid $color-black-original;
     border-radius: 100px;
     padding: 30px 50px;
     @include below($tablet-lg) {
@@ -373,7 +374,17 @@
     }
   }
 }
+.flexible__section.project__overview {
+  @include below($mobile-lg) {
+    padding-bottom: 0 !important;
+  }
+}
 .project__overview {
+  &:not(.flexible__section) {
+    @include below($tablet-sm) {
+      margin-bottom: 60px;
+    }
+  }
   h3 {
     @include fontStyle(2.8vw, 1.2, 400, $color-black);
     margin-bottom: 40px;
@@ -725,5 +736,18 @@
 .cta__secondary {
   @include below($mobile-lg) {
     margin-right: auto;
+  }
+}
+.project__overview__row {
+  @include above($tablet-sm) {
+    margin: 0 -50px;
+  }
+  @include below($tablet-sm) {
+    flex-flow: column-reverse;
+  }
+  & > div {
+    @include above($tablet-sm) {
+      padding: 0 50px;
+    }
   }
 }

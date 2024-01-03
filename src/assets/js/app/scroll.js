@@ -138,6 +138,36 @@ if ($(window.innerWidth > 1200)) {
                 offset: `-${document.querySelector("header").clientHeight + 30}`,
             });
             }
+            $('#select__service, #select__industry').on('change', function () {
+                filterCustomPostss();
+                $('#filtered-posts').addClass('opacity-50')
+            });
+
+            function filterCustomPostss(page = 1) {
+                var taxonomy1value = $('#select__service').val();
+                var taxonomy2value = $('#select__industry').val();
+
+                $.ajax({
+                    url: ajaxurl, // Use the AJAX URL provided by WordPress
+                    type: 'post',
+                    data: {
+                        action: 'filter_custom_postss',
+                        taxonomy1: taxonomy1value,
+                        taxonomy2: taxonomy2value,
+                    },
+                    success: function (response) {
+                        $('#filtered-posts').html(response);
+                        scroll.update();
+                        ScrollTrigger.refresh();
+
+                        setTimeout(() => {
+                            $('#filtered-posts').removeClass('opacity-50')
+
+                        }, 500);
+
+                    }
+                });
+            }
         })
 
         $('.animate__up').each(function () {

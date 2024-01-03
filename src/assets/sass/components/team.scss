@@ -96,12 +96,12 @@
   flex-wrap: wrap;
   margin: 90px -10px 0;
   @include below($tablet-lg) {
-    margin-top: 50px;
     justify-content: unset;
     flex-wrap: nowrap;
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
+    margin: 50px -15px 0 -10px;
   }
   .team__members__slide__item {
     width: 25%;

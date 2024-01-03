@@ -8,6 +8,11 @@ section,
 footer {
   overflow: hidden;
 }
+main{
+  @include below($tablet-lg){
+    overflow: hidden;
+  }
+}
 * {
   outline: 0;
   &,

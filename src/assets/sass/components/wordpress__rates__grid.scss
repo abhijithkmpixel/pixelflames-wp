@@ -217,11 +217,12 @@
     width: max-content;
     margin-left: auto;
     border-radius: 12px;
-    @include below($mobile-lg) {
-      padding: 30px 20px;
-    }
     @include below($tablet-sm) {
       width: 100%;
+    }
+    @include below($mobile-lg) {
+      padding: 30px 20px;
+      margin-top: 30px;
     }
 
     img {
