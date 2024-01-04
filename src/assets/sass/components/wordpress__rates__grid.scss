@@ -104,6 +104,11 @@
       font-size: 18px;
       margin-bottom: 25px;
     }
+    strong {
+      @include fontStyleInherit();
+      color: $color-madison;
+      font-weight: 600;
+    }
     svg {
       width: 16px;
       vertical-align: sub;

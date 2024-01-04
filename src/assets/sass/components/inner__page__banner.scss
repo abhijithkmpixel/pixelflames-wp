@@ -74,6 +74,8 @@
       display: flex;
       margin: 40px -15px 0;
       flex-wrap: wrap;
+      transform: translateY(150px);
+      opacity: 0;
       @include below($mobile-lg) {
         margin: 20px -15px 0;
         display: none;
@@ -126,6 +128,8 @@
   h1 {
     @include fontStyle(4.2vw, 1, 600, $color-madison);
     margin-bottom: 20px;
+    transform: translateY(150px);
+    opacity: 0;
     @include below($tablet-lg) {
       font-size: 60px;
     }
@@ -141,6 +145,8 @@
   .inner__page__featured__image {
     margin-top: -120px;
     position: relative;
+         transform: translateY(150px);
+    opacity: 0;
     @include below($mobile-lg) {
       margin-top: -30px;
     }

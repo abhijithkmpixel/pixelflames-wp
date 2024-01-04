@@ -1,18 +1,23 @@
 /** @format */
 if ($(window.innerWidth > 1200)) {
     // const scroll;
-    gsap.from('.staggerTitle', {
-        opacity: 0,
-        y: 100.,
+    gsap.to('.staggerTitle', {
+        opacity: 1,
+        y: 0.,
         stagger: .2,
-        delay: 0,
+        delay: 2.1,
     })
 
-    gsap.from('.hero__banner .hero__banner__featured__side__Image__wrap ', {
-        opacity: 0,
-        x: 100.,
+    gsap.to('.hero__banner .hero__banner__featured__side__Image__wrap ', {
+        opacity: 1,
+        x: 0.,
         stagger: .4,
-        delay: 1.2,
+        delay: 2.8,
+    })
+    gsap.to('header ', {
+        opacity: 1,
+        y: 0,
+        delay: 2.8,
     })
     setTimeout(() => {
 
@@ -169,6 +174,28 @@ if ($(window.innerWidth > 1200)) {
                 });
             }
         })
+        $(".counters").each(function (index, element) {
+            var count = $(this),
+                zero = {
+                    val: 0
+                },
+                num = count.data("number"),
+                split = (num + "").split("."), // to cover for instances of decimals
+                decimals = split.length > 1 ? split[1].length : 0;
+            gsap.to(zero, {
+                val: num,
+                duration: 2,
+                scrollTrigger: {
+                    trigger: element,
+                    start: "0% 100%",
+                    scroller: window.innerWidth > 1200 ? "[data-scroll-container]" : "body",
+
+                },
+                onUpdate: function () {
+                    count.text(zero.val.toFixed(decimals));
+                }
+            });
+        });
 
         $('.animate__up').each(function () {
 

@@ -52,6 +52,8 @@
     h1 {
       @include fontStyle(4.2vw, 1, 600, $color-madison);
       margin-bottom: 25px;
+      transform: translateY(150px);
+      opacity: 0;
       @include below($tablet-lg) {
         font-size: 60px;
       }
@@ -67,6 +69,9 @@
     p {
       @include fontStyle(1.3vw, 1.75, 400, $color-blue-bayoux);
       max-width: 90%;
+      transform: translateY(150px);
+      opacity: 0;
+
       @include below($tablet-lg) {
         font-size: 20px;
         text-align: center;
@@ -75,6 +80,10 @@
       @include below($mobile-lg) {
         font-size: 16px;
       }
+    }
+    .staggerTitle {
+      transform: translateY(150px);
+      opacity: 0;
     }
     .cta__primary {
       @include below($tablet-sm) {
@@ -85,6 +94,8 @@
   }
   .hero__banner__featured__side__Image__wrap {
     position: relative;
+    transform: translateX(150px);
+    opacity: 0;
     @include below($tablet-lg) {
       display: flex;
       align-items: flex-end;
@@ -93,7 +104,7 @@
   .hero__banner__featured__side__Image {
     object-position: bottom;
     @include below($tablet-lg) {
-      width: 60%;
+      width: 80%;
       margin: auto;
       height: auto;
       display: block;
@@ -108,9 +119,11 @@
   .float__image {
     position: absolute;
     z-index: 5;
+    opacity: 0;
     transition: 0s all ease-in-out;
     &.float__img1 {
-      width: 140px;
+      // width: 190px;
+      width: 9vw;
       height: auto;
       left: 0;
       top: 35%;
@@ -125,7 +138,8 @@
       }
     }
     &.float__img2 {
-      width: 90px;
+      // width: 90px;
+      width: 7vw;
       height: auto;
       right: 150px;
       top: 40%;
@@ -133,12 +147,14 @@
         top: 30%;
       }
       @include below($mobile-lg) {
-        width: 70px;
+        width: 60px;
         right: 70px;
+        top: 35%;
       }
     }
     &.float__img3 {
-      width: 50px;
+      // width: 50px;
+      width: 3.5vw;
       height: auto;
       left: 30px;
       bottom: 20%;
@@ -151,11 +167,12 @@
       }
       @include below($mobile-lg) {
         width: 30px;
-        left: 70px;
+        left: 50px;
       }
     }
     &.float__img4 {
-      width: 130px;
+      // width: 130px;
+      width: 7vw;
       height: auto;
       right: 160px;
       bottom: 10%;
@@ -196,18 +213,162 @@
   }
 }
 
+// .float__img1 {
+//   animation: zoomAnimation 12s infinite 0s; /* Adjust the duration as needed */
+// }
+
+// .float__img2 {
+//   animation: zoomAnimation 12s infinite 3s; /* Adjust the duration and delay as needed */
+// }
+
+// .float__img3 {
+//   animation: zoomAnimation 12s infinite 6s; /* Adjust the duration and delay as needed */
+// }
+
+// .float__img4 {
+//   animation: zoomAnimation 12s infinite 9s; /* Adjust the duration and delay as needed */
+// }
+
+@keyframes moveInArc {
+  0% {
+    transform: translateY(-100px) translateX(50px);
+    opacity: 0;
+    @include below($mobile-lg) {
+      transform: translateY(-50px) translateX(30px);
+    }
+  }
+  5% {
+    transform: translateY(0) translateX(0);
+    opacity: 1;
+  }
+  90% {
+    transform: translateY(0) translateX(0);
+    opacity: 1;
+  }
+  95% {
+    transform: translateY(100px) translateX(-30px);
+    opacity: 0;
+    @include below($mobile-lg) {
+      transform: translateY(50px) translateX(-20px);
+    }
+  }
+  100% {
+    transform: translateY(100px) translateX(-30px);
+    opacity: 0;
+    @include below($mobile-lg) {
+      transform: translateY(50px) translateX(-20px);
+    }
+  }
+}
+@keyframes moveInArc2 {
+  0% {
+    transform: translateY(100px) translateX(50px);
+    opacity: 0;
+    @include below($mobile-lg) {
+      transform: translateY(50px) translateX(30px);
+    }
+  }
+  5% {
+    transform: translateY(0) translateX(0);
+    opacity: 1;
+  }
+  90% {
+    transform: translateY(0) translateX(0);
+    opacity: 1;
+  }
+  95% {
+    transform: translateY(-100px) translateX(-50px);
+    opacity: 0;
+    @include below($mobile-lg) {
+      transform: translateY(-60px) translateX(-30px);
+    }
+  }
+  100% {
+    transform: translateY(-100px) translateX(-50px);
+    opacity: 0;
+    @include below($mobile-lg) {
+      transform: translateY(-60px) translateX(-30px);
+    }
+  }
+}
+@keyframes moveInArc3 {
+  0% {
+    transform: translateY(-100px) translateX(-20px);
+    opacity: 0;
+    @include below($mobile-lg) {
+      transform: translateY(-50px) translateX(-15px);
+    }
+  }
+  5% {
+    transform: translateY(0) translateX(0);
+    opacity: 1;
+  }
+  90% {
+    transform: translateY(0) translateX(0);
+    opacity: 1;
+  }
+  95% {
+    transform: translateY(80px) translateX(30px);
+    opacity: 0;
+    @include below($mobile-lg) {
+      transform: translateY(50px) translateX(20px);
+    }
+  }
+  100% {
+    transform: translateY(80px) translateX(30px);
+    opacity: 0;
+    @include below($mobile-lg) {
+      transform: translateY(50px) translateX(20px);
+    }
+  }
+}
+@keyframes moveInArc4 {
+  0% {
+    transform: translateY(50px) translateX(-80px);
+    opacity: 0;
+    @include below($mobile-lg) {
+      transform: translateY(30px) translateX(-50px);
+    }
+  }
+  5% {
+    transform: translateY(0) translateX(0);
+    opacity: 1;
+  }
+  90% {
+    transform: translateY(0) translateX(0);
+    opacity: 1;
+  }
+  95% {
+    transform: translateY(-80px) translateX(30px);
+    opacity: 0;
+    @include below($mobile-lg) {
+      transform: translateY(-50px) translateX(20px);
+    }
+  }
+  100% {
+    transform: translateY(-80px) translateX(30px);
+    opacity: 0;
+    @include below($mobile-lg) {
+      transform: translateY(-50px) translateX(20px);
+    }
+  }
+}
 .float__img1 {
-  animation: zoomAnimation 12s infinite 0s; /* Adjust the duration as needed */
+  animation: moveInArc 10s linear infinite; /* Adjust the duration as needed */
+  animation-delay: 3.3s;
 }
 
 .float__img2 {
-  animation: zoomAnimation 12s infinite 3s; /* Adjust the duration and delay as needed */
+  animation: moveInArc2 10s linear infinite; /* Adjust the duration and delay as needed */
+  animation-delay: 3.3s;
 }
 
 .float__img3 {
-  animation: zoomAnimation 12s infinite 6s; /* Adjust the duration and delay as needed */
+  animation: moveInArc3 10s linear infinite; /* Adjust the duration and delay as needed */
+  animation-delay: 3.3s;
 }
 
 .float__img4 {
-  animation: zoomAnimation 12s infinite 9s; /* Adjust the duration and delay as needed */
+  animation: moveInArc4 10s linear infinite; /* Adjust the duration and delay as needed */
+  animation-delay: 3.3s;
 }

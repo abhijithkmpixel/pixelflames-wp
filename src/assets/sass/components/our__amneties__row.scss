@@ -101,6 +101,7 @@
   span {
     @include fontStyle(1vw, 1.2, 400, $color-blue-bayoux);
     transition: 0.2s all ease-in-out;
+    display: inline-block;
     @include below($tablet-lg) {
       font-size: 18px;
     }
