@@ -108,6 +108,7 @@
       @include fontStyleInherit();
       color: $color-madison;
       font-weight: 600;
+      transition: 0.3s all ease-in-out;
     }
     svg {
       width: 16px;
@@ -168,6 +169,9 @@
           path {
             fill: $color-white;
           }
+        }
+        strong {
+          color: $color-white;
         }
       }
       &::after {

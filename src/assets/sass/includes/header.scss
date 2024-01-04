@@ -324,7 +324,7 @@ header {
                   transition: 0.5s all ease-in-out;
                   @for $i from 1 through 3 {
                     &:nth-child(#{$i}n) {
-                      transition-delay: #{($i * 0.15) + 0.5}s;
+                      transition-delay: #{($i * 0.15) + 0.1}s;
                     }
                   }
                 }
