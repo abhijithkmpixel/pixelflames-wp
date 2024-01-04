@@ -17,7 +17,7 @@ if ($(window.innerWidth > 1200)) {
     gsap.to('header ', {
         opacity: 1,
         y: 0,
-        delay: 2.8,
+        delay: 1.7,
     })
     setTimeout(() => {
 
