@@ -227,6 +227,12 @@ picture {
       text-align: center;
       position: relative;
       z-index: 5;
+      @include below($tablet-lg){
+        font-size: 20px;
+      }
+      @include below($mobile-lg){
+        font-size: 16px;
+      }
     }
     img,
     svg {
