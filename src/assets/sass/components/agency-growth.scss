@@ -142,6 +142,9 @@
       @include fontStyle(1.7vw, 1.2, 600, $color-madison);
       margin: 0;
       transition: 0.3s all ease-in-out;
+      @include below($desktop-lg) {
+        font-size: 1.5vw;
+      }
       @include below($tablet-lg) {
         font-size: 30px;
       }

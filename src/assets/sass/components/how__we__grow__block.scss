@@ -35,10 +35,26 @@
           margin-bottom: 30px;
         }
       }
+      .steps__body {
+        width: calc(100% - (6vw + 35px));
+        flex: 0 0 calc(100% - (6vw + 35px));
+        @include below($tablet-lg) {
+          width: calc(100% - (120px + 35px));
+          flex: 0 0 calc(100% - (120px + 35px));
+        }
+        @include below($tablet-sm) {
+          width: calc(100% - (90px + 35px));
+          flex: 0 0 calc(100% - (90px + 35px));
+        }
+        @include below($mobile-lg) {
+          width: 100%;
+          flex: 0 0 100%;
+        }
+      }
       .how__we__grow__steps__icon {
         width: 6vw;
         flex: 0 0 6vw;
-        height: auto;
+        height: 6vw;
         aspect-ratio: 1/1;
         display: flex;
         justify-content: center;
@@ -55,12 +71,14 @@
         @include below($tablet-lg) {
           width: 120px;
           flex: 0 0 120px;
+          height: 120px;
         }
         @include below($tablet-sm) {
           width: 90px;
           flex: 0 0 90px;
           height: 90px;
           padding: 20px;
+          
         }
         @include below($mobile-lg) {
           margin: 0 auto 20px;
