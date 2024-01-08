@@ -5,29 +5,38 @@ $(document).ready(function () {
         $('.preloader').addClass('loaded')
 
     }, 1400);
-    //     $('.team__members__slider').slick({
-    //         dots: false,
-    //         infinite: true,
-    //         speed: 500,
-    //         // slidesToShow: 5,
-    //         variableWidth: true,
-    //         rows: 2,
-    //         slidesToScroll: 1,
-    //         prevArrow: `      <button class="slick__arr slick__prev">
-    //           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
-    //   <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
-    // </svg>
-    //         </button>`,
-    //         nextArrow: `  <button class="slick__arr slick__next">
-    //         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
-    //   <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
-    // </svg>
-    //         </button>`,
+    $('.chat__bot__ai__icon').click(function () {
+        $('.chat__bot__ai__chat__box ').toggleClass('chat__open')
+    })
+    $('.inner__page__banner .inner__page__featured__image .inner__page__featured__image__icon').click(function () {
+        $('.chat__bot__ai__chat__box ').toggleClass('chat__open')
+    })
+    $('.chat__bot__ai .chat__bot__ai__chat__box .chat__bot__ai__chat__box__outer .chat__bot__ai__chat__box__header svg').click(function () {
+        $('.chat__bot__ai__chat__box ').toggleClass('chat__open')
+    })
+    $('.team__members__slider').slick({
+        dots: false,
+        infinite: true,
+        speed: 500,
+        // slidesToShow: 5,
+        variableWidth: true,
+        rows: 2,
+        slidesToScroll: 1,
+        prevArrow: `      <button class="slick__arr slick__prev">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+      <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
+    </svg>
+            </button>`,
+        nextArrow: `  <button class="slick__arr slick__next">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+      <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+    </svg>
+            </button>`,
 
-    //         // asNavFor: '.clients__testimonials__avatar__slider',
-    //         // focusOnSelect: true,
+        // asNavFor: '.clients__testimonials__avatar__slider',
+        // focusOnSelect: true,
 
-    //     });
+    });
     $('.clients__logo__slider_3').slick({
         // slidesToShow: 4,
         slidesToScroll: 1,
