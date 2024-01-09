@@ -156,7 +156,7 @@
       // width: 50px;
       width: 3.5vw;
       height: auto;
-      left: 30px;
+      left: 45px;
       bottom: 20%;
       @include below($tablet-lg) {
         left: 190px;
@@ -355,20 +355,20 @@
 }
 .float__img1 {
   animation: moveInArc 10s linear infinite; /* Adjust the duration as needed */
-  animation-delay: 3.3s;
+  animation-delay: 1.5s;
 }
 
 .float__img2 {
   animation: moveInArc2 10s linear infinite; /* Adjust the duration and delay as needed */
-  animation-delay: 3.3s;
+  animation-delay: 1.5s;
 }
 
 .float__img3 {
   animation: moveInArc3 10s linear infinite; /* Adjust the duration and delay as needed */
-  animation-delay: 3.3s;
+  animation-delay: 1.5s;
 }
 
 .float__img4 {
   animation: moveInArc4 10s linear infinite; /* Adjust the duration and delay as needed */
-  animation-delay: 3.3s;
+  animation-delay: 1.5s;
 }

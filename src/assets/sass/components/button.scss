@@ -217,6 +217,9 @@
   padding: 14px 18px;
   border-radius: 8px;
   box-shadow: 0 0 50px 0 rgba($color: #a0c2d3, $alpha: 0.24);
+  @include below($desktop-lg) {
+    font-size: 16px;
+  }
   @include below($tablet-lg) {
     font-size: 18px;
   }

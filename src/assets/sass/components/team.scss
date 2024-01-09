@@ -64,7 +64,7 @@
       transition: 0.5s all ease-in-out;
       // clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
       &:nth-child(2) {
-        clip-path: circle(0.5% at 50% 50%);
+        clip-path: circle(0% at 50% 50%);
         position: absolute;
         inset: 0;
         z-index: 2;
