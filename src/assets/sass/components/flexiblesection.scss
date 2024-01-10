@@ -570,6 +570,9 @@
     padding: 0 17px;
     margin-bottom: 40px;
     &:nth-child(2),
+    &:nth-child(11),
+    &:nth-child(20),
+    &:nth-child(16),
     &:nth-child(7),
     &:nth-child(5) {
       .portfolio__listing__card {
@@ -581,7 +584,10 @@
       }
     }
     &:nth-child(3),
+    &:nth-child(12),
+    &:nth-child(17),
     &:nth-child(8),
+    &:nth-child(13),
     &:nth-child(4) {
       .portfolio__listing__card {
         .portfolio__listing__card__image {
@@ -592,6 +598,9 @@
       }
     }
     &:nth-child(1),
+    &:nth-child(10),
+    &:nth-child(19),
+    &:nth-child(15),
     &:nth-child(6) {
       .portfolio__listing__card {
         .portfolio__listing__card__image {
@@ -602,6 +611,8 @@
       }
     }
     &:nth-child(5),
+    &:nth-child(14),
+    &:nth-child(18),
     &:nth-child(9) {
       .portfolio__listing__card {
         .portfolio__listing__card__image {

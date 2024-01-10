@@ -5,7 +5,7 @@
   height: 100dvh;
   background-color: $color-alice-blue;
   @include below($tablet-lg) {
-    height: 100dvh;
+    height: auto;
   }
   @include below($mobile-lg) {
     height: auto;
@@ -39,6 +39,7 @@
       text-transform: uppercase;
       @include below($tablet-lg) {
         font-size: 24px;
+        margin: 0 auto 25px;
       }
       @include below($tablet-sm) {
         margin: 0 auto 25px;
@@ -56,10 +57,10 @@
       opacity: 0;
       @include below($tablet-lg) {
         font-size: 60px;
+        text-align: center;
       }
       @include below($tablet-sm) {
         font-size: 50px;
-        text-align: center;
       }
       @include below($mobile-lg) {
         font-size: 40px;
@@ -86,7 +87,7 @@
       opacity: 0;
     }
     .cta__primary {
-      @include below($tablet-sm) {
+      @include below($tablet-lg) {
         margin: auto;
         display: flex;
       }
@@ -129,9 +130,11 @@
       top: 35%;
       @include below($tablet-lg) {
         left: 130px;
+        width: 180px;
       }
       @include below($tablet-sm) {
         left: 35px;
+        width: 140px;
       }
       @include below($mobile-lg) {
         width: 90px;
@@ -143,8 +146,14 @@
       height: auto;
       right: 150px;
       top: 40%;
+      @include below($tablet-lg) {
+        width: 150px;
+        top: 35%;
+        right: 180px;
+      }
       @include below($tablet-sm) {
         top: 30%;
+        width: 115px;
       }
       @include below($mobile-lg) {
         width: 60px;
@@ -159,11 +168,13 @@
       left: 45px;
       bottom: 20%;
       @include below($tablet-lg) {
-        left: 190px;
+        left: 140px;
         bottom: 22%;
+        width: 60px;
       }
       @include below($tablet-sm) {
         left: 130px;
+        width: 40px;
       }
       @include below($mobile-lg) {
         width: 30px;
@@ -176,10 +187,13 @@
       height: auto;
       right: 160px;
       bottom: 10%;
+      @include below($tablet-lg) {
+        width: 170px;
+      }
       @include below($tablet-sm) {
         bottom: 15%;
         right: 130px;
-        width: 140px;
+        width: 130px;
       }
       @include below($mobile-lg) {
         width: 70px;
