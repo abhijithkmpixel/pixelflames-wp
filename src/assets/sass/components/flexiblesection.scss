@@ -350,8 +350,14 @@
         max-width: 100%;
       }
     }
-    &:hover {
-      @include above($tablet-lg) {
+    // &:hover {
+    //   @include above($tablet-lg) {
+    //     border-color: $color-white;
+    //     box-shadow: 0 40px 40px 0 rgba($color: #a0c2d3, $alpha: 0.24);
+    //   }
+    // }
+    &.active{
+            @include above($tablet-lg) {
         border-color: $color-white;
         box-shadow: 0 40px 40px 0 rgba($color: #a0c2d3, $alpha: 0.24);
       }

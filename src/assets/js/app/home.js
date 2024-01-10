@@ -5,6 +5,10 @@ $(document).ready(function () {
         $('.preloader').addClass('loaded')
 
     }, 1400);
+    $('.our__features__card').mouseover(function () {
+        $('.our__features__card').removeClass('active')
+        $(this).addClass('active')
+    })
     $('.chat__bot__ai__icon').click(function () {
         $('.chat__bot__ai__chat__box ').toggleClass('chat__open')
     })
