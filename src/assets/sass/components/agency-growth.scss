@@ -31,6 +31,28 @@
       padding: 0 15px;
     }
   }
+  &:not(.agency__growth__grid--service) {
+    .agency__growth__card {
+      padding: 40px 30px 75px;
+      @include below($tablet-lg) {
+        padding: 30px 30px 60px;
+      }
+      @include below($tablet-sm) {
+        padding: 30px 20px 60px;
+      }
+      .cta__primary {
+        position: absolute;
+        left: 30px;
+        bottom: 40px;
+        @include below($tablet-lg) {
+          bottom: 30px;
+        }
+        @include below($tablet-sm) {
+          left: 20px;
+        }
+      }
+    }
+  }
 }
 .agency__growth__card {
   width: 100%;
@@ -53,6 +75,9 @@
       opacity: 0.2;
     }
     .cta__primary {
+      position: absolute;
+      left: 30px;
+      bottom: 40px;
       svg {
         path {
           fill: $color-white;
@@ -80,6 +105,7 @@
     position: relative;
     z-index: 5;
   }
+
   &::after {
     content: "";
     width: 80%;
