@@ -4,7 +4,7 @@ $(document).ready(function () {
     setTimeout(() => {
         $('.preloader').addClass('loaded')
 
-    }, 1400);
+    }, 1000);
     $('.our__features__card').mouseover(function () {
         $('.our__features__card').removeClass('active')
         $(this).addClass('active')
