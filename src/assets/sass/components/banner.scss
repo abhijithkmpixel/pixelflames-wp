@@ -146,6 +146,11 @@
       height: auto;
       right: 150px;
       top: 40%;
+      @include below($desktop-lg){
+        width: 6vw;
+        right: 130px;
+        top: 41%;
+      }
       @include below($tablet-lg) {
         width: 150px;
         top: 35%;

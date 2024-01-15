@@ -169,7 +169,7 @@
       margin: 0;
       transition: 0.3s all ease-in-out;
       @include below($desktop-lg) {
-        font-size: 1.5vw;
+        font-size: 1.35vw;
       }
       @include below($tablet-lg) {
         font-size: 30px;
