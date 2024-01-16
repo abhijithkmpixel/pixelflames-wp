@@ -44,6 +44,9 @@
     position: relative;
     padding: 20px 0;
     @include fontStyle(1.11vw, 1.5, 500, $color-black);
+    @include below($desktop-sm) {
+      font-size: 16px;
+    }
     @include below($tablet-lg) {
       font-size: 24px;
     }
@@ -65,7 +68,7 @@
       border-radius: 50%;
       display: block;
       background-color: $color-pomegranate;
-      margin-right: 24px;
+      margin-right: 19px;
       @include below($mobile-lg) {
         margin-right: 15px;
         width: 10px;

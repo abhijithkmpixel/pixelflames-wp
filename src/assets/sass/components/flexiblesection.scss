@@ -106,8 +106,8 @@
     }
     p {
       @include fontStyle(1.25vw, 1.4, 400);
-      @include below($tablet-lg) {
-        font-size: 20px;
+      @include below($desktop-sm) {
+        font-size: 18px;
       }
       @include below($mobile-lg) {
         font-size: 16px;
@@ -188,6 +188,9 @@
   }
   .cta__primary {
     font-size: 0.8vw;
+    @include below($desktop-sm) {
+      font-size: 12px;
+    }
     @include below($tablet-lg) {
       font-size: 16px;
     }
@@ -206,6 +209,9 @@
     margin-bottom: 5px;
     transition: 0.2s all ease-in-out;
 
+    @include below($desktop-sm) {
+      font-size: 16px;
+    }
     @include below($tablet-lg) {
       font-size: 20px;
     }
@@ -217,7 +223,9 @@
     @include fontStyle(0.8vw, 1, 600, $color-madison);
     // margin-bottom: 10px;
     transition: 0.2s all ease-in-out;
-
+    @include below($desktop-sm) {
+      font-size: 14px;
+    }
     @include below($tablet-lg) {
       font-size: 18px;
     }
@@ -229,7 +237,9 @@
     @include fontStyle(0.6vw, 1, 500, $color-lynch);
     // margin-bottom: 10px;
     transition: 0.2s all ease-in-out;
-
+    @include below($desktop-sm) {
+      font-size: 12px;
+    }
     @include below($tablet-lg) {
       font-size: 16px;
     }
@@ -241,7 +251,9 @@
     @include fontStyle(1vw, 1, 500, $color-black);
     margin-bottom: 10px;
     transition: 0.2s all ease-in-out;
-
+    @include below($desktop-sm) {
+      font-size: 15px;
+    }
     @include below($tablet-lg) {
       font-size: 19px;
     }
@@ -356,8 +368,8 @@
     //     box-shadow: 0 40px 40px 0 rgba($color: #a0c2d3, $alpha: 0.24);
     //   }
     // }
-    &.active{
-            @include above($tablet-lg) {
+    &.active {
+      @include above($tablet-lg) {
         border-color: $color-white;
         box-shadow: 0 40px 40px 0 rgba($color: #a0c2d3, $alpha: 0.24);
       }
@@ -404,6 +416,9 @@
   p {
     @include fontStyle(1.2vw, 1.6, 400, $color-river-bed);
     margin-bottom: 25px;
+    @include below($desktop-sm) {
+      font-size: 16px;
+    }
     @include below($tablet-lg) {
       font-size: 18px;
     }

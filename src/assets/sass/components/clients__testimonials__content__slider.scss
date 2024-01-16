@@ -39,6 +39,9 @@
     p {
       @include fontStyle(1.2vw, 1.5, 500, $color-blue-bayoux);
       margin-bottom: 15px;
+      @include below($desktop-sm){
+        font-size: 18px;
+      }
       @include below($tablet-lg) {
         font-size: 24px;
       }

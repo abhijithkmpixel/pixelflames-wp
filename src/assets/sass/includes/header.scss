@@ -90,6 +90,9 @@ header {
           position: relative;
           display: flex;
           align-items: center;
+          @include below($desktop-sm) {
+            font-size: 13px;
+          }
           svg {
             width: 11px;
             height: auto;
@@ -186,6 +189,9 @@ header {
           h6 {
             @include fontStyle(1.12vw, 1, 500, $color-madison);
             margin-bottom: 15px;
+            @include below($desktop-sm) {
+              font-size: 15px;
+            }
             @include below($tablet-lg) {
               font-size: 20px;
               margin: 0;
@@ -194,6 +200,9 @@ header {
           p {
             @include fontStyle(0.973vw, 1.8, 400, $color-blue-bayoux);
             // margin-bottom: 25px;
+            @include below($desktop-sm) {
+              font-size: 15px;
+            }
           }
           .submenu__links {
             @include below($tablet-lg) {
@@ -216,6 +225,9 @@ header {
                   margin-right: 10px;
                   background-color: $color-black-original;
                   margin-top: 7px;
+                  @include below($mobile-lg) {
+                    margin-top: 4px;
+                  }
                 }
               }
               &:not(:last-child) {
@@ -275,6 +287,9 @@ header {
                   margin-bottom: 10px;
                   text-transform: capitalize;
                   transition: 0.2s all ease-in-out;
+                  @include below($desktop-sm) {
+                    margin-bottom: 5px;
+                  }
                   @include below($tablet-lg) {
                     margin-bottom: 0;
                   }
@@ -473,7 +488,6 @@ header {
   }
 }
 
-
 .chat__bot__ai {
   position: fixed;
   bottom: 15px;
@@ -566,7 +580,7 @@ header {
           margin-top: 0px;
           background-color: #eee;
           position: relative;
-          &:last-child{
+          &:last-child {
             margin-bottom: 10px;
           }
           &::after {

@@ -171,6 +171,9 @@
       @include below($desktop-lg) {
         font-size: 1.35vw;
       }
+      @include below($desktop-sm) {
+        font-size: 19px;
+      }
       @include below($tablet-lg) {
         font-size: 30px;
       }
@@ -199,6 +202,9 @@
   p {
     @include fontStyle(1vw, 1.5, 500, $color-blue-bayoux);
     margin-bottom: 0;
+    @include below($desktop-sm) {
+      font-size: 14px;
+    }
     @include below($tablet-lg) {
       font-size: 18px;
     }

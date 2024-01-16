@@ -135,6 +135,9 @@
       font-weight: 500;
       color: $color-blue-bayoux;
       margin-bottom: 0;
+      @include below($desktop-sm) {
+        font-size: 15px;
+      }
       @include below($tablet-lg) {
         font-size: 18px;
       }

@@ -368,6 +368,9 @@
   @include above($tablet-lg) {
     display: none;
   }
+  .team__members__slide__item__inner{
+    margin-bottom: 15px;
+  }
 }
 .desktop__slider {
   @include below($tablet-lg) {
