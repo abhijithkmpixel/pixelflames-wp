@@ -23,61 +23,61 @@ if ($(window.innerWidth > 1200)) {
 
         setTimeout(() => {
 
-            const scroll = new LocomotiveScroll({
-                el: document.querySelector("[data-scroll-container]"),
-                smooth: true,
-                lerp: 0.05,
-                // scrollFromAnywhere:true,
-                multiplier: 0.8,
-                scrollFromAnywhere: false
-            });
-            scroll.on("scroll", ScrollTrigger.update);
-            scroll.on(
-                "scroll",
-                (func = (scroll) => {
-                    if (scroll.scroll.y > 100) {
-                        $("body").addClass("sticky__header");
-                    } else {
-                        $("body").removeClass("sticky__header");
-                    }
+            // const scroll = new LocomotiveScroll({
+            //     el: document.querySelector("[data-scroll-container]"),
+            //     smooth: true,
+            //     lerp: 0.05,
+            //     // scrollFromAnywhere:true,
+            //     multiplier: 0.8,
+            //     scrollFromAnywhere: false
+            // });
+            // scroll.on("scroll", ScrollTrigger.update);
+            // scroll.on(
+            //     "scroll",
+            //     (func = (scroll) => {
+            //         if (scroll.scroll.y > 100) {
+            //             $("body").addClass("sticky__header");
+            //         } else {
+            //             $("body").removeClass("sticky__header");
+            //         }
 
-                })
-            );
-            window.addEventListener("load", function () {
-                setTimeout(() => {
-                    scroll.update();
+            //     })
+            // );
+            // window.addEventListener("load", function () {
+            //     setTimeout(() => {
+            //         scroll.update();
 
-                    ScrollTrigger.refresh();
-                }, 1000);
-            });
-            $("[scrollTo]").click(function (e) {
-                e.preventDefault();
-                let id = $(this).attr("href").split("#")[1];
-                let target = document.getElementById(id);
-                scroll.scrollTo(target, {
-                    offset: `-${document.querySelector("header").clientHeight + 30}`,
-                });
-            });
-            // tell ScrollTrigger to use these proxy methods for the ".smooth-scroll" element since Locomotive Scroll is hijacking things
-            ScrollTrigger.scrollerProxy("[data-scroll-container]", {
-                scrollTop(value) {
-                    return arguments.length
-                        ? scroll.scrollTo(value, 0, 0)
-                        : scroll.scroll.instance.scroll.y;
-                }, // we don't have to define a scrollLeft because we're only scrolling vertically.
-                getBoundingClientRect() {
-                    return {
-                        top: 0,
-                        left: 0,
-                        width: window.innerWidth,
-                        height: window.innerHeight,
-                    };
-                },
-                // LocomotiveScroll handles things completely differently on mobile devices - it doesn't even transform the container at all! So to get the correct behavior and avoid jitters, we should pin things with position: fixed on mobile. We sense it by checking to see if there's a transform applied to the container (the LocomotiveScroll-controlled element).
-                pinType: document.querySelector("[data-scroll-container]").style.transform
-                    ? "transform"
-                    : "fixed",
-            });
+            //         ScrollTrigger.refresh();
+            //     }, 1000);
+            // });
+            // $("[scrollTo]").click(function (e) {
+            //     e.preventDefault();
+            //     let id = $(this).attr("href").split("#")[1];
+            //     let target = document.getElementById(id);
+            //     scroll.scrollTo(target, {
+            //         offset: `-${document.querySelector("header").clientHeight + 30}`,
+            //     });
+            // });
+            // // tell ScrollTrigger to use these proxy methods for the ".smooth-scroll" element since Locomotive Scroll is hijacking things
+            // ScrollTrigger.scrollerProxy("[data-scroll-container]", {
+            //     scrollTop(value) {
+            //         return arguments.length
+            //             ? scroll.scrollTo(value, 0, 0)
+            //             : scroll.scroll.instance.scroll.y;
+            //     }, // we don't have to define a scrollLeft because we're only scrolling vertically.
+            //     getBoundingClientRect() {
+            //         return {
+            //             top: 0,
+            //             left: 0,
+            //             width: window.innerWidth,
+            //             height: window.innerHeight,
+            //         };
+            //     },
+            //     // LocomotiveScroll handles things completely differently on mobile devices - it doesn't even transform the container at all! So to get the correct behavior and avoid jitters, we should pin things with position: fixed on mobile. We sense it by checking to see if there's a transform applied to the container (the LocomotiveScroll-controlled element).
+            //     pinType: document.querySelector("[data-scroll-container]").style.transform
+            //         ? "transform"
+            //         : "fixed",
+            // });
 
             // $('#quick__scroll').click(function () {
             //   var parentSection = $(this).closest('section');
@@ -98,7 +98,7 @@ if ($(window.innerWidth > 1200)) {
                     }
                 })
                 setTimeout(() => {
-                    scroll.update();
+                    // scroll.update();
                 }, 1000);
             })
             $('#contact__form__taab .cta__tab').click(function () {
@@ -114,7 +114,7 @@ if ($(window.innerWidth > 1200)) {
                     }
                 })
                 setTimeout(() => {
-                    scroll.update();
+                    // scroll.update();
                 }, 1000);
             })
 
@@ -138,12 +138,13 @@ if ($(window.innerWidth > 1200)) {
                         }
                     })
                     setTimeout(() => {
-                        scroll.update();
+                        // scroll.update();
                     }, 1000);
                     let target = document.querySelector(`[data-tab-id=${contactformid}]`);
-                    scroll.scrollTo(target, {
-                        offset: `-${document.querySelector("header").clientHeight + 30}`,
-                    });
+                    // scroll.scrollTo(target, {
+                    //     offset: `-${document.querySelector("header").clientHeight + 30}`,
+                    // });
+                    target.scrollIntoView();
                 }
                 $('#select__service, #select__industry').on('change', function () {
                     filterCustomPostss();
@@ -165,7 +166,7 @@ if ($(window.innerWidth > 1200)) {
                         success: function (response) {
                             $('#filtered-posts').html(response);
                             scroll.update();
-                            ScrollTrigger.refresh();
+                            // ScrollTrigger.refresh();
 
                             setTimeout(() => {
                                 $('#filtered-posts').removeClass('opacity-50')
@@ -190,7 +191,7 @@ if ($(window.innerWidth > 1200)) {
                     scrollTrigger: {
                         trigger: element,
                         start: "0% 100%",
-                        scroller: window.innerWidth > 1200 ? "[data-scroll-container]" : "body",
+                        // scroller: window.innerWidth > 1200 ? "[data-scroll-container]" : "body",
 
                     },
                     onUpdate: function () {
@@ -296,20 +297,20 @@ if ($(window.innerWidth > 1200)) {
                             trigger: $(this),
                             start: "0% 100%",
                             end: "100% 0%",
-                            scroller: window.innerWidth > 1200 ? "[data-scroll-container]" : "body",
+                            // scroller: window.innerWidth > 1200 ? "[data-scroll-container]" : "body",
                             scrub: true,
                         }
                     })
             })
             $(window).blur(function () {
-                scroll.update();
+                // scroll.update();
 
             })
-            // each time the window updates, we should refresh ScrollTrigger and then update LocomotiveScroll.
-            ScrollTrigger.addEventListener("refresh", () => scroll.update());
+            // // each time the window updates, we should refresh ScrollTrigger and then update LocomotiveScroll.
+            // ScrollTrigger.addEventListener("refresh", () => scroll.update());
 
-            // after everything is set up, refresh() ScrollTrigger and update LocomotiveScroll because padding may have been added for pinning, etc.
-            ScrollTrigger.refresh();
+            // // after everything is set up, refresh() ScrollTrigger and update LocomotiveScroll because padding may have been added for pinning, etc.
+            // ScrollTrigger.refresh();
         }, 1500);
     })
 

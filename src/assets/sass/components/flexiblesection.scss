@@ -164,7 +164,7 @@
 .products__package {
   table-layout: fixed;
   @include above($tablet-lg) {
-    width: 75%;
+    width: 85%;
     // margin: auto;
   }
   @include below($tablet-lg) {
@@ -181,15 +181,16 @@
       padding: 12px 15px;
     }
   }
-  th:hover {
+  th:first-child {
+    width: 36%;
     // @include above($tablet-lg) {
 
     // }
   }
   .cta__primary {
     font-size: 0.8vw;
-    @include below($desktop-sm) {
-      font-size: 12px;
+    @include below($desktop-lg) {
+      font-size: 15px;
     }
     @include below($tablet-lg) {
       font-size: 16px;
@@ -205,12 +206,12 @@
     }
   }
   h4 {
-    @include fontStyle(1.1vw, 1, 700, $color-black);
+    @include fontStyle(24px, 1, 700, $color-black);
     margin-bottom: 5px;
     transition: 0.2s all ease-in-out;
 
     @include below($desktop-sm) {
-      font-size: 16px;
+      font-size: 20px;
     }
     @include below($tablet-lg) {
       font-size: 20px;
@@ -220,11 +221,11 @@
     }
   }
   h6 {
-    @include fontStyle(0.8vw, 1, 600, $color-madison);
+    @include fontStyle(17px, 1.2, 600, $color-madison);
     // margin-bottom: 10px;
     transition: 0.2s all ease-in-out;
     @include below($desktop-sm) {
-      font-size: 14px;
+      font-size: 16px;
     }
     @include below($tablet-lg) {
       font-size: 18px;
@@ -234,11 +235,11 @@
     }
   }
   p {
-    @include fontStyle(0.6vw, 1, 500, $color-lynch);
+    @include fontStyle(14px, 1.2, 500, $color-lynch);
     // margin-bottom: 10px;
     transition: 0.2s all ease-in-out;
     @include below($desktop-sm) {
-      font-size: 12px;
+      font-size: 14px;
     }
     @include below($tablet-lg) {
       font-size: 16px;
@@ -248,11 +249,11 @@
     }
   }
   h5 {
-    @include fontStyle(1vw, 1, 500, $color-black);
+    @include fontStyle(15px, 1, 500, $color-black);
     margin-bottom: 10px;
     transition: 0.2s all ease-in-out;
     @include below($desktop-sm) {
-      font-size: 15px;
+      font-size: 14px;
     }
     @include below($tablet-lg) {
       font-size: 19px;
@@ -755,13 +756,16 @@
 }
 
 .how__it__works__tab__link__wrap {
+  margin-bottom: 30px;
   @include below($mobile-lg) {
     justify-content: center !important;
     align-items: center;
   }
   .cta__tab {
+    margin-right: 25px;
     @include below($mobile-lg) {
       margin-bottom: 10px;
+      margin-right: 0px;
     }
   }
 }

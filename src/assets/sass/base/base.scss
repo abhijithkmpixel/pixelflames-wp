@@ -123,20 +123,20 @@ img {
   overflow: hidden;
   transition: 0.35s all ease-in-out;
 }
-[data-scroll-container] {
-  position: fixed;
-  // top: 0;
-  // right: 0;
-  // bottom: 0;
-  // left: 0;
-  width: 100vw;
-  // max-width: 100vw;
-  // overflow: hidden;
-  // transition: 0.35s all ease-in-out;
-  @include below($tablet-lg) {
-    position: static;
-  }
-}
+// [data-scroll-container] {
+//   position: fixed;
+//   // top: 0;
+//   // right: 0;
+//   // bottom: 0;
+//   // left: 0;
+//   width: 100vw;
+//   // max-width: 100vw;
+//   // overflow: hidden;
+//   // transition: 0.35s all ease-in-out;
+//   @include below($tablet-lg) {
+//     position: static;
+//   }
+// }
 body {
   height: 100vh;
 }
