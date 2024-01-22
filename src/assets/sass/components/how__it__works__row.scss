@@ -44,8 +44,8 @@
     position: relative;
     padding: 20px 0;
     @include fontStyle(1.11vw, 1.5, 500, $color-black);
-    @include below($desktop-sm) {
-      font-size: 16px;
+    @include below($desktop-lg) {
+      font-size: 18px;
     }
     @include below($tablet-lg) {
       font-size: 24px;

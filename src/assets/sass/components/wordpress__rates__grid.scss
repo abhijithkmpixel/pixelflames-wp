@@ -100,6 +100,9 @@
     z-index: 5;
     margin-bottom: 30px;
     transition: 0.3s all ease-in-out;
+    @include below($desktop-lg) {
+      font-size: 16px;
+    }
     @include below($tablet-lg) {
       font-size: 18px;
       margin-bottom: 25px;

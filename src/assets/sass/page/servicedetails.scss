@@ -49,6 +49,9 @@
       a {
         @include fontStyle(1.2vw, 1, 400, $color-blue-bayoux);
         text-decoration: none;
+        @include below($desktop-lg) {
+          font-size: 18px;
+        }
         @include below($tablet-lg) {
           font-size: 20px;
         }
@@ -135,8 +138,8 @@
       font-weight: 500;
       color: $color-blue-bayoux;
       margin-bottom: 0;
-      @include below($desktop-sm) {
-        font-size: 15px;
+      @include below($desktop-lg) {
+        font-size: 14px;
       }
       @include below($tablet-lg) {
         font-size: 18px;

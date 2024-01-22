@@ -34,8 +34,8 @@
 }
 .subtitle__primary {
   @include fontStyle(1.15vw, 1.5, 500, $color-blue-bayoux);
-  @include below($desktop-sm) {
-    font-size: 19px;
+  @include below($desktop-lg) {
+    font-size: 18px;
   }
   @include below($tablet-lg) {
     font-size: 26px;

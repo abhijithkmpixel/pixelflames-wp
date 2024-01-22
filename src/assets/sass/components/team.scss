@@ -33,6 +33,9 @@
   }
   p {
     @include fontStyle(1.45vw, 1.5, 400, $color-black);
+    @include below($desktop-lg) {
+      font-size: 18px;
+    }
     @include below($tablet-lg) {
       font-size: 20px;
     }
@@ -368,7 +371,7 @@
   @include above($tablet-lg) {
     display: none;
   }
-  .team__members__slide__item__inner{
+  .team__members__slide__item__inner {
     margin-bottom: 15px;
   }
 }

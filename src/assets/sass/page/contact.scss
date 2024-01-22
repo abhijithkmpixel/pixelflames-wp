@@ -243,7 +243,7 @@
       color: $color-blue-bayoux;
       line-height: 1.2;
       font-weight: 500;
-      @include below($tablet-lg) {
+      @include below($desktop-lg) {
         font-size: 18px;
       }
       @include below($mobile-sm) {
@@ -287,7 +287,7 @@
         line-height: 1;
         margin-bottom: 20px;
         text-decoration: none;
-        @include below($tablet-lg) {
+        @include below($desktop-lg) {
           font-size: 18px;
         }
         @include below($mobile-sm) {

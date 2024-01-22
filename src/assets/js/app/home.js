@@ -181,6 +181,26 @@ $(document).ready(function () {
             $('body').removeClass('sticky__header')
 
         }
+
+        var targetDiv = $('.scroll__to__top');
+        var windowHeight = $('main').height();
+        $(window).scroll(function () {
+            // Calculate the position relative to the window height
+            var scrollPosition = $(window).scrollTop();
+            var scrollPercentage = (scrollPosition / windowHeight) * 100;
+
+            // Check if the user has scrolled past 50%
+            if (scrollPercentage > 50) {
+                targetDiv.addClass('show');
+            } else {
+                targetDiv.removeClass('show');
+            }
+
+            $('.scroll__to__top').click(function (e) {
+                // e.preventDefault()
+                $('html, body').scrollTop(0);
+            });
+        });
     })
     $('#hamburger__button').click(function () {
         $('#hamburger__button').toggleClass('is-active')

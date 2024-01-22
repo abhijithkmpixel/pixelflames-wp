@@ -202,7 +202,7 @@
   p {
     @include fontStyle(1vw, 1.5, 500, $color-blue-bayoux);
     margin-bottom: 0;
-    @include below($desktop-sm) {
+    @include below($desktop-lg) {
       font-size: 14px;
     }
     @include below($tablet-lg) {
