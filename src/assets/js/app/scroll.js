@@ -120,32 +120,34 @@ if ($(window.innerWidth > 1200)) {
 
             $(document).ready(function () {
                 let initparams = window.location.href.split('form-id=')[1];
-                let contactformid = initparams.split('&')[0]
-                if (contactformid != undefined) {
-                    $('#contact__form__taab .cta__tab').each(function () {
-                        if ($(this).attr('data-tab-id') == contactformid) {
-                            $('#contact__form__taab .cta__tab').each(function () {
-                                $(this).removeClass('active')
-                            })
-                            $(this).addClass('active')
-                        }
-                    })
-                    $('.form_wrap').each(function () {
-                        if ($(this).attr('data-tab-body') == contactformid) {
-                            $('.form_wrap').each(function () {
-                                $(this).addClass('d-none')
-                            })
-                            $(this).removeClass('d-none')
-                        }
-                    })
-                    setTimeout(() => {
-                        // scroll.update();
-                    }, 1000);
-                    let target = document.querySelector(`[data-tab-id=${contactformid}]`);
-                    // scroll.scrollTo(target, {
-                    //     offset: `-${document.querySelector("header").clientHeight + 30}`,
-                    // });
-                    target.scrollIntoView();
+                if(initparams){
+                    let contactformid = initparams.split('&')[0];
+                    if (contactformid != undefined) {
+                        $('#contact__form__taab .cta__tab').each(function () {
+                            if ($(this).attr('data-tab-id') == contactformid) {
+                                $('#contact__form__taab .cta__tab').each(function () {
+                                    $(this).removeClass('active')
+                                })
+                                $(this).addClass('active')
+                            }
+                        })
+                        $('.form_wrap').each(function () {
+                            if ($(this).attr('data-tab-body') == contactformid) {
+                                $('.form_wrap').each(function () {
+                                    $(this).addClass('d-none')
+                                })
+                                $(this).removeClass('d-none')
+                            }
+                        })
+                        setTimeout(() => {
+                            // scroll.update();
+                        }, 1000);
+                        let target = document.querySelector(`[data-tab-id=${contactformid}]`);
+                        // scroll.scrollTo(target, {
+                        //     offset: `-${document.querySelector("header").clientHeight + 30}`,
+                        // });
+                        target.scrollIntoView();
+                    }
                 }
                 $('#select__service, #select__industry').on('change', function () {
                     filterCustomPostss();
@@ -166,7 +168,7 @@ if ($(window.innerWidth > 1200)) {
                         },
                         success: function (response) {
                             $('#filtered-posts').html(response);
-                            scroll.update();
+                            // scroll.update();
                             // ScrollTrigger.refresh();
 
                             setTimeout(() => {
