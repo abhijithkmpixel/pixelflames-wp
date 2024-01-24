@@ -1,7 +1,7 @@
 /** @format */
 
 .flexible__section {
-  padding: 120px 0;
+  padding: 90px 0;
   @include below($tablet-lg) {
     padding: 80px 0;
   }
@@ -9,7 +9,7 @@
     padding: 40px 0;
   }
   .agency__growth__grid {
-    margin-top: 60px;
+    margin-top: 40px;
     @include below($tablet-lg) {
       // margin-top: 70px;
     }
@@ -21,36 +21,72 @@
     }
   }
   .title__primary {
-    margin-bottom: 35px;
+    margin-bottom: 20px;
     @include below($tablet-lg) {
       // margin-bottom: 40px;
     }
     @include below($tablet-sm) {
-      margin-bottom: 30px;
+      margin-bottom: 25px;
     }
     @include below($mobile-lg) {
-      margin-bottom: 20px;
+      margin-bottom: 15px;
     }
   }
   .subtitle__primary {
     margin-bottom: 25px;
   }
+  // & + .flexible__section:not(.section__bg__lilac),
+  // & + .flexible__section:not(.section__bg__gallery),
+  // & + .flexible__section:not(.section__bg__aqua__squeeze),
+  // & + .flexible__section:not(.section__alice__blue) {
+  //   padding-top: 0;
+  // }
 }
 .section__bg__gallery {
   background-color: $color-gallery;
 }
 .section__bg__lilac {
   background-color: $color-white-lilac;
+  padding-top: 60px;
+  @include below($tablet-lg) {
+    padding-top: 70px;
+  }
+  @include below($mobile-lg) {
+    padding-top: 40px;
+  }
 }
 .section__bg__aqua__squeeze {
   background-color: $color-aqua-squeeze;
+  padding-top: 70px;
+  @include below($tablet-lg) {
+    padding-top: 60px;
+  }
+  @include below($mobile-lg) {
+    padding-top: 40px;
+  }
+  & + .flexible__section {
+    padding-top: 70px;
+    @include below($tablet-lg) {
+      padding-top: 80px;
+    }
+    @include below($mobile-lg) {
+      padding-top: 40px;
+    }
+  }
 }
 .section__alice__blue {
   background-color: $color-alice-blue;
+  padding-top: 70px;
+  @include below($tablet-lg) {
+    padding-top: 70px;
+  }
+  @include below($mobile-lg) {
+    padding-top: 40px;
+  }
 }
 .flexible__alternate__grid {
   // padding: 120px 0;
-  padding: 80px 0;
+  padding: 90px 0;
   @include below($tablet-lg) {
     padding: 80px 0;
   }
@@ -66,6 +102,13 @@
       padding: 0 50px;
       @include below($tablet-lg) {
         padding: 0 20px;
+      }
+      &:not(:last-child) {
+        p {
+          @include below($tablet-sm) {
+            margin-bottom: 25px;
+          }
+        }
       }
     }
     .col-xl-4 {
@@ -92,6 +135,7 @@
       }
       @include below($mobile-lg) {
         width: 100%;
+        margin: 0 auto 15px;
         aspect-ratio: 398/256;
       }
       img {
@@ -102,6 +146,9 @@
       margin-bottom: 25px;
       @include below($tablet-sm) {
         margin-bottom: 20px;
+      }
+      @include below($mobile-lg) {
+        margin-bottom: 10px;
       }
     }
     p {
@@ -314,7 +361,9 @@
   margin: 0 -20px;
   & > div {
     padding: 0 20px;
-    margin-bottom: 30px;
+    @include below($tablet-sm) {
+      margin-bottom: 30px;
+    }
   }
   .our__features__card {
     width: 100%;
@@ -401,18 +450,18 @@
 }
 .flexible__section.project__overview {
   @include below($mobile-lg) {
-    padding-bottom: 0 !important;
+    // padding-bottom: 0 !important;
   }
 }
 .project__overview {
   &:not(.flexible__section) {
     @include below($tablet-sm) {
-      margin-bottom: 60px;
+      margin-bottom: 40px;
     }
   }
   h3 {
     @include fontStyle(2.8vw, 1.2, 400, $color-black);
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     @include below($tablet-lg) {
       font-size: 38px;
     }
@@ -436,6 +485,9 @@
       @include fontStyleInherit();
       color: $color-black;
       font-weight: 500;
+    }
+    &:last-child {
+      margin-bottom: 0;
     }
   }
 }
@@ -543,7 +595,7 @@
     margin-top: 50px;
   }
   @include below($mobile-lg) {
-    margin-top: 20px;
+    margin-top: 0px;
   }
   li {
     padding: 35px 0;
@@ -590,7 +642,7 @@
   margin-left: 50px;
 }
 .portfolio__listing__row {
-  margin: 0 -17px;
+  margin: 0 -17px -40px;
   & > div {
     padding: 0 17px;
     margin-bottom: 40px;
@@ -657,7 +709,7 @@
       border-radius: 12px;
       overflow: hidden;
       transition: 0.4s all ease-in-out;
-      margin-bottom: 30px;
+      margin-bottom: 20px;
       position: relative;
       @include below($tablet-sm) {
         margin-bottom: 20px;
@@ -717,7 +769,7 @@
       }
     }
     p {
-      @include fontStyle(1vw, 1.4, 400, $color-river-bed);
+      @include fontStyle(0.9vw, 1.4, 400, $color-river-bed);
       text-transform: uppercase;
       display: flex;
       align-items: flex-start;
@@ -730,8 +782,12 @@
       @include below($tablet-sm) {
         font-size: 16px;
       }
+      @include below($mobile-lg) {
+        font-weight: 500;
+        font-size: 14px;
+      }
       &::before {
-        content: "";
+        // content: "";
         width: 12px;
         height: 12px;
         border-radius: 50%;
@@ -748,6 +804,9 @@
   }
 }
 .filter__btn__wrap {
+  @include below($mobile-lg){
+    margin-bottom: 30px;
+  }
   .custom__selectbox {
     & + .custom__selectbox {
       @include below($tablet-sm) {
@@ -773,12 +832,13 @@
   @include below($mobile-lg) {
     justify-content: center !important;
     align-items: center;
+    margin-bottom: 20px;
   }
   .cta__tab {
     margin-right: 25px;
     @include below($mobile-lg) {
       margin-bottom: 10px;
-      margin-right: 0px;
+      margin-right: 5px;
     }
   }
 }

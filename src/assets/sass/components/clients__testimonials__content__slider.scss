@@ -33,13 +33,14 @@
   @include below($mobile-lg) {
     padding: 30px 20px;
     margin-top: 10px;
+    margin-bottom: 20px;
   }
   .clients__testimonials__content__slide__item {
     width: 100%;
     p {
       @include fontStyle(1.2vw, 1.5, 500, $color-blue-bayoux);
       margin-bottom: 15px;
-      @include below($desktop-lg){
+      @include below($desktop-lg) {
         font-size: 18px;
       }
       @include below($tablet-lg) {
@@ -73,7 +74,7 @@
 .clients__testimonials__row {
   margin: 0 -40px 90px;
   @include below($mobile-lg) {
-    margin-bottom: 70px;
+    margin-bottom: 40px;
   }
   .col-xl-5 {
     @include above($tablet-lg) {

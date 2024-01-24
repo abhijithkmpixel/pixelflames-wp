@@ -9,7 +9,7 @@
     border-radius: 50%;
     display: inline-block;
     // vertical-align: middle;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
     background: linear-gradient(#fb6770, #f5333f);
     @include below($desktop-lg) {
       width: 14px;
@@ -20,6 +20,7 @@
       width: 10px;
       height: 10px;
       margin-bottom: 3px;
+      display: none;
     }
   }
   @include below($tablet-lg) {

@@ -181,7 +181,7 @@
     appearance: none;
     width: 100%;
     background-color: transparent;
-    @include fontStyle(1.1vw, 0.8, 400, $color-black);
+    @include fontStyle(1.1vw, 1, 400, $color-black);
     padding: 12px 57px 12px 20px;
     border: 0 !important;
     outline: 0 !important;
@@ -212,7 +212,7 @@
 .cta__tab {
   text-decoration: none;
   @include fontStyle(1vw, 1.3, 500, $color-blue-bayoux);
-  text-transform: uppercase;
+  // text-transform: uppercase;
   border: 1px solid transparent;
   transition: 0.2s all ease-in-out;
   width: max-content;

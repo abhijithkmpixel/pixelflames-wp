@@ -34,6 +34,7 @@
     }
     @include below($mobile-lg) {
       width: 100%;
+      margin: 0 auto 30px;
     }
   }
 }
@@ -43,6 +44,9 @@
     align-items: flex-start;
     position: relative;
     padding: 20px 0;
+    &:last-child {
+      padding-bottom: 0;
+    }
     @include fontStyle(1.11vw, 1.5, 500, $color-black);
     @include below($desktop-lg) {
       font-size: 18px;

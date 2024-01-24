@@ -172,6 +172,9 @@ picture {
   img {
     object-fit: cover;
   }
+    &:last-child{
+    margin-bottom: 0 !important;
+  }
 }
 .ratio__1160x616 {
   width: 100%;
@@ -180,6 +183,9 @@ picture {
   overflow: hidden;
   img {
     object-fit: cover;
+  }
+  &:last-child{
+    margin-bottom: 0 !important;
   }
 }
 .ratio__565x420 {
@@ -192,6 +198,9 @@ picture {
   }
   img {
     object-fit: cover;
+  }
+    &:last-child{
+    margin-bottom: 0 !important;
   }
 }
 .radius__12 {

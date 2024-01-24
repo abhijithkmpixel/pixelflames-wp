@@ -119,7 +119,8 @@ if ($(window.innerWidth > 1200)) {
             })
 
             $(document).ready(function () {
-                let contactformid = window.location.href.split('form-id=')[1]
+                let initparams = window.location.href.split('form-id=')[1];
+                let contactformid = initparams.split('&')[0]
                 if (contactformid != undefined) {
                     $('#contact__form__taab .cta__tab').each(function () {
                         if ($(this).attr('data-tab-id') == contactformid) {
@@ -289,10 +290,10 @@ if ($(window.innerWidth > 1200)) {
             $('picture img').each(function () {
 
                 gsap.fromTo($(this), {
-                    objectPosition: "100% 0%",
+                    objectPosition: "50% 0%",
                 },
                     {
-                        objectPosition: "100% 100%",
+                        objectPosition: "50% 100%",
                         scrollTrigger: {
                             trigger: $(this),
                             start: "0% 100%",
@@ -311,7 +312,7 @@ if ($(window.innerWidth > 1200)) {
 
             // // after everything is set up, refresh() ScrollTrigger and update LocomotiveScroll because padding may have been added for pinning, etc.
             // ScrollTrigger.refresh();
-        }, 1500);
+        }, 100);
     })
 
     // gsap.to('header .brand__logo',

@@ -1,10 +1,13 @@
 /** @format */
 
 .wordpress__rates__grid {
-  margin: 80px -19px 0;
+  margin: 35px -19px 0;
   & > div {
     padding: 0 19px;
     margin-bottom: 50px;
+    @include below($mobile-lg) {
+      margin-bottom: 30px;
+    }
   }
   & + .cta__secondary {
     @include below($mobile-lg) {
@@ -55,7 +58,9 @@
   width: 100%;
   height: 100%;
   // padding: 47px 40px;
+  display: block;
   padding: 40px 35px;
+  text-decoration: none;
   border: 1px solid $color-blue-bayoux;
   //   background-color: $color-coral2;
   border-radius: 18px;
@@ -84,7 +89,7 @@
   }
   h4 {
     @include fontStyle(2.5vw, 1.1, 700, $color-madison);
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     transition: 0.3s all ease-in-out;
     position: relative;
     z-index: 5;
@@ -184,18 +189,18 @@
   }
 }
 .wordpress__package__row {
-  margin: 0 -48px;
-  padding-bottom: 90px;
+  margin: 0 -50px;
+  // padding-bottom: 90px;
   @include below($tablet-lg) {
-    margin-top: 150px !important;
+    // margin-top: 150px !important;
   }
   @include below($mobile-lg) {
-    padding-bottom: 50px;
-    margin-top: 70px !important;
+    // padding-bottom: 50px;
+    // margin-top: 70px !important;
   }
   //   border-bottom: 1px solid $color-black;
   & > div {
-    padding: 0 48px;
+    padding: 0 50px;
   }
   .wordpress__package__featured__image {
     width: 100%;
@@ -209,6 +214,7 @@
     }
     @include below($mobile-lg) {
       width: 100%;
+      margin: 0 auto 30px;
     }
     img {
       object-fit: cover;
@@ -217,9 +223,12 @@
 }
 
 .lets__work__together {
-  padding: 80px 0 10px;
+  padding: 90px 0 10px;
+  @include below($tablet-sm) {
+    padding: 70px 0 10px;
+  }
   @include below($mobile-lg) {
-    padding: 40px 0 10px;
+    padding: 35px 0 10px;
     text-align: center !important;
   }
   .lets__word__together_contact__info {
@@ -234,7 +243,7 @@
     }
     @include below($mobile-lg) {
       padding: 30px 20px;
-      margin-top: 30px;
+      margin-top: 15px;
     }
 
     img {

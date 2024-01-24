@@ -7,6 +7,7 @@
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
+    margin-right: -30px;
   }
   @include below($mobile-lg) {
     margin: 0 -15px;
@@ -14,7 +15,7 @@
   & > div {
     padding: 0 20px;
     @include below($tablet-lg) {
-      margin-bottom: 40px;
+      // margin-bottom: 40px;
       width: 40%;
       flex: 0 0 40%;
       scroll-snap-align: start;
@@ -91,7 +92,7 @@
   }
   h4 {
     @include fontStyle(1.55vw, 1, 600, $color-madison);
-    text-transform: capitalize;
+    // text-transform: capitalize;
     margin-bottom: 10px;
     transition: 0.2s all ease-in-out;
     @include below($tablet-lg) {

@@ -1,9 +1,9 @@
 /** @format */
 
 .how__we__grow__block {
-  margin: 0 -75px;
+  margin: 0 -50px;
   & > div {
-    padding: 0 75px;
+    padding: 0 50px;
   }
   .how__we__grow__block__featured__image {
     width: 100%;
@@ -63,7 +63,7 @@
         border-radius: 10px;
         background-color: transparent;
         border: 1px solid $color-blue-bayoux;
-        margin-right: 35px;
+        margin-right: 25px;
         transition: 0.3s all ease-in-out;
         img {
           transition: 0.3s all ease-in-out;
@@ -86,7 +86,7 @@
       }
       h4 {
         @include fontStyle(1.55vw, 1.2, 600, $color-madison);
-        margin-bottom: 10px;
+        margin-bottom: 7px;
         transition: 0.3s all ease-in-out;
         @include below($tablet-lg) {
           font-size: 27px;

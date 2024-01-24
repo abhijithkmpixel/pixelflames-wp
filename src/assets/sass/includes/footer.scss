@@ -2,7 +2,7 @@
 
 footer {
   background-color: $color-zircon;
-  padding: 90px 0 60px;
+  padding: 80px 0 60px;
   @include below($mobile-lg) {
     padding: 40px 0 30px;
   }
@@ -185,7 +185,7 @@ footer {
       }
       h4 {
         @include fontStyle(2.1vw, 1.2, 500, $color-madison);
-        margin-bottom: 40px;
+        margin-bottom: 30px;
         text-transform: capitalize;
         @include below($tablet-lg) {
           font-size: 26px;
@@ -206,7 +206,7 @@ footer {
             text-align: center;
           }
           &:not(:last-child) {
-            margin-bottom: 15px;
+            margin-bottom: 13px;
             @include below($mobile-lg) {
               margin-bottom: 10px;
             }

@@ -5,7 +5,7 @@
   overflow: hidden;
   position: relative;
   @include below($mobile-lg) {
-    margin-bottom: 30px;
+    margin-bottom: 10px;
   }
   .subtitle__primary {
     margin-bottom: 29px;
@@ -72,7 +72,7 @@
     }
     .site__breadcrumbs {
       display: flex;
-      margin: 40px -15px 0;
+      margin: 10px -15px 0;
       flex-wrap: wrap;
       transform: translateY(150px);
       opacity: 0;
@@ -135,7 +135,7 @@
     }
     @include below($mobile-lg) {
       font-size: 38px;
-      margin-bottom: 50px;
+      margin-bottom: 10px;
       text-align: center;
       max-width: 90%;
       margin-left: auto;
@@ -143,7 +143,7 @@
     }
   }
   .inner__page__featured__image {
-    margin-top: -120px;
+    margin-top: -150px;
     position: relative;
          transform: translateY(150px);
     opacity: 0;
