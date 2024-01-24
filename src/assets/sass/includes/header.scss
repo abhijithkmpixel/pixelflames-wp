@@ -12,7 +12,7 @@ header {
   // opacity: 0;
   .container-fluid {
     @include below($tablet-lg) {
-      // padding: 0 15px;
+      padding: 0px;
     }
   }
   &::after {
@@ -31,21 +31,20 @@ header {
     transform-origin: top;
   }
   @include below($tablet-lg) {
-    padding: 35px 0;
+    padding:  0;
     background-color: $color-white;
   }
-  @include below($mobile-lg) {
-    padding: 25px 0;
-  }
+  // @include below($mobile-lg) {
+  //   padding: 25px 0;
+  // }
   .header__inner {
-    @include below($tablet-lg) {
-      // padding: 25px 25px;
-      // border-radius: 12px;
-      // background-color: $color-white;
-    }
-    @include below($mobile-lg) {
-      // padding: 22px 18px;
-    }
+   @include below($tablet-lg) {
+    padding: 35px 15px;
+    background-color: $color-white;
+  }
+   @include below($mobile-lg) {
+    padding: 25px 15px;
+  }
   }
   .brand__logo {
     display: block;
@@ -365,7 +364,7 @@ header {
       top: 0;
       width: 100vw;
       height: auto;
-      z-index: 10;
+      z-index: -1;
       background-color: $color-white;
       flex-flow: column;
       align-items: flex-start;
