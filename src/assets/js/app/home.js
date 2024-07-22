@@ -2,6 +2,10 @@
 
 $(document).ready(function () {
     setTimeout(() => {
+
+        $('body').css({ '--height': document.querySelector('header').clientHeight + 'px' })
+    }, 1000);
+    setTimeout(() => {
         $('.preloader').addClass('loaded')
 
     }, 1000);
@@ -236,7 +240,6 @@ $(document).ready(function () {
         })
     }
 
-    $('body').css({ '--height': document.querySelector('header').clientHeight + 'px' })
 
 
     $('.secondary_nav .itemlinks').click(function () {

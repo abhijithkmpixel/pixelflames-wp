@@ -53,8 +53,8 @@
     h1 {
       @include fontStyle(4.2vw, 1, 600, $color-madison);
       margin-bottom: 25px;
-      transform: translateY(150px);
-      opacity: 0;
+      // transform: translateY(150px);
+      // opacity: 0;
       @include below($tablet-lg) {
         font-size: 60px;
         text-align: center;
@@ -70,8 +70,8 @@
     p {
       @include fontStyle(1.3vw, 1.75, 400, $color-blue-bayoux);
       max-width: 90%;
-      transform: translateY(150px);
-      opacity: 0;
+      // transform: translateY(150px);
+      // opacity: 0;
 
       @include below($tablet-lg) {
         font-size: 20px;
@@ -83,8 +83,8 @@
       }
     }
     .staggerTitle {
-      transform: translateY(150px);
-      opacity: 0;
+      // transform: translateY(150px);
+      // opacity: 0;
     }
     .cta__primary {
       @include below($tablet-lg) {
@@ -95,8 +95,8 @@
   }
   .hero__banner__featured__side__Image__wrap {
     position: relative;
-    transform: translateX(150px);
-    opacity: 0;
+    // transform: translateX(150px);
+    // opacity: 0;
     @include below($tablet-lg) {
       display: flex;
       align-items: flex-end;
@@ -146,7 +146,7 @@
       height: auto;
       right: 150px;
       top: 40%;
-      @include below($desktop-lg){
+      @include below($desktop-lg) {
         width: 6vw;
         right: 130px;
         top: 41%;
