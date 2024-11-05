@@ -31,20 +31,20 @@ header {
     transform-origin: top;
   }
   @include below($tablet-lg) {
-    padding:  0;
+    padding: 0;
     background-color: $color-white;
   }
   // @include below($mobile-lg) {
   //   padding: 25px 0;
   // }
   .header__inner {
-   @include below($tablet-lg) {
-    padding: 35px 15px;
-    background-color: $color-white;
-  }
-   @include below($mobile-lg) {
-    padding: 25px 15px;
-  }
+    @include below($tablet-lg) {
+      padding: 35px 15px;
+      background-color: $color-white;
+    }
+    @include below($mobile-lg) {
+      padding: 25px 15px;
+    }
   }
   .brand__logo {
     display: block;
@@ -355,6 +355,9 @@ header {
               margin-top: 35px;
             }
           }
+        }
+        &.active_page a {
+          font-weight: 600;
         }
       }
     }

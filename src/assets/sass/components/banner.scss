@@ -396,11 +396,20 @@
   height: auto;
   height: 100svh;
   position: relative;
+  .hero__banner__secondary__bg1 {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 50vw;
+  }
   &::before {
     content: "";
   }
   .container-fluid {
     height: 100%;
+    position: relative;
+    z-index: 10;
     .hero__banner__secondary__inner {
       height: 100%;
       display: flex;
@@ -409,7 +418,7 @@
       .hero__banner__secondary__inner__content__wrap {
         text-align: center;
         h1 {
-          @include fontStyle(6vw, 1, 900, $color-madison);
+          @include fontStyle(7vw, 1.05, 700, $color-madison);
           margin-bottom: 34px;
           span {
             @include fontStyleInherit();
@@ -418,7 +427,8 @@
         }
         p {
           @include fontStyle(1.3vw, 1.75, 400, $color-blue-bayoux);
-          max-width: 90%;
+          max-width: 1146px;
+          margin-bottom: 48px;
         }
       }
     }
