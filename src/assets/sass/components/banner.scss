@@ -391,3 +391,36 @@
   animation: moveInArc4 10s linear infinite; /* Adjust the duration and delay as needed */
   animation-delay: 1.5s;
 }
+.hero__banner__secondary {
+  width: 100%;
+  height: auto;
+  height: 100svh;
+  position: relative;
+  &::before {
+    content: "";
+  }
+  .container-fluid {
+    height: 100%;
+    .hero__banner__secondary__inner {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .hero__banner__secondary__inner__content__wrap {
+        text-align: center;
+        h1 {
+          @include fontStyle(6vw, 1, 900, $color-madison);
+          margin-bottom: 34px;
+          span {
+            @include fontStyleInherit();
+            color: $color-pomegranate;
+          }
+        }
+        p {
+          @include fontStyle(1.3vw, 1.75, 400, $color-blue-bayoux);
+          max-width: 90%;
+        }
+      }
+    }
+  }
+}
