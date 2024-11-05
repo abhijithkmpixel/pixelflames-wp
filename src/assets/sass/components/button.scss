@@ -260,11 +260,11 @@
   &:hover {
     color: $color-blue-bayoux;
     @include above($tablet-lg) {
-      box-shadow: 0 15px 50px 0 rgba($color: #a0c2d3, $alpha: 0.5);
+      // box-shadow: 0 15px 50px 0 rgba($color: #a0c2d3, $alpha: 0.5);
     }
   }
   &.active {
     box-shadow: none;
-    border: 1px solid rgba($color: $color-blue-bayoux, $alpha: 0.5);
+    // border: 1px solid rgba($color: $color-blue-bayoux, $alpha: 0.5);
   }
 }

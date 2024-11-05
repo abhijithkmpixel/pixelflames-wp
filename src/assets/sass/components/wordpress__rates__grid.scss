@@ -292,3 +292,34 @@
     }
   }
 }
+.work__together__block {
+  width: 90%;
+  border-radius: 12px;
+  padding: 20px 20px 50px;
+  background-color: $color-chablis;
+  margin: 0 auto;
+  img {
+    width: 140px;
+    height: 140px;
+    margin: 0 auto 0;
+    display: block;
+  }
+  h3 {
+    @include fontStyle(3.2vw, 1, 500, $color-madison);
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  p {
+    @include fontStyle(1.1vw, 1.2, 500, $color-blue-bayoux);
+    text-align: center;
+    margin-bottom: 25px;
+  }
+  a {
+    @include fontStyle(1.55vw, 1, 500, $color-cod-gray);
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    width: max-content;
+    margin: 0 auto 15px;
+  }
+}
