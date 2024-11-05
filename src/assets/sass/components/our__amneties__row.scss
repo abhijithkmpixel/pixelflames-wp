@@ -78,7 +78,7 @@
     }
   }
   h3 {
-    @include fontStyle(3.82vw, 1, 800, $color-madison);
+    @include fontStyle(2.35vw, 1, 700, $color-madison);
     margin-bottom: 10px;
     transition: 0.2s all ease-in-out;
     span {
@@ -100,7 +100,7 @@
     }
   }
   span {
-    @include fontStyle(1vw, 1.3, 400, $color-blue-bayoux);
+    @include fontStyle(0.95vw, 1.3, 400, $color-blue-bayoux);
     transition: 0.2s all ease-in-out;
     display: inline-block;
     @include below($desktop-lg) {

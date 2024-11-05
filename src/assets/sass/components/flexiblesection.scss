@@ -45,6 +45,16 @@
 .section__bg__gallery {
   background-color: $color-gallery;
 }
+.section__bg__concrete {
+  background-color: $color-concrete;
+  padding-top: 60px;
+  @include below($tablet-lg) {
+    padding-top: 70px;
+  }
+  @include below($mobile-lg) {
+    padding-top: 40px;
+  }
+}
 .section__bg__lilac {
   background-color: $color-white-lilac;
   padding-top: 60px;
@@ -804,7 +814,7 @@
   }
 }
 .filter__btn__wrap {
-  @include below($mobile-lg){
+  @include below($mobile-lg) {
     margin-bottom: 30px;
   }
   .custom__selectbox {
@@ -829,16 +839,22 @@
 
 .how__it__works__tab__link__wrap {
   margin-bottom: 30px;
+  border: 1px solid $color-silver;
   @include below($mobile-lg) {
     justify-content: center !important;
     align-items: center;
     margin-bottom: 20px;
   }
   .cta__tab {
-    margin-right: 25px;
+    // margin-right: 25px;
+    background-color: transparent;
+    box-shadow: none;
     @include below($mobile-lg) {
       margin-bottom: 10px;
-      margin-right: 5px;
+      // margin-right: 5px;
+    }
+    &.active {
+      border: 0 !important;
     }
   }
 }

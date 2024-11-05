@@ -396,12 +396,12 @@
   height: auto;
   height: 100svh;
   position: relative;
-  .hero__banner__secondary__bg1 {
+  .hero__banner__secondary__bg {
     position: absolute;
     z-index: 1;
     top: 0;
     left: 0;
-    width: 50vw;
+    width: 100%;
   }
   &::before {
     content: "";
@@ -427,8 +427,8 @@
         }
         p {
           @include fontStyle(1.3vw, 1.75, 400, $color-blue-bayoux);
-          max-width: 1146px;
-          margin-bottom: 48px;
+          max-width: 70%;
+          margin: 0 auto 48px;
         }
       }
     }

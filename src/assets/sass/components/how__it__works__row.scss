@@ -1,6 +1,8 @@
 /** @format */
 
 .how__it__works__row {
+  position: relative;
+  z-index: 10;
   .col-xl-5 {
     @include above($tablet-lg) {
       width: 46%;
@@ -81,4 +83,12 @@
       }
     }
   }
+}
+.how__it_works__vector {
+  position: absolute;
+  top: 0%;
+  left: 0;
+  height: 100%;
+  // transform: translateX(-50%);
+  z-index: 1;
 }

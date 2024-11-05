@@ -61,8 +61,8 @@
         align-items: center;
         padding: 23px;
         border-radius: 10px;
-        background-color: transparent;
-        border: 1px solid $color-blue-bayoux;
+        background-color: $color-concrete;
+        border: 0;
         margin-right: 25px;
         transition: 0.3s all ease-in-out;
         img {
