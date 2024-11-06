@@ -91,3 +91,10 @@
   height: calc(110%);
   z-index: 1;
 }
+.drop__a__msg__block {
+  position: relative;
+  background: url("../img/bg/dambg.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 90%;
+}

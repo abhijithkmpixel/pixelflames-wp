@@ -402,14 +402,19 @@
     top: 0;
     left: 0;
     width: 100%;
+    @include below($tablet-lg) {
+      height: 100%;
+      img {
+        height: 100%;
+        width: auto;
+      }
+    }
   }
-  &::before {
-    content: "";
-  }
+
   .container-fluid {
     height: 100%;
     position: relative;
-    z-index: 10;
+    z-index: 5;
     .hero__banner__secondary__inner {
       height: 100%;
       display: flex;
@@ -420,6 +425,19 @@
         h1 {
           @include fontStyle(7vw, 1.05, 700, $color-madison);
           margin-bottom: 34px;
+          @include below($desktop-sm) {
+            font-size: 6vw;
+          }
+          @include below($tablet-lg) {
+            font-size: 70px;
+          }
+          @include below($tablet-sm) {
+            font-size: 60px;
+          }
+          @include below($mobile-lg) {
+            font-size: 30px;
+            margin-bottom: 15px;
+          }
           span {
             @include fontStyleInherit();
             color: $color-pomegranate;
@@ -429,6 +447,21 @@
           @include fontStyle(1.3vw, 1.75, 400, $color-blue-bayoux);
           max-width: 70%;
           margin: 0 auto 48px;
+          @include below($desktop-sm) {
+            font-size: 1.2vw;
+          }
+          @include below($tablet-lg) {
+            font-size: 20px;
+          }
+          @include below($tablet-sm) {
+            font-size: 18px;
+            max-width: 90%;
+          }
+          @include below($mobile-lg) {
+            font-size: 16px;
+            max-width: 100%;
+            margin-bottom: 30px;
+          }
         }
       }
     }

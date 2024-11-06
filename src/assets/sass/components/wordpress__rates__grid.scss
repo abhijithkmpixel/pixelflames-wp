@@ -303,16 +303,32 @@
     height: 140px;
     margin: 0 auto 0;
     display: block;
+    @include below($tablet-sm) {
+      width: 100px;
+      height: 100px;
+    }
   }
   h3 {
     @include fontStyle(3.2vw, 1, 500, $color-madison);
     text-align: center;
     margin-bottom: 10px;
+    @include below($tablet-lg) {
+      font-size: 30px;
+    }
+    @include below($mobile-lg) {
+      font-size: 24px;
+    }
   }
   p {
     @include fontStyle(1.1vw, 1.2, 500, $color-blue-bayoux);
     text-align: center;
     margin-bottom: 25px;
+    @include below($tablet-lg) {
+      font-size: 18px;
+    }
+    @include below($mobile-lg) {
+      font-size: 16px;
+    }
   }
   a {
     @include fontStyle(1.55vw, 1, 500, $color-cod-gray);
@@ -321,5 +337,14 @@
     display: block;
     width: max-content;
     margin: 0 auto 15px;
+    transition: 0.2s all ease-in-out;
+    @include below($tablet-lg) {
+      font-size: 20px;
+    }
+    &:hover {
+      @include above($tablet-lg) {
+        color: $color-pomegranate;
+      }
+    }
   }
 }

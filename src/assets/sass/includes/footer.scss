@@ -1,13 +1,13 @@
 /** @format */
 
 footer {
-  background-color: $color-zircon;
+  background-color: $color-concrete;
   padding: 80px 0 60px;
   @include below($mobile-lg) {
     padding: 40px 0 30px;
   }
   h2 {
-    @include fontStyle(8.15vw, 0.9, 700, $color-madison);
+    @include fontStyle(6.3vw, 0.9, 700, $color-madison);
     text-transform: capitalize;
     @include below($mobile-lg) {
       font-size: 50px;
@@ -184,7 +184,7 @@ footer {
         }
       }
       h4 {
-        @include fontStyle(2.1vw, 1.2, 500, $color-madison);
+        @include fontStyle(1.25vw, 1.2, 500, $color-madison);
         margin-bottom: 30px;
         text-transform: capitalize;
         @include below($tablet-lg) {
@@ -213,7 +213,7 @@ footer {
           }
           a {
             text-decoration: none;
-            @include fontStyle(1.2vw, 1, 400, $color-blue-bayoux);
+            @include fontStyle(1.1vw, 1, 400, $color-blue-bayoux);
             transition: 0.2s all ease-in-out;
             position: relative;
             @include below($tablet-lg) {
@@ -248,12 +248,15 @@ footer {
     }
   }
   .footer__copyright__text {
+    margin-top: 180px !important;
     @include fontStyle(1vw, 1, 400, $color-blue-bayoux);
     @include below($tablet-lg) {
       font-size: 16px;
+      margin-top: 80px !important;
     }
     @include below($mobile-lg) {
       font-size: 12px;
+      margin-top: 40px !important;
     }
   }
 }
