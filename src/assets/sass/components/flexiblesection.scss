@@ -575,7 +575,7 @@
       opacity: 0;
     }
     &::after {
-      content: "";
+      content: none;
       position: absolute;
       width: 80%;
       height: auto;

@@ -4,6 +4,7 @@
   width: 100%;
   overflow: hidden;
   position: relative;
+
   @include below($mobile-lg) {
     margin-bottom: 10px;
   }
@@ -31,11 +32,18 @@
   }
   .inner__page__banner__inner {
     padding: 200px 0 200px;
-    background-color: $color-alice-blue;
+    // background-color: $color-concrete;
     position: relative;
+    background: url("../img/bg/banner3bg.svg"), $color-alice-blue;
+    background-size: 70% auto;
+    background-position: top right;
+    background-repeat: no-repeat;
     @include below($mobile-lg) {
       padding: 140px 0 60px;
+      background-size: 100%;
+      background-position: center;
     }
+
     .ball1 {
       content: "";
       width: 18px;
@@ -145,7 +153,7 @@
   .inner__page__featured__image {
     margin-top: -150px;
     position: relative;
-         transform: translateY(150px);
+    transform: translateY(150px);
     opacity: 0;
     @include below($mobile-lg) {
       margin-top: -30px;
@@ -193,5 +201,14 @@
         padding: 12px;
       }
     }
+  }
+}
+.element__right__block {
+  background: url("../img/bg/left.svg"), $color-alice-blue;
+  background-size: 45% auto;
+  background-position: top left;
+  background-repeat: no-repeat;
+  @include below($mobile-lg) {
+    background-size: 100%;
   }
 }

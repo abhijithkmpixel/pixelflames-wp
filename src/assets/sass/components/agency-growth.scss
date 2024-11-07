@@ -65,6 +65,9 @@
   height: 100%;
   transition: 0.3s all ease-in-out;
   overflow: hidden;
+  background: url("../img/bg/expertisebg.svg");
+  background-size: 100%;
+  background-repeat: no-repeat;
   @include below($tablet-lg) {
     padding: 30px;
     border-color: $color-pomegranate;
@@ -108,7 +111,7 @@
   }
 
   &::after {
-    content: "";
+    content: none;
     width: 80%;
     height: auto;
     aspect-ratio: 1/1;
